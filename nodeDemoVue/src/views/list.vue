@@ -1,11 +1,3 @@
-<!--
- * @Author: your name
- * @Date: 2020-07-25 17:56:30
- * @LastEditTime: 2020-08-01 21:43:22
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \nodese:\aoneQt\vue-cli4\src\views\list.vue
---> 
 <!-- 详情页面 -->
 <template>
   <div id='list' @dblclick= "showTinymce = true">

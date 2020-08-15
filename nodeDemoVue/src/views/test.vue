@@ -1,11 +1,3 @@
-<!--
- * @Author: your name
- * @Date: 2020-07-28 14:20:58
- * @LastEditTime: 2020-08-05 21:43:23
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \nodese:\aoneQt\vue-cli4\src\views\test.vue
--->
 <!-- 测试 -->
 <template>
     <div id='test'>
@@ -13,6 +5,7 @@
         <br/>
         <br/>
         <button @click="GetData">获取数据</button>
+         <router-link to="/test1">测试1</router-link>
     </div>
 </template>
 
