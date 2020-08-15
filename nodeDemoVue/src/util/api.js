@@ -9,6 +9,8 @@ const config = {
     GetTemp: "/api/getTemp",// 获取所有的模板
 
     Addlist: "/api/addList",// 添加列表 传分类type，列表名称name
+	
+	Dellist: "/api/delList",// 删除列表 传分类type，列表名称name
 
     GetDataBase: "/api/getDataBase",// 获取数据库
 

@@ -25,8 +25,7 @@
               v-for="(data,index) in item.children"
               :key="index" 
               :class="{'sub_active':SubActive === data.id && activeType === key}"
-              v-text="data.title" 
-              @click="SubClick(data)"></li>
+              v-text="data.title" @click="SubClick(data)" @contextmenu.prevent="Dellist(data,key)"></li>
           </ul>
         </li>
       </ul>
@@ -113,7 +112,13 @@ export default {
     AddList() {// 添加按钮
       console.log(this.isAddType)
       this.$Add({title: "添加列表",type:this.isAddType})
-    }
+    },
+	Dellist(data,key){
+		console.log(data)
+		this.$http.Dellist({type:key,id:data.id}).then(res=>{
+			console.log(res)
+		})
+	}
   }
 }
 </script>
