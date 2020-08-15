@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="<%= BASE_URL %>data/icon/iconfont.css">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <script>
+      window.siteHeaders = {
+        openUrl: window.location.href,
+        fwtime: '0.1', //访问请求时间
+        ggtime: '0.2', // 观光时间
+        sendtime: '1', // 用户在线
+        device: "WAP",
+        language: "CN",
+        site: "a03",
+        agent: '',
+        theme: '#0848a8',
+        isLogin: '', //是否需要登录进入首页
+        isLoginPlay: '', //是否登录进入游戏
+      };
+    </script>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

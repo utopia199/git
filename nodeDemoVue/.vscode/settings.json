@@ -1,0 +1,5 @@
+{
+    "git.confirmEmptyCommits": false,
+    "git.detectSubmodules": false,
+    "git.enabled": false
+}
