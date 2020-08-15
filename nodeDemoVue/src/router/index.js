@@ -11,20 +11,20 @@ Vue.use(VueRouter)
   ]
   
 const router = new VueRouter({
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    to
+    from
+    // `to` 和 `from` 都是路由对象
+    if (savedPosition) {// 是否是浏览器的前进后退，或者router.go(-1)
+      return savedPosition
+    } else {
+      return {x: 0, y: 0}
+    }
+  }
 })
 // 路由拦截
-router.beforeEach((to,from,next)=>{
-  console.log(to,'beforeEach')
-  from
-  next()
-})
-
-router.beforeResolve((to, from, next) => {
-  console.log(to,'beforeResolve')
-  from
-  next()
-  /* 必须调用 `next` */
-})
-
+// router.beforeEach((to,from,next)=>{
+//   next()
+// })
 export default router

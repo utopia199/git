@@ -1,11 +1,3 @@
-<!--
- * @Author: your name
- * @Date: 2020-07-25 18:02:13
- * @LastEditTime: 2020-08-01 20:51:28
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \nodese:\aoneQt\vue-cli4\src\App.vue
---> 
 <template>
   <div id="app">
     <router-view v-if="typeList" />

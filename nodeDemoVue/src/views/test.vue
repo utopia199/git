@@ -1,11 +1,13 @@
 <!-- 测试 -->
 <template>
     <div id='test'>
+         <p v-for="index in 1000" :key="index">{{index}}</p>
         <button @click="SetTemp">设置数据</button>
         <br/>
         <br/>
         <button @click="GetData">获取数据</button>
          <router-link to="/test1">测试1</router-link>
+        
     </div>
 </template>
 
