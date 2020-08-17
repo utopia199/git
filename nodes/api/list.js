@@ -54,6 +54,35 @@ exports.set = function(req, res){// 添加列表
 
     })
 };
+exports.edi = function(req,res){ //修改列表
+	let body = req.body;
+	let obj = new Object();
+	global.GET_FILE_CONTENT('config.json').then(resolve=>{
+		if(body.type){ //修改列表
+			if(resolve[body.type]){
+				resolve[body.type].children.map((item,index)=>{
+					if(item.id == body.id){
+						item.title = body.name
+					}
+				})
+				fs.writeFile('config.json', JSON.stringify(resolve), 'utf8', (err) => {
+				    if (!err) {
+				        obj.status_code = 200;
+				        obj.message = "成功";
+				    }
+						res.json(obj);
+				    return 
+				});
+			}
+		}else if(body.types){ //修改分类
+			
+		}else{
+			obj.status_code = 400;
+			obj.message = "参数有误";
+			res.json(obj);
+		}
+	}).catch(err=>{})
+};
 exports.del = function(req, res){ //删除列表
 	let body = req.body;
 	let obj = new Object();

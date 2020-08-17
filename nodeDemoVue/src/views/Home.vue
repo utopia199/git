@@ -34,7 +34,7 @@
 		<p class="add_btn" v-show="isAdd" ref="addBtn" @click="AddList">添加列表</p>
 		<div class="set" v-show="isSet" ref="setBtn">
 			<div class="btn" @click="Dellist">删除</div>
-			<div class="btn">编辑</div>
+			<div class="btn" @click="Editor">编辑</div>
 		</div>
 	</div>
 </template>
@@ -119,7 +119,6 @@ export default {
 
 		AddList() {
 			// 添加按钮
-			console.log(this.isAddType);
 			this.$Add({ title: '添加列表', type: this.isAddType });
 		},
 		ShowSet(k,evt,data) {
@@ -145,6 +144,14 @@ export default {
 			}).catch(()=>{
 				
 			})
+		},
+		Editor(){ //编辑
+			this.$Add({ 
+				title: '编辑列表', 
+				type: this.isAddType, 
+				listName: this.delList.title, 
+				id: this.delList.id ,
+			});
 		}
 	}
 };

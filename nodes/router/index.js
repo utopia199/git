@@ -36,6 +36,8 @@ app.post("/api/addList", require("../api/list.js").set);// 获取详情
 
 app.post("/api/delList", require("../api/list.js").del);// 删除详情
 
+app.post("/api/ediList", require("../api/list.js").edi);// 修改详情
+
 app.post("/api/getDataBase", require("../api/temp.js").get);// 获取数据库
 
 app.use(express.static("./"));// 可以访问根目录下的所有文件主要是html
