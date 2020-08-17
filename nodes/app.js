@@ -25,11 +25,27 @@ var mysql = require('mysql');
 //     res.send('Database created...');
 // })
 
-var { exec } = require('child_process');
-let child = exec("start cmd.exe /K cd /D G:\\aoneQt\\a01_pc" ,{encoding: 'npm run dev'},(error, stdout, stderr) => {
- console.log(stdout); // 直接查看输出
-});
+// const { spawn } = require('child_process');
+// const child_process = spawn('start npm install',{
+//     cwd:'G:\\aoneQt\\a01_pc',
+//     shell: true,
+// })
 
+
+const { spawn } = require('child_process');
+child = spawn('node', ['./test.js']);
+child.stdout.setEncoding('utf8');
+// 父进程-发
+child.stdin.write(JSON.stringify({
+  type: 'url',
+  data: 'G:\\aoneQt\\a01_pc'
+}));
+// 父进程-收
+child.stdout.on('data', function (chunk) {
+  let data = chunk.toString();
+  let message = JSON.parse(data);
+  console.log(`地址是${message.data}`);
+});
 
 
 
