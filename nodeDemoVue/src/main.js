@@ -20,7 +20,9 @@ Vue.prototype.$Add = function(item) {
   let AddMent = new Add({
     data: {
       title: item.title,
-      type: item.type
+      type: item.type,
+			listName: item.listName ? item.listName : '',
+			id: item.id ? item.id : '',
     }
   }).$mount()
   document.body.appendChild(AddMent.$el)

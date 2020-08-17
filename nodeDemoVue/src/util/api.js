@@ -10,7 +10,9 @@ const config = {
 
     Addlist: "/api/addList",// 添加列表 传分类type，列表名称name
 	
-	Dellist: "/api/delList",// 删除列表 传分类type，列表名称name
+		Dellist: "/api/delList",// 删除列表 传分类type，列表名称name
+		
+		Edilist: "/api/ediList",// 修改列表 传分类type，列表名称name, 列表id
 
     GetDataBase: "/api/getDataBase",// 获取数据库
 
