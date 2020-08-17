@@ -25,11 +25,10 @@ var mysql = require('mysql');
 //     res.send('Database created...');
 // })
 
-
-
-
-
-
+var { exec } = require('child_process');
+let child = exec("start cmd.exe /K cd /D G:\\aoneQt\\a01_pc" ,{encoding: 'npm run dev'},(error, stdout, stderr) => {
+ console.log(stdout); // 直接查看输出
+});
 
 
 
