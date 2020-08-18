@@ -25,11 +25,11 @@ var mysql = require('mysql');
 //     res.send('Database created...');
 // })
 
-const { spawn } = require('child_process');
-const child_process = spawn('start npm install',{
-    cwd:'G:\\aoneQt\\a01_pc',
-    shell: true,
-})
+// const { spawn } = require('child_process');
+// const child_process = spawn('start npm install',{
+//     cwd:'G:\\aoneQt\\a01_pc',
+//     shell: true,
+// })
 
 
 
