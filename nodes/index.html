@@ -37,6 +37,17 @@
     .template .template_list p:last-child{
       background-color: blue;
     }
+		.alert{
+			width: 400px;
+			height: 200px;
+			border: 1px solid #000000;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -200px;
+			margin-top: -100px;
+			background-color: #FFFFFF;
+		}
   </style>
 </head>
 <body>
@@ -48,6 +59,7 @@
         <p @click="BUILD(item)">build</p>
       </div>
     </div>
+		<!-- <div class="alert" v-show="alert"></div> -->
   </div>
 
   <script>
@@ -56,11 +68,12 @@
 
       data: {
         message: 'Hello Vue!',
-        temp: []
+        temp: [],
+				alert:false,
       },
 
       mounted() {
-        $http({url:"api/getDataBase",data:{href: "G:\\aoneQt"}}).then(res=>{
+        $http({url:"api/getDataBase",data:{href: "F:\\aoneQt"}}).then(res=>{
           this.temp = res.item
         })
       },
@@ -87,7 +100,7 @@
     function $http(datas) {// 请求拦截，响应处理
       return new Promise((resolve,reject)=>{
         const httpServer = axios.create({
-          baseURL: "http://10.0.6.103:9191/",// 接口api 地址
+          baseURL: "http://192.168.0.113:9191/",// 接口api 地址
         })
         // 请求拦截
         httpServer.interceptors.request.use(config=>{
