@@ -1,8 +1,12 @@
 const express=require("express");
 const os = require("os");
 const app = express();
-const path = require('path')
-const bodyParser = require('body-parser');// 处理post参数 通过req.body获取
+const path = require("path");
+const bodyParser = require("body-parser");// 处理post参数 通过req.body获取
+const fs = require("fs")
+
+app.use(express.static("./"));// 访问Html
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -38,10 +42,11 @@ app.post("/api/delList", require("../api/list.js").del);// 删除详情
 
 app.post("/api/ediList", require("../api/list.js").edi);// 修改详情
 
-app.post("/api/getDataBase", require("../api/temp.js").get);// 获取数据库
+app.post("/api/getDataBase", require("../api/temp.js").getTemp);// 获取模板
 
-app.use(express.static("./"));// 可以访问根目录下的所有文件主要是html
+app.post("/api/getDataBase", require("../api/temp.js").install);// 初始化
 
+app.post("/api/getDataBase", require("../api/temp.js").build);// 打包
 
 
 // 动态获取IP地址
@@ -55,5 +60,7 @@ let server = app.listen(9191, IParr[1].address, function () {
     let host = server.address().address;
     let port = server.address().port;
     console.log("\n地址为 http://%s:%s", host, port);
+    
 });
+
 module.exports = app;
