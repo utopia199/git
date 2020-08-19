@@ -54,7 +54,11 @@
   <div id="app">
     <div class="template">
       <div v-for="item in temp" :key="item" class="template_list">
-        <span v-text="item"></span>
+        
+        <div>
+          <span v-text="item.file"></span>
+          <span v-if="item.nodemodules">node_modules</span>
+        </div>
         <p @click="INSTALL(item)">install</p>
         <p @click="BUILD(item)">build</p>
       </div>
@@ -73,9 +77,25 @@
       },
 
       mounted() {
-        $http({url:"api/getDataBase",data:{href: "F:\\aoneQt"}}).then(res=>{
+        $http({url:"api/getDataBase",data:{href: "G:\\aoneQt"}}).then(res=>{
           this.temp = res.item
         })
+         function a(){
+          return new Promise((res,rej)=>{
+            setTimeout(() => {
+              res(123)
+            }, 1000);
+          })
+          
+        }
+
+        async function v() {
+          await  a().then(res=>{
+            console.log(res)
+          })
+          console.log(456)
+        }
+        v()
       },
 
       methods: {
@@ -87,8 +107,9 @@
         },
 
         BUILD(item) {// 打包
-          $http({url:"api/build",data:{temp: item}}).then(res=>{
-            alert(res.message)
+          $http({url:"api/build",data:{temp: item,edition: "2"}}).then(res=>{
+            console.log(new Date().getTime())
+            alert(new Date().getTime())
           })
         }
       }
@@ -100,7 +121,8 @@
     function $http(datas) {// 请求拦截，响应处理
       return new Promise((resolve,reject)=>{
         const httpServer = axios.create({
-          baseURL: "http://192.168.0.113:9191/",// 接口api 地址
+          baseURL: "http://10.0.6.103:9191/",// 接口api 地址
+          timeout: 100000
         })
         // 请求拦截
         httpServer.interceptors.request.use(config=>{
