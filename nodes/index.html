@@ -5,50 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="https://upload.todojoy.com/static/uploads/image/a03/20200429/1588154329350610.png">
   <title>Document</title>
-  <!-- <script src="./tools/artTemplate.js"></script>
-  <script src="./tools/jquery-2.2.3.min.js"></script> -->
+  <link rel="stylesheet" href="./index.css">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <style>
-    *{margin:0;padding:0;}
-    li {
-      list-style: none;
-    }
-    .template{
-      overflow: hidden;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      width: 800px;
-    }
-    .template .template_list{
-      line-height:20px;margin: 5px;border:1px solid red;display: flex;
-      flex-direction: column;
-      width: 100px;
-      text-align: center;
-      cursor: pointer;
-    }
-    .template .template_list p{
-      line-height: 25px;
-      background-color: green;
-      color:#fff;
-      margin-top: 3px;
-    }
-    .template .template_list p:last-child{
-      background-color: blue;
-    }
-		.alert{
-			width: 400px;
-			height: 200px;
-			border: 1px solid #000000;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			margin-left: -200px;
-			margin-top: -100px;
-			background-color: #FFFFFF;
-		}
-  </style>
+ 
 </head>
 <body>
   <div id="app">
@@ -57,13 +17,19 @@
         
         <div>
           <span v-text="item.file"></span>
-          <span v-if="item.nodemodules">node_modules</span>
+          <span v-if="item.nodemodules">modules</span>
         </div>
         <p @click="INSTALL(item)">install</p>
         <p @click="BUILD(item)">build</p>
       </div>
     </div>
-		<!-- <div class="alert" v-show="alert"></div> -->
+    <!-- 弹窗 -->
+    <div id="alert" v-show="alert">
+      <div class="alert_content">
+        <p>提示<span @click="alert = '' ">X</span></p>
+        <div v-text="alert"></div>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -71,45 +37,37 @@
       el: '#app',
 
       data: {
-        message: 'Hello Vue!',
         temp: [],
-				alert:false,
+				alert: false,// 是否显示弹窗
       },
 
-      mounted() {
-        $http({url:"api/getDataBase",data:{href: "G:\\aoneQt"}}).then(res=>{
-          this.temp = res.item
-        })
-         function a(){
-          return new Promise((res,rej)=>{
-            setTimeout(() => {
-              res(123)
-            }, 1000);
-          })
-          
-        }
-
-        async function v() {
-          await  a().then(res=>{
-            console.log(res)
-          })
-          console.log(456)
-        }
-        v()
+      created() {
+       this.GET_TEMP()
       },
 
       methods: {
         INSTALL(item) {// 初始化
-          $http({url:"api/install",data:{temp: item}}).then(res=>{
-            console.log(res)
-            alert(res.message)
+          $http({url:"api/install",data:{temp: item.file}}).then(res=>{
+            this.GET_TEMP()
+          }).catch(message=>{
+            this.alert = message
           })
         },
 
         BUILD(item) {// 打包
-          $http({url:"api/build",data:{temp: item,edition: "2"}}).then(res=>{
-            console.log(new Date().getTime())
-            alert(new Date().getTime())
+          $http({url:"api/build",data:{temp: item.file,edition: "2"}}).then(res=>{
+            this.alert = res.message
+          }).catch(message=>{
+            console.log(message)
+            this.alert = message
+          })
+        },
+
+        GET_TEMP(){
+          $http({url:"api/getDataBase",data:{href: "G:\\aoneQt"}}).then(res=>{
+            this.temp = res.item
+          }).catch(message=>{
+            this.alert = message
           })
         }
       }
@@ -138,10 +96,10 @@
             resolve(data)
             return data
           }else {
-            return Promise.reject(data.message)
+            return reject(data.message)
           }
         },error=>{
-          return Promise.reject(error)
+          return reject(error)
         })
         httpServer({url:datas.url,data:datas.data,method:"post"})
       })
