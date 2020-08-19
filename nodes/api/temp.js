@@ -1,12 +1,13 @@
 
 const fs = require("fs")
 const path = require("path");
-const CodePath = "G:\\aoneQt\\";// 代码路径
+const CodePath = "E:\\aoneQt\\";// 代码路径
 const { spawn } = require('child_process');
 exports.getTemp = function (req,res){// 获取模板
     let obj = new Object();
     let body = req.body;
     let filesObj = [];
+	console.log(2)
     GetTemp()
     function GetTemp() {
         let len = 1,

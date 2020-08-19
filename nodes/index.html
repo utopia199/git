@@ -35,10 +35,9 @@
   <script>
     const app = new Vue({
       el: '#app',
-
       data: {
         temp: [],
-				alert: false,// 是否显示弹窗
+		alert: false,// 是否显示弹窗
       },
 
       created() {
@@ -63,16 +62,15 @@
           })
         },
 
-        GET_TEMP(){
-          $http({url:"api/getDataBase",data:{href: "G:\\aoneQt"}}).then(res=>{
+        GET_TEMP(){// 获取网站模板
+          $http({url:"api/getDataBase",data:{href: "E:\\aoneQt"}}).then(res=>{
             this.temp = res.item
           }).catch(message=>{
             this.alert = message
           })
         }
       }
-
-    })
+    });
 
 
     
@@ -103,10 +101,7 @@
         })
         httpServer({url:datas.url,data:datas.data,method:"post"})
       })
-      
-      
     }
-   
   </script>
 </body>
 </html>
