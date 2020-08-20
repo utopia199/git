@@ -192,6 +192,15 @@ menu header .up_code {
   user-select: none;
 }
 
+menu header .svn_updata_message {
+  width: 300px;
+  background-color: #000;
+  height: 100%;
+  margin: 0 35px;
+  overflow-y: auto;
+  color: #fff;
+}
+
 menu article {
   flex: 1;
   overflow-x: hidden;
