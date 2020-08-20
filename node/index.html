@@ -83,6 +83,7 @@
       el: '#app',
       data: {
         temp: [],
+				updata: [],
         showTemp: [],
 		    alert: false,// 是否显示弹窗
         active: "全部",// 下拉框默认选中
@@ -177,7 +178,7 @@
               return 
             }
             this.loading = true
-            $http({url:"api/build",data:{temp: item.file,edition: "2"}}).then(res=>{
+            $http({url:"api/build",data:{temp: item.file,newEdition: "2",oldEdition: "1"}}).then(res=>{
               this.alert = res.message
               this.loading = false
             }).catch(message=>{
@@ -190,20 +191,24 @@
         },
 
         GET_TEMP(){// 获取网站模板
-          this.loading = true
-          $http({url:"api/getDataBase",data:{href: "G:\\aoneQt"}}).then(res=>{
-            res.item.forEach(data=>{
-              data.checkbox = false
-              data.oldlevel = 0
-              data.level = ""
-            })
-            this.temp = res.item
-            this.showTemp = res.item
-            this.loading = false
-          }).catch(message=>{
-            this.alert = message
-            this.loading = false
-          })
+					this.loading = true
+					axios.all([$http({url:"api/getDataBase",data:{href: "F:\\aoneQt"}}),$http({url:"api/getUpdata"})]).then(
+						axios.spread((temp,updata)=>{
+							this.loading = false
+							temp.item.forEach(data=>{
+							  data.checkbox = false
+							  data.oldlevel = 0
+							  data.level = ""
+							})
+							this.temp = temp.item
+							this.showTemp = temp.item
+							this.updata = updata.items
+						})
+					).catch(
+						axios.spread((temp,updata) => {
+						  this.loading = false
+						})
+					)
         },
 
         ALL_BUILD() {// 批量打包
@@ -239,7 +244,7 @@
     function $http(datas) {// 请求拦截，响应处理
       return new Promise((resolve,reject)=>{
         const httpServer = axios.create({
-          baseURL: "http://10.0.6.103:9191/",// 接口api 地址
+          baseURL: "http://192.168.0.113:9191/",// 接口api 地址
           timeout: 100000
         })
         // 请求拦截

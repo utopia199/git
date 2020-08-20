@@ -23,18 +23,6 @@ exports.getUpdata = function(req,res){ //获取更新日志
 	})
 };
 
-exports.setUpdata = function(req,res){ //添加更新日志
-	let body = req.body;
-	let obj = new Object();
-	global.GET_FILE_CONTENT('updata.json').then(resolve=>{
-	    obj.status_code = 200;
-	    obj.message = "添加成功";
-	    res.json(obj);
-	}).catch(err=>{
-	
-	})
-}
-
 function GetFile(href) {// 获取指定路径下的文件夹
     return new Promise((resolve,reject)=>{
         fs.readdir(href,function (err,files) {
