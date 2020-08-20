@@ -168,6 +168,7 @@ menu header .all_build {
   bottom: 0;
   margin: auto;
   border-radius: 5px;
+	cursor: pointer;
 }
 
 menu header .search_input {
