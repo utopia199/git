@@ -1,13 +1,12 @@
 
 const fs = require("fs")
 const path = require("path");
-const CodePath = "E:\\aoneQt\\";// 代码路径
+const CodePath = "G:\\aoneQt\\";// 代码路径
 const { spawn } = require('child_process');
 exports.getTemp = function (req,res){// 获取模板
     let obj = new Object();
     let body = req.body;
     let filesObj = [];
-	console.log(2)
     GetTemp()
     function GetTemp() {
         let len = 1,
@@ -81,19 +80,19 @@ exports.build = function (req,res){// 打包模板
         });
         // 执行完成触发
         serve.once('close', function () {
-            // console.log("打包完成-----执行拷贝",CodePath + body.temp)
-            // let Desktop = require('path').join(require('os').homedir(), 'Desktop') + "\\dist"; // 桌面路径
-            // GetFile(require('path').join(require('os').homedir(), 'Desktop')).then(desktopF=>{
-            //     if(!desktopF.includes("dist")){
-            //         fs.mkdirSync(Desktop);//创建dist文件夹
-            //     }
-            //     copyFolder(CodePath + body.temp + "\\temp",Desktop).then(()=>{
-            //         obj.status_code = 200;
-            //         obj.message =  "已在桌面生成dist文件夹";
-            //         res.json(obj);
-            //         console.log("拷贝成功",CodePath + body.temp)
-            //     }).catch(()=>{})
-            // })
+            console.log("打包完成-----执行拷贝",CodePath + body.temp)
+            let Desktop = require('path').join(require('os').homedir(), 'Desktop') + "\\dist"; // 桌面路径
+            GetFile(require('path').join(require('os').homedir(), 'Desktop')).then(desktopF=>{
+                if(!desktopF.includes("dist")){
+                    fs.mkdirSync(Desktop);//创建dist文件夹
+                }
+                copyFolder(CodePath + body.temp + "\\temp",Desktop).then(()=>{
+                    obj.status_code = 200;
+                    obj.message =  "已在桌面生成dist文件夹";
+                    res.json(obj);
+                    console.log("拷贝成功",CodePath + body.temp)
+                }).catch(()=>{})
+            })
             
         })
         function copyFolder(from, to){ // 复制文件夹到指定目录
