@@ -1,9 +1,9 @@
 const fs = require("fs")
-const CodePath = "G:\\aoneQt\\";// 代码路径
 exports.getUpdata = function(req,res){ //获取更新日志
 	let obj = new Object();
+	let body = req.body;
 	global.GET_FILE_CONTENT('updata.json').then(resolve=>{
-		GetFile("G:\\aoneQt").then((files)=>{
+		GetFile(global.href).then((files)=>{
 			for(let index = 0 ; index < files.length; index++) {
 			    if(!files[index].includes('.') && !resolve[files[index]]){
 			        resolve[files[index]] = []

@@ -2,7 +2,6 @@
 const fs = require("fs")
 const path = require("path");
 const os = require("os");
-const CodePath = "G:\\aoneQt\\";// 代码路径
 const { spawn } = require('child_process');
 exports.getTemp = function (req,res){// 获取模板
     let obj = new Object();
@@ -13,14 +12,14 @@ exports.getTemp = function (req,res){// 获取模板
         let len = 1,
             i = 0,
             ll = [];
-        GetFile(body.href).then(files=>{
+        GetFile(global.href).then(files=>{
             for(let index = 0 ; index < files.length; index++) {
                 if(!files[index].includes('.')){
                     ll.push(files[index])
                 }
             }
             len = ll.length
-            pushList(body.href + "\\" + ll[i],type=>{
+            pushList(global.href + "\\" + ll[i],type=>{
                 filesObj.push({
                     file: ll[i],
                     nodemodules: type
@@ -32,11 +31,11 @@ exports.getTemp = function (req,res){// 获取模板
             res.json(obj);
         })
         function pushList(href,callback) {
-            GetFile(body.href + "\\" + ll[i]).then(files=>{
+            GetFile(global.href + "\\" + ll[i]).then(files=>{
                 if( i < len-1) {
                    callback( files.includes("node_modules"))
                     i++
-                   pushList(body.href + "\\" + ll[i],callback)
+                   pushList(global.href + "\\" + ll[i],callback)
                 } else {
                     obj.status_code = 200;
                     obj.item = filesObj;
@@ -54,13 +53,13 @@ exports.install = function (req,res){// 初始化下载node
     let body = req.body;
     let obj = new Object();
     if( typeof body.temp === "string"){
-        console.log("开始初始化-----",CodePath + body.temp)
+        console.log("开始初始化-----",global.href + "\\" +body.temp)
         const serve = spawn('npm install',{
-            cwd:CodePath + body.temp,
+            cwd:global.href + "\\" + body.temp,
             shell: true
         })
         serve.once('close', function () {
-            console.log("初始化完成-----",CodePath + body.temp)
+            console.log("初始化完成-----",global.href + "\\" + body.temp)
             obj.status_code = 200;
             obj.message =  "初始化完成";
             res.json(obj);
@@ -74,42 +73,53 @@ exports.install = function (req,res){// 初始化下载node
 exports.build = function (req,res){// 打包模板
     let body = req.body;
     let obj = new Object();
-    if( body.temp && body.newEdition && body.oldEdition){
-        const serve = spawn('npm run build:up',{
-            cwd:CodePath + body.temp,
-            shell: true
-        });
-        // 执行完成触发
-        serve.once('close', function () {
-            //改名
+		console.log(body)
+		body.map((item,index)=>{
+			if(item.temp && item.newEdition && item.oldEdition>=0){
+				const serve = spawn('npm run build:up',{
+						cwd:global.href + "\\" + item.temp,
+						shell: true
+				});
+				// 执行完成触发
+				serve.once('close', function () {
+						//改名
 						let Desktop = require('path').join(require('os').homedir(), 'Desktop'); // 桌面路径
 						let oldpath = Desktop + "\\temp";
-						let newpath = Desktop + "\\"+body.newEdition
-            fs.rename(oldpath,newpath,function (err) {
-            	if(err){
-            		throw Error("改名失败");
-            		//...
-            	}
+						let newpath = Desktop + "\\"+item.newEdition
+						fs.rename(oldpath,newpath,function (err) {
+							if(err){
+								obj.status_code = 400;
+								obj.message =  "打包失败";
+								res.json(obj);
+								return
+							}
 							// 动态获取IP地址
 							let networkInterfaces = os.networkInterfaces();
 							let IParr = new Object()
 							for(let k in networkInterfaces){
-							    IParr=(networkInterfaces[k])
+									IParr=(networkInterfaces[k])
 							}
+							console.log(IParr[1].address)
 							let updata = {}
-							updata.temp = body.temp
+							updata.temp = item.temp
 							updata.times = time(new Date())
 							updata.name = IParr[1].address
-							updata.oldNum = body.oldEdition
-							updata.newNum = body.newEdition
-							setUpdata(updata,obj,res)
-            });
-        })
-    } else {
-        obj.status_code = 400;
-        obj.message =  "参数有误";
-        res.json(obj);
-    }
+							updata.oldNum = item.oldEdition
+							updata.newNum = item.newEdition
+							let call = false
+							if(index == body.length - 1){
+								call = true
+							}
+							setUpdata(updata,obj,res,call)
+						});
+				})
+			}else{
+				obj.status_code = 400;
+				obj.message =  "参数有误";
+				res.json(obj);
+				return
+			}
+		})
 }
 function GetFile(href) {// 获取指定路径下的文件夹
     return new Promise((resolve,reject)=>{
@@ -132,7 +142,7 @@ function time(tim) {//传时间戳
     second = ('0' + tim.getSeconds()).slice(-2);
     return year+'/'+month+'/'+day +' '+hour+':'+minute+':'+second
 }
-function setUpdata(data,obj,res){ //添加更新日志
+function setUpdata(data,obj,res,over){ //添加更新日志
 	global.GET_FILE_CONTENT('updata.json').then(resolve=>{
 		if(resolve[data.temp]){
 			resolve[data.temp].push({
@@ -143,12 +153,18 @@ function setUpdata(data,obj,res){ //添加更新日志
 				newNum: data.newNum
 			})
 			fs.writeFile('updata.json', JSON.stringify(resolve), 'utf8', (err) => {
-				if(!err){
+				if(err){
+					console.log(1)
+					obj.status_code = 400;
+					obj.message =  "打包失败";
+					res.json(obj);
+					return
+				}
+				if(!err && over){
 					obj.status_code = 200;
 					obj.message =  "打包成功";
 					res.json(obj);
 				}
-				return 
 			});
 		}
 	})
