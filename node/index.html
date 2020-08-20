@@ -63,7 +63,6 @@
         },
 
         GET_TEMP(){// 获取网站模板
-          $http({url:"api/getDataBase",data:{href: "E:\\aoneQt"}}).then(res=>{
             this.temp = res.item
           }).catch(message=>{
             this.alert = message
@@ -77,7 +76,6 @@
     function $http(datas) {// 请求拦截，响应处理
       return new Promise((resolve,reject)=>{
         const httpServer = axios.create({
-          baseURL: "http://192.168.0.106:9191/",// 接口api 地址
           timeout: 100000
         })
         // 请求拦截
