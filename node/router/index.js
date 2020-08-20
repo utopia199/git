@@ -52,6 +52,8 @@ app.post("/api/build", require("../api/temp.js").build);// 打包
 
 app.post("/api/message", require("../api/socket.js").message);// soket
 
+app.post("/api/upcode", require("../api/upcode").up);// 更新代码
+
 
 // 动态获取IP地址
 let networkInterfaces = os.networkInterfaces();
