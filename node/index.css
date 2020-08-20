@@ -180,6 +180,18 @@ menu header .search_input {
   border-radius: 5px;
 }
 
+menu header .up_code {
+  width: 78px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  background-color: #ffb800;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
 menu article {
   flex: 1;
   overflow-x: hidden;

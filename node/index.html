@@ -22,6 +22,7 @@
         <!-- 搜索条件 -->
         <input type="text" placeholder="输入模板名称搜索" class="search_input" v-model.trim="searchData">
       
+        <p class="up_code" @click="UP_CODE">更新代码</p>
         <p class="all_build" @click="ALL_BUILD">批量打包</p>
 
       </header>
@@ -227,7 +228,9 @@
           } else {
             console.log(arr)
           }
-        }
+        },
+
+        UP_CODE(){}
       }
     });
 
