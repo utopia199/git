@@ -37,11 +37,13 @@
       el: '#app',
       data: {
         temp: [],
+				upData: [],
 		alert: false,// 是否显示弹窗
       },
 
       created() {
        this.GET_TEMP()
+			 this.GET_UPDATA()
       },
 
       methods: {
@@ -54,7 +56,7 @@
         },
 
         BUILD(item) {// 打包
-          $http({url:"api/build",data:{temp: item.file,edition: "2"}}).then(res=>{
+          $http({url:"api/build",data:{temp: item.file,newEdition: "2",oldEdition:"1"}}).then(res=>{
             this.alert = res.message
           }).catch(message=>{
             console.log(message)
@@ -68,7 +70,16 @@
           }).catch(message=>{
             this.alert = message
           })
-        }
+        },
+				
+				GET_UPDATA(){//获取更新日志
+					$http({url:"api/getUpdata"}).then(res=>{
+					  this.upData = res.items
+						console.log(this.upData)
+					}).catch(message=>{
+					  this.alert = message
+					})
+				}
       }
     });
 
