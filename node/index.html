@@ -235,7 +235,16 @@
           }
         },
 
-        UP_CODE(){}
+        UP_CODE(){
+          this.loading = true
+          $http({url:"api/upcode"}).then(res=>{
+              this.alert = res.message
+              this.loading = false
+            }).catch(message=>{
+              this.alert = message
+              this.loading = false
+            })
+        },
       }
     });
 
