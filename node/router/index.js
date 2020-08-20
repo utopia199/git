@@ -44,6 +44,10 @@ app.post("/api/ediList", require("../api/list.js").edi);// 修改详情
 
 app.post("/api/getDataBase", require("../api/temp.js").getTemp);// 获取模板
 
+app.post("/api/getUpdata", require("../api/updata.js").getUpdata);// 获取更新日志
+
+app.post("/api/setUpdata", require("../api/updata.js").setUpdata);// 添加更新日志
+
 app.post("/api/install", require("../api/temp.js").install);// 初始化
 
 app.post("/api/build", require("../api/temp.js").build);// 打包
