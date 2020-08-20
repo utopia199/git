@@ -102,7 +102,7 @@ exports.build = function (req,res){// 打包模板
 							updata.name = IParr[1].address
 							updata.oldNum = body.oldEdition
 							updata.newNum = body.newEdition
-							setUpdata(updata,obj)
+							setUpdata(updata,obj,res)
             });
         })
     } else {
@@ -132,9 +132,8 @@ function time(tim) {//传时间戳
     second = ('0' + tim.getSeconds()).slice(-2);
     return year+'/'+month+'/'+day +' '+hour+':'+minute+':'+second
 }
-function setUpdata(data){ //添加更新日志
+function setUpdata(data,obj,res){ //添加更新日志
 	global.GET_FILE_CONTENT('updata.json').then(resolve=>{
-		console.log(resolve)
 		if(resolve[data.temp]){
 			resolve[data.temp].push({
 				temp: data.temp,
