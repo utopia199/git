@@ -12,23 +12,68 @@
 </head>
 <body>
   <div id="app">
-    <div class="template">
-      <div v-for="item in temp" :key="item" class="template_list">
-        
-        <div>
-          <span v-text="item.file"></span>
-          <span v-if="item.nodemodules">modules</span>
+    <!-- 主要内容 -->
+    <menu>
+      <!-- 头部 -->
+      <header>
+        <select v-model="active">
+          <option :label="item.label" v-for="item in options" :key="item.type" :value="item.label"></option>
+        </select>
+        <!-- 搜索条件 -->
+        <input type="text" placeholder="输入模板名称搜索" class="search_input" v-model.trim="searchData">
+      
+        <p class="all_build" @click="ALL_BUILD">批量打包</p>
+
+      </header>
+
+      <!-- 内容 -->
+      <article>
+        <div v-for="(item,index) in showTemp" :key="index" class="template_list">
+          <div class="temp_data">
+            <p>
+              <label :for="item.file"> 
+                <input type="checkbox" name="" :id="item.file" :checked="item.checkbox" v-model="item.checkbox">
+                模板名称：<span v-text="item.file" class="temp_name"></span>
+              </label>
+            </p>
+  
+            <p 
+              @click="activeIndex = index"
+              v-if="!item.nodemodules" 
+              class="node_modedules">
+              请执行初始化
+            </p>
+            <div v-else>
+              以前版本 <span v-text="item.oldlevel"></span>&nbsp;&nbsp;&nbsp;
+              新版本&nbsp;<input type="text" class="new_level" v-model.trim="item.level" >
+            </div>
+
+            <p class="function_btn">
+              <span @click="INSTALL(item)">初始化</span>
+              <span @click="BUILD(item)">代码打包</span>
+            </p>
+          </div>
+          <div class="operation" v-if="index === activeIndex" @click="activeIndex = -1">
+            操作日志
+          </div>
         </div>
-        <p @click="INSTALL(item)">install</p>
-        <p @click="BUILD(item)">build</p>
-      </div>
-    </div>
+        <div v-if="!showTemp.length && searchData || !showTemp.length && active!=='全部'">占无相应模板信息</div>
+      </article>
+    </menu>
+    <!-- 右侧边栏 -->
+    <aside></aside>
+
     <!-- 弹窗 -->
     <div id="alert" v-show="alert">
       <div class="alert_content">
-        <p>提示<span @click="alert = '' ">X</span></p>
+        <p>提示<span @click="alert = '' "></span></p>
         <div v-text="alert"></div>
       </div>
+    </div>
+
+    <!-- Loading -->
+    <div id="loading" v-if="loading">
+      <span v-for="item in 5" :key="item"></span>
     </div>
   </div>
 
@@ -37,37 +82,151 @@
       el: '#app',
       data: {
         temp: [],
-		alert: false,// 是否显示弹窗
+        showTemp: [],
+		    alert: false,// 是否显示弹窗
+        active: "全部",// 下拉框默认选中
+        activeIndex: -1,// 操作日志选中
+        loading: false,
+        options: [// 下拉选项
+          {label:"全部",type: "all"},
+          {label:"PC",type: "PC"},
+          {label:"WAP",type: "WAP"},
+          {label:"会员中心",type: "user"},
+          {label:"其他",type: "other"},
+        ],
+        searchData: "" // input值
       },
 
       created() {
        this.GET_TEMP()
       },
 
+      watch: {
+        "searchData"(to){
+          this.showTemp = []
+          if( to ){
+            this.active = "全部"
+          }
+          this.temp.forEach(data=>{
+            if(data.file.includes(to)){
+              this.showTemp.push(data)
+            }
+          })
+        },
+
+        "active"(to) {
+          this.showTemp = []
+          if(to !== "全部") {
+            this.searchData = ""
+          }
+          switch (to) {
+            case "PC":
+              this.temp.forEach(data=>{
+                if(data.file.includes("pc")){
+                  this.showTemp.push(data)
+                }
+              })
+              break;
+            case "WAP":
+              this.temp.forEach(data=>{
+                if(data.file.includes("wap")){
+                  this.showTemp.push(data)
+                }
+              })
+              break;
+            case "全部":
+              this.showTemp = this.temp
+              break;
+            case "会员中心":
+              this.temp.forEach(data=>{
+                if(data.file.includes("user")){
+                  this.showTemp.push(data)
+                }
+              })
+              break;
+            default:
+              this.temp.forEach(data=>{
+                if(!data.file.includes("user") && !data.file.includes("wap") && !data.file.includes("pc")){
+                  this.showTemp.push(data)
+                }
+              })
+              break;
+          }
+        }
+
+
+      },
+
       methods: {
         INSTALL(item) {// 初始化
+          this.loading = true
           $http({url:"api/install",data:{temp: item.file}}).then(res=>{
             this.GET_TEMP()
+            this.loading = false
           }).catch(message=>{
             this.alert = message
+            this.loading = false
           })
         },
 
         BUILD(item) {// 打包
-          $http({url:"api/build",data:{temp: item.file,edition: "2"}}).then(res=>{
-            this.alert = res.message
-          }).catch(message=>{
-            console.log(message)
-            this.alert = message
-          })
+          if(item.nodemodules) {
+            if(!item.level) {
+              this.alert = "请先输入版本号"
+              return 
+            }
+            this.loading = true
+            $http({url:"api/build",data:{temp: item.file,edition: "2"}}).then(res=>{
+              this.alert = res.message
+              this.loading = false
+            }).catch(message=>{
+              this.alert = message
+              this.loading = false
+            })
+          } else {
+            this.alert = "请先初始化模板"
+          }
         },
 
         GET_TEMP(){// 获取网站模板
+          this.loading = true
           $http({url:"api/getDataBase",data:{href: "G:\\aoneQt"}}).then(res=>{
+            res.item.forEach(data=>{
+              data.checkbox = false
+              data.oldlevel = 0
+              data.level = ""
+            })
             this.temp = res.item
+            this.showTemp = res.item
+            this.loading = false
           }).catch(message=>{
             this.alert = message
+            this.loading = false
           })
+        },
+
+        ALL_BUILD() {// 批量打包
+          let arr = [],
+            isbuild = false;
+          this.showTemp.forEach(data=>{
+            if(data.checkbox){
+              let item = {
+                temp: data.file,
+                edition: data.level,
+                oldlevel: data.oldlevel
+              }
+              if(!data.level){
+                isbuild = `请填写 ${data.file}版本号`
+                return 
+              }
+              arr.push(item)
+            }
+          })
+          if(isbuild) {
+            this.alert = isbuild
+          } else {
+            console.log(arr)
+          }
         }
       }
     });
@@ -81,6 +240,7 @@
           timeout: 100000
         })
         // 请求拦截
+        this.loading = true
         httpServer.interceptors.request.use(config=>{
           config.headers["device"] = "PC"
           config.headers['token'] = ""
