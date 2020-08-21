@@ -116,3 +116,5 @@ Stacktrace:   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInte
 2020-08-21 22:24:14 - Send SIGINT 18388
 2020-08-21 22:24:14 - SIGINT to 18388 failed - Killing as fallback
 2020-08-21 22:24:14 - Finished node_service.exe
+2020-08-21 22:40:25 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\node\node_modules\node-windows\lib\wrapper.js --file G:\git\node\app.js --scriptoptions= --log "node_service wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-08-21 22:40:25 - Started 20180
