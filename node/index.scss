@@ -149,12 +149,14 @@ menu{
       user-select: none;
     }
     .svn_updata_message{
-      width: 300px;
+      width: 500px;
       background-color: #000;
       height: 100%;
       margin:0 35px;
       overflow-y: auto;
       color:#fff;
+      overflow-x: hidden;
+      padding:2px;
     }
   }
   article{

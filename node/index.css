@@ -168,7 +168,6 @@ menu header .all_build {
   bottom: 0;
   margin: auto;
   border-radius: 5px;
-	cursor: pointer;
 }
 
 menu header .search_input {
@@ -194,12 +193,14 @@ menu header .up_code {
 }
 
 menu header .svn_updata_message {
-  width: 300px;
+  width: 500px;
   background-color: #000;
   height: 100%;
   margin: 0 35px;
   overflow-y: auto;
   color: #fff;
+  overflow-x: hidden;
+  padding: 2px;
 }
 
 menu article {

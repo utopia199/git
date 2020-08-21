@@ -250,7 +250,7 @@
 
         UP_CODE(){
           this.loading = true
-          $http({url:"api/upcode"}).then(res=>{
+          $http({url:"api/upcode",data:{path:"G:\\aoneQt"}}).then(res=>{
               this.svnUpdata = res.message
               this.loading = false
             }).catch(message=>{
