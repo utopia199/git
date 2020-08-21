@@ -61,6 +61,7 @@ app.post("/api/getAdmin", require("../api/upcode").adminCode);// 获取网站后
 app.post("/api/adminInstall", require("../api/upcode").adminInstall);// 初始化网站后台代码
 
 app.post("/api/adminBuild", require("../api/upcode").adminBuild);// 打包网站后台代码
+app.post("/api/compression", require("../api/compression").compression);// 压缩文件
 
 
 // 动态获取IP地址
