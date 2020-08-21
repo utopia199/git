@@ -130,43 +130,7 @@
         },
 
         "active"(to) {
-          this.showTemp = []
-          if(to !== "全部") {
-            this.searchData = ""
-          }
-          switch (to) {
-            case "PC":
-              this.temp.forEach(data=>{
-                if(data.file.includes("pc")){
-                  this.showTemp.push(data)
-                }
-              })
-              break;
-            case "WAP":
-              this.temp.forEach(data=>{
-                if(data.file.includes("wap")){
-                  this.showTemp.push(data)
-                }
-              })
-              break;
-            case "全部":
-              this.showTemp = this.temp
-              break;
-            case "会员中心":
-              this.temp.forEach(data=>{
-                if(data.file.includes("user")){
-                  this.showTemp.push(data)
-                }
-              })
-              break;
-            default:
-              this.temp.forEach(data=>{
-                if(!data.file.includes("user") && !data.file.includes("wap") && !data.file.includes("pc")){
-                  this.showTemp.push(data)
-                }
-              })
-              break;
-          }
+          this.NAV_CHANGE(to)
         }
 
 
@@ -222,6 +186,7 @@
 							this.temp = temp.item
 							this.showTemp = temp.item
 							this.updata = updata.items
+							this.NAV_CHANGE(this.active)
 						})
 					).catch(
 						this.loading = false
@@ -265,7 +230,7 @@
 
         UP_CODE(){
           this.loading = true
-          $http({url:"api/upcode",data:{path:"G:\\aoneQt"}}).then(res=>{
+          $http({url:"api/upcode",data:{path:"F:\\aoneQt"}}).then(res=>{
               this.svnUpdata = res.message
               this.loading = false
             }).catch(message=>{
@@ -273,6 +238,46 @@
               this.loading = false
             })
         },
+				
+				NAV_CHANGE(to){
+					this.showTemp = []
+					if(to !== "全部") {
+					  this.searchData = ""
+					}
+					switch (to) {
+					  case "PC":
+					    this.temp.forEach(data=>{
+					      if(data.file.includes("pc")){
+					        this.showTemp.push(data)
+					      }
+					    })
+					    break;
+					  case "WAP":
+					    this.temp.forEach(data=>{
+					      if(data.file.includes("wap")){
+					        this.showTemp.push(data)
+					      }
+					    })
+					    break;
+					  case "全部":
+					    this.showTemp = this.temp
+					    break;
+					  case "会员中心":
+					    this.temp.forEach(data=>{
+					      if(data.file.includes("user")){
+					        this.showTemp.push(data)
+					      }
+					    })
+					    break;
+					  default:
+					    this.temp.forEach(data=>{
+					      if(!data.file.includes("user") && !data.file.includes("wap") && !data.file.includes("pc")){
+					        this.showTemp.push(data)
+					      }
+					    })
+					    break;
+					}
+				}
       }
     });
 

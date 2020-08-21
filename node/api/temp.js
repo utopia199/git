@@ -83,8 +83,8 @@ exports.build = function (req,res){// 打包模板
 				serve.once('close', function () {
 						//改名
 						let Desktop = require('path').join(require('os').homedir(), 'Desktop'); // 桌面路径
-						let oldpath = Desktop + "\\dist\\temp";
-						let newpath = Desktop + "\\dist\\"+item.newEdition
+						let oldpath = Desktop + "\\dist\\"+item.temp+"\\temp";
+						let newpath = Desktop + "\\dist\\"+item.temp+"\\"+item.newEdition
 						fs.rename(oldpath,newpath,function (err) {
 							if(err){
 								obj.status_code = 400;
