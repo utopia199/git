@@ -102,3 +102,17 @@ Stacktrace:   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInte
 2020-08-21 14:12:39 - Finished node_service.exe
 2020-08-21 18:35:19 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\node\node_modules\node-windows\lib\wrapper.js --file G:\git\node\app.js --scriptoptions= --log "node_service wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
 2020-08-21 18:35:19 - Started 18388
+2020-08-21 22:24:14 - Stopping node_service.exe
+2020-08-21 22:24:14 - ProcessKill 18388
+2020-08-21 22:24:14 - Found child process: 12172 Name: conhost.exe
+2020-08-21 22:24:14 - Found child process: 14188 Name: node.exe
+2020-08-21 22:24:14 - Stopping process 12172
+2020-08-21 22:24:14 - Send SIGINT 12172
+2020-08-21 22:24:14 - SIGINT to 12172 failed - Killing as fallback
+2020-08-21 22:24:14 - Stopping process 14188
+2020-08-21 22:24:14 - Send SIGINT 14188
+2020-08-21 22:24:14 - SIGINT to 14188 failed - Killing as fallback
+2020-08-21 22:24:14 - Stopping process 18388
+2020-08-21 22:24:14 - Send SIGINT 18388
+2020-08-21 22:24:14 - SIGINT to 18388 failed - Killing as fallback
+2020-08-21 22:24:14 - Finished node_service.exe

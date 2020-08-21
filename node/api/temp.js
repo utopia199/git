@@ -73,6 +73,7 @@ exports.install = function (req,res){// 初始化下载node
 exports.build = function (req,res){// 打包模板
     let body = req.body;
     let obj = new Object();
+    console.log(body)
 		if(body.temp && body.newEdition && body.oldEdition>=0){
 			const serve = spawn('npm run build:up',{
                 cwd:global.href + "\\" + body.temp,
