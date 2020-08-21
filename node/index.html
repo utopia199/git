@@ -151,15 +151,13 @@
         },
 
         BUILD(item) {// 打包
-					let arr = []
           if(item.nodemodules) {
             if(!item.level) {
               this.alert = "请先输入版本号"
               return 
             }
             this.loading = true
-						arr.push({temp: item.file,newEdition: item.level,oldEdition: item.oldlevel})
-            $http({url:"api/build",data:arr}).then(res=>{
+            $http({url:"api/build",data:{temp: item.file,newEdition: item.level,oldEdition: item.oldlevel}}).then(res=>{
               this.alert = res.message
               this.loading = false
 							this.GET_TEMP()
@@ -217,14 +215,24 @@
           } else {
 						if(arr.length>0){
 							this.loading = true
-							$http({url:"api/build",data:arr}).then((res)=>{
-								this.loading = false
-								this.alert = res.message
-								this.GET_TEMP()
-							}).catch((err)=>{
-								this.alert = err
-								this.loading = false
-							})
+							let index = 0
+							let that = this
+							build()
+							function build(){
+								$http({url:"api/build",data:arr[index]}).then((res)=>{
+									index ++
+									if(index < arr.length){
+										build()
+									}else{
+										that.loading = false
+										that.alert = res.message
+										that.GET_TEMP()
+									}
+								}).catch((err)=>{
+									that.alert = err
+									that.loading = false
+								})
+							}
 						}else{
 							this.alert = "请选择要打包的文件"
 						}

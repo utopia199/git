@@ -73,51 +73,45 @@ exports.install = function (req,res){// 初始化下载node
 exports.build = function (req,res){// 打包模板
     let body = req.body;
     let obj = new Object();
-		body.map((item,index)=>{
-			if(item.temp && item.newEdition && item.oldEdition>=0){
-				const serve = spawn('npm run build:up',{
-						cwd:global.href + "\\" + item.temp,
-						shell: true
-				});
-				// 执行完成触发
-				serve.once('close', function () {
-						//改名
-						let Desktop = require('path').join(require('os').homedir(), 'Desktop'); // 桌面路径
-						let oldpath = Desktop + "\\dist\\"+item.temp+"\\temp";
-						let newpath = Desktop + "\\dist\\"+item.temp+"\\"+item.newEdition
-						fs.rename(oldpath,newpath,function (err) {
-							if(err){
-								obj.status_code = 400;
-								obj.message =  "打包失败";
-								res.json(obj);
-								return
-							}
-							// 动态获取IP地址
-							let networkInterfaces = os.networkInterfaces();
-							let IParr = new Object()
-							for(let k in networkInterfaces){
-									IParr=(networkInterfaces[k])
-							}
-							let updata = {}
-							updata.temp = item.temp
-							updata.times = time(new Date())
-							updata.name = IParr[1].address
-							updata.oldNum = item.oldEdition
-							updata.newNum = item.newEdition
-							let call = false
-							if(index == body.length - 1){
-								call = true
-							}
-							setUpdata(updata,obj,res,call)
-						});
-				})
-			}else{
-				obj.status_code = 400;
-				obj.message =  "参数有误";
-				res.json(obj);
-				return
-			}
-		})
+		if(body.temp && body.newEdition && body.oldEdition>=0){
+			const serve = spawn('npm run build:up',{
+					cwd:global.href + "\\" + body.temp,
+					shell: true
+			});
+			// 执行完成触发
+			serve.once('close', function () {
+					//改名
+					let Desktop = require('path').join(require('os').homedir(), 'Desktop'); // 桌面路径
+					let oldpath = Desktop + "\\dist\\"+body.temp+"\\temp";
+					let newpath = Desktop + "\\dist\\"+body.temp+"\\"+body.newEdition
+					fs.rename(oldpath,newpath,function (err) {
+						if(err){
+							obj.status_code = 400;
+							obj.message =  body.temp+"打包失败";
+							res.json(obj);
+							return
+						}
+						// 动态获取IP地址
+						let networkInterfaces = os.networkInterfaces();
+						let IParr = new Object()
+						for(let k in networkInterfaces){
+								IParr=(networkInterfaces[k])
+						}
+						let updata = {}
+						updata.temp = body.temp
+						updata.times = time(new Date())
+						updata.name = IParr[1].address
+						updata.oldNum = body.oldEdition
+						updata.newNum = body.newEdition
+						setUpdata(updata,obj,res)
+					});
+			})
+		}else{
+			obj.status_code = 400;
+			obj.message =  body.temp+"参数有误";
+			res.json(obj);
+			return
+		}
 }
 function GetFile(href) {// 获取指定路径下的文件夹
     return new Promise((resolve,reject)=>{
@@ -151,17 +145,11 @@ function setUpdata(data,obj,res,over){ //添加更新日志
 				newNum: data.newNum
 			})
 			fs.writeFile('updata.json', JSON.stringify(resolve), 'utf8', (err) => {
-				if(err){
-					console.log(1)
-					obj.status_code = 400;
-					obj.message =  "打包失败";
-					res.json(obj);
-					return
-				}
-				if(!err && over){
+				if(!err){
 					obj.status_code = 200;
 					obj.message =  "打包成功";
 					res.json(obj);
+					return
 				}
 			});
 		}
