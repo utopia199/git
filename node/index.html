@@ -76,7 +76,9 @@
       </article>
     </menu>
     <!-- 右侧边栏 -->
-    <aside></aside>
+    <aside>
+      <button @click="Sokect">test</button>
+    </aside>
 
     <!-- 弹窗 -->
     <div id="alert" v-show="alert">
@@ -310,7 +312,12 @@
 					    })
 					    break;
 					}
-				}
+				},
+        Sokect() {
+          $http({url:"api/message"}).then(res=>{
+
+          })
+        }
       }
     });
 
@@ -319,7 +326,7 @@
     function $http(datas) {// 请求拦截，响应处理
       return new Promise((resolve,reject)=>{
         const httpServer = axios.create({
-          baseURL: "http://192.168.0.113:9191/",// 接口api 地址
+          baseURL: "http://10.0.6.103:9191/",// 接口api 地址
           timeout: 100000
         })
         // 请求拦截
@@ -329,7 +336,7 @@
           config.headers['token'] = "";
           
           if(config.url === "api/getDataBase"){// 只需要在获取模板的接口传路径
-            config.headers['path'] = "F:\\aoneQt";
+            config.headers['path'] = "G:\\aoneQt";
           }
           return config
         })

@@ -54,8 +54,6 @@ app.post("/api/install", require("../api/temp.js").install);// 初始化
 
 app.post("/api/build", require("../api/temp.js").build);// 打包
 
-app.post("/api/message", require("../api/socket.js").message);// soket
-
 app.post("/api/upcode", require("../api/upcode").upCode);// 更新代码
 
 app.post("/api/compression", require("../api/compression").compression);// 压缩文件

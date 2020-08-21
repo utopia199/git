@@ -25,6 +25,7 @@ const fs = require("fs");
 //     res.send('Database created...');
 // })
 
+
 // 原本应该是操作数据库的方法
 global.GET_FILE_CONTENT = function (file){// 读取文件内容
     return new Promise((resolve,reject)=>{
