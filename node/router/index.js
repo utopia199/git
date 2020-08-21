@@ -56,6 +56,11 @@ app.post("/api/build", require("../api/temp.js").build);// 打包
 
 app.post("/api/upcode", require("../api/upcode").upCode);// 更新代码
 
+app.post("/api/getAdmin", require("../api/upcode").adminCode);// 获取网站后台代码
+
+app.post("/api/adminInstall", require("../api/upcode").adminInstall);// 初始化网站后台代码
+
+app.post("/api/adminBuild", require("../api/upcode").adminBuild);// 打包网站后台代码
 app.post("/api/compression", require("../api/compression").compression);// 压缩文件
 
 

@@ -289,44 +289,6 @@ menu article .template_list .temp_data .function_btn span:last-child {
 menu article .template_list .operation {
   width: 100%;
   height: 100px;
-	display: flex;
-	flex-direction: column;
-}
-
-menu article .template_list .operation .title{
-	line-height: 20px;
-}
-
-menu article .template_list .operation .updataBox{
-	flex: 1;
-	width: 100%;
-	overflow-y: auto;
-}
-
-menu article .template_list .operation .updataBox .list{
-	height: 30px;
-	width: 100%;
-	display: flex;
-	align-items: center;
-}
-
-menu article .template_list .operation .updataBox .list span{
-	width: 20%;
-}
-
-menu article .template_list .operation .updataBox .list .ip{
-	width: 25%;
-}
-
-menu article .template_list .operation .updataBox .list .time{
-	width: 35%;
-}
-
-menu article .template_list .operation .updataBox .no_updata{
-	line-height: 20px;
-	width: 100%;
-	text-align: center;
-	margin-top: 20px;
 }
 
 aside {
@@ -334,4 +296,71 @@ aside {
   height: 100%;
   background-color: #f5f5f5;
   overflow-y: auto;
+}
+
+aside .admin_build {
+  width: 100%;
+  height: 180px;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+aside .admin_build .admin_title {
+  line-height: 35px;
+  border-left: 4px solid #1e9fff;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f1efef;
+  text-indent: 1em;
+}
+
+aside .admin_build .admin_caozuo {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+}
+
+aside .admin_build .admin_caozuo p {
+  width: 78px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  background-color: #ffb800;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+aside .admin_build .admin_caozuo p:nth-child(2) {
+  background-color: #1e9fff;
+}
+
+aside .admin_build .admin_caozuo p:nth-child(3) {
+  background-color: #009688;
+}
+
+aside .admin_build .sub_admin {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+aside .admin_build .sub_admin .new_level {
+  color: red;
+  font-weight: bold;
+  width: 40px;
+  text-align: center;
+  margin-left: 5px;
+}
+
+aside .admin_build .sub_admin p {
+  font-size: 14px;
+}
+
+aside .admin_build .sub_admin p .temp_name {
+  font-weight: bold;
+  color: red;
 }

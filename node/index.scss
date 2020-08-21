@@ -233,5 +233,65 @@ aside{
   height: 100%;
   background-color: #f5f5f5;
   overflow-y: auto;
+  .admin_build{// 网站后台打包
+    width: 100%;
+    height: 180px;
+    background-color: #fff;
+    overflow-y: auto;
+    .admin_title{
+      line-height: 35px;
+      border-left:4px solid #1e9fff;
+      width: 100%;
+      box-sizing: border-box;
+      border-bottom:1px solid rgb(241, 239, 239);
+      text-indent: 1em;
+    }
+    .admin_caozuo{
+      display: flex;
+      justify-content:space-around ;
+      padding-top:15px;
+      p{
+        width: 78px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        background-color: #ffb800;
+        color: #ffffff;
+        border-radius: 5px;
+        cursor: pointer;
+        user-select: none;
+        &:nth-child(2){
+          background-color: #1e9fff;
+        }
+        
+        &:nth-child(3){
+          background-color: #009688;
+        }
+      }
+     
+    }
+    .sub_admin{
+      display: flex;
+      justify-content: space-between;
+      padding:0 15px;
+      box-sizing: border-box;
+      margin-top:5px;
+      .new_level{
+        color:red;
+        font-weight: bold;
+        width: 40px;
+        text-align: center;
+        margin-left:5px;
+      }
+      p{
+        font-size: 14px;
+        
+        .temp_name{
+          font-weight: bold;
+          color:red;
+        }
+      }
+    }
+  }
 }
 

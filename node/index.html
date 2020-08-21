@@ -22,7 +22,7 @@
         <!-- 搜索条件 -->
         <input type="text" placeholder="输入模板名称搜索" class="search_input" v-model.trim="searchData">
       
-        <p class="up_code" @click="UP_CODE">更新代码</p>
+        <p class="up_code" @click="UP_CODE('G:\\aoneQt')">更新代码</p>
 
         <div class="svn_updata_message" v-if="svnUpdata">{{svnUpdata}}</div>
 				
@@ -77,7 +77,24 @@
     </menu>
     <!-- 右侧边栏 -->
     <aside>
-      <button @click="Sokect">test</button>
+      <div class="admin_build">
+        <p class="admin_title">网站后台</p>
+        <div class="admin_caozuo">
+          <p @click="UP_CODE('G:\\aonePkht')">更新代码</p>
+          <p @click="INSTALL_ADMIN">初始化</p>
+          <p @click="ADMIN_BUILD">打包代码</p>
+        </div>
+        <div class="admin_temp_list">
+          <div v-for="(item,index) in adminArr" :key="index" class="sub_admin">
+            <label :for="item.file"> 
+              <input type="checkbox" name="" :id="item.file" :checked="item.checkbox" v-model="item.checkbox">
+              模板名称：<span v-text="item.file" class="temp_name"></span>
+            </label>
+            <p>新版本<input type="text" class="new_level" v-model.trim="item.new_level" ></p>
+          </div>
+        </div>
+        
+      </div>
     </aside>
 
     <!-- 弹窗 -->
@@ -114,6 +131,7 @@
         ],
         searchData: "", // input值
         svnUpdata:"",
+        adminArr: new Array(), // 网站后台模板数据
       },
 
       created() {
@@ -152,13 +170,15 @@
         },
 
         BUILD(item) {// 打包
+					let arr = []
           if(item.nodemodules) {
             if(!item.level) {
               this.alert = "请先输入版本号"
               return 
             }
             this.loading = true
-            $http({url:"api/build",data:{temp: item.file,newEdition: item.level,oldEdition: item.oldlevel}}).then(res=>{
+						arr.push({temp: item.file,newEdition: item.level,oldEdition: item.oldlevel})
+            $http({url:"api/build",data:arr}).then(res=>{
               this.alert = res.message
               this.loading = false
 							this.GET_TEMP()
@@ -192,6 +212,20 @@
 					).catch(
 						this.loading = false
 					)
+          $http({url:"api/getAdmin",data:{path: "G:\\aonePkht"}}).then(res=>{
+            let arr = [];
+            res.item.forEach(data=>{
+              let obj = {
+                file: data,
+                checkbox: false,
+                new_level: ""
+              }
+              arr.push(obj) 
+            })
+            this.adminArr = arr
+          }).catch(err=>{
+
+          })
         },
 
 				CHECK_CHANGE(event){
@@ -228,39 +262,70 @@
           } else {
 						if(arr.length>0){
 							this.loading = true
-							let index = 0
-							let that = this
-							build()
-							function build(){
-								$http({url:"api/build",data:arr[index]}).then((res)=>{
-									index ++
-									if(index < arr.length){
-										build()
-									}else{
-										that.loading = false
-										that.alert = res.message
-										that.GET_TEMP()
-									}
-								}).catch((err)=>{
-									that.alert = err
-									that.loading = false
-								})
-							}
+							$http({url:"api/build",data:arr}).then((res)=>{
+								this.loading = false
+								this.alert = res.message
+								this.GET_TEMP()
+							}).catch((err)=>{
+								this.alert = err
+								this.loading = false
+							})
 						}else{
 							this.alert = "请选择要打包的文件"
 						}
           }
         },
 
-        UP_CODE(){
+        UP_CODE(href){// 更新代码
           this.loading = true
-          $http({url:"api/upcode",data:{path:"G:\\aoneQt"}}).then(res=>{
+          $http({url:"api/upcode",data:{path:href}}).then(res=>{
               this.svnUpdata = res.message
               this.loading = false
             }).catch(message=>{
               this.alert = message
               this.loading = false
             })
+        },
+
+        INSTALL_ADMIN() {// 初始化网站后台代码
+          let active = [];
+          this.adminArr.forEach(data=>{
+            if(data.checkbox){
+              active.push(data.file)
+            }
+          })
+          if(active.length){
+            this.loading = true
+            $http({url:"/api/adminInstall",data: {temp: active, href: "G:\\aonePkht"}}).then(()=>{
+              this.loading = false
+              this.alert = "node包下载完成"
+            }).catch(err=>{
+              this.loading = false
+            })
+          } else {
+            this.alert = "请选择要初始化的模板"
+          }
+        },
+
+        ADMIN_BUILD() {// 打包网站后台
+          let arr = [];
+          this.adminArr.forEach(data=>{
+            console.log(data.checkbox ,  data.new_level)
+            if(data.checkbox &&  data.new_level) {
+              arr.push({temp: data.file,newEdition: data.new_level})
+            }
+          })
+          if(arr.legnth) {
+            this.loading = true
+            $http({url: "", data: {temp: arr}}).then(()=>{
+              this.alert = "打包成功"
+              this.loading = false
+            }).catch(()=>{
+              this.loading = false
+            })
+          } else {
+            this.alert = "请选择需要打包模板"
+          }
         },
 				
 				COMPRESSION(){ //压缩
@@ -312,12 +377,7 @@
 					    })
 					    break;
 					}
-				},
-        Sokect() {
-          $http({url:"api/message"}).then(res=>{
-
-          })
-        }
+				}
       }
     });
 
