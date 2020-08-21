@@ -272,8 +272,12 @@
         // 请求拦截
         this.loading = true
         httpServer.interceptors.request.use(config=>{
-          config.headers["device"] = "PC"
-          config.headers['token'] = ""
+          config.headers["device"] = "PC";
+          config.headers['token'] = "";
+          
+          if(config.url === "api/getDataBase"){// 只需要在获取模板的接口传路径
+            config.headers['path'] = "G:\\aoneQt";
+          }
           return config
         })
 

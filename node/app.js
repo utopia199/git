@@ -42,4 +42,3 @@ global.GET_FILE_CONTENT = function (file){// 读取文件内容
 global.SET_FILE_CONTENT = function (req){// 写入文件内容
     
 }
-global.href = "F:\\aoneQt"

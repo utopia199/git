@@ -19,6 +19,10 @@ app.all("*", function(req, res, next) {
     // 跨域允许的请求方式 
     res.header("Access-Control-Allow-Methods","POST,GET");
     res.header("Access-Content-Type","application/x-www-form-urlencoded");
+    // 通过请求头获取代码的路径
+    if (req.url === '/api/getDataBase') {
+        global.href = req.headers.path
+    }
     next();
 });
 
