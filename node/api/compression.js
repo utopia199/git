@@ -49,7 +49,6 @@ exports.compression = function(req,res){
 			    files = fs.readdirSync(path);
 			    files.forEach(function(file,index){
 			        let curPath = path + "\\" + file;
-							console.log(curPath)
 			        if(fs.statSync(curPath).isDirectory()) {
 			            deleteFolder(curPath);
 			        } else {
