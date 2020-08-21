@@ -274,6 +274,44 @@ menu article .template_list .temp_data .function_btn span:last-child {
 menu article .template_list .operation {
   width: 100%;
   height: 100px;
+	display: flex;
+	flex-direction: column;
+}
+
+menu article .template_list .operation .title{
+	line-height: 20px;
+}
+
+menu article .template_list .operation .updataBox{
+	flex: 1;
+	width: 100%;
+	overflow-y: auto;
+}
+
+menu article .template_list .operation .updataBox .list{
+	height: 30px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+menu article .template_list .operation .updataBox .list span{
+	width: 20%;
+}
+
+menu article .template_list .operation .updataBox .list .ip{
+	width: 25%;
+}
+
+menu article .template_list .operation .updataBox .list .time{
+	width: 35%;
+}
+
+menu article .template_list .operation .updataBox .no_updata{
+	line-height: 20px;
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
 }
 
 aside {
