@@ -74,38 +74,41 @@ exports.build = function (req,res){// 打包模板
     let body = req.body;
     let obj = new Object();
 		if(body.temp && body.newEdition && body.oldEdition>=0){
-			const serve = spawn('npm run build:up',{
-					cwd:global.href + "\\" + body.temp,
-					shell: true
-			});
-			// 执行完成触发
-			serve.once('close', function () {
-					//改名
-					let Desktop = require('path').join(require('os').homedir(), 'Desktop'); // 桌面路径
-					let oldpath = Desktop + "\\dist\\"+body.temp+"\\temp";
-					let newpath = Desktop + "\\dist\\"+body.temp+"\\"+body.newEdition
-					fs.rename(oldpath,newpath,function (err) {
-						if(err){
-							obj.status_code = 400;
-							obj.message =  body.temp+"打包失败";
-							res.json(obj);
-							return
-						}
-						// 动态获取IP地址
-						let networkInterfaces = os.networkInterfaces();
-						let IParr = new Object()
-						for(let k in networkInterfaces){
-								IParr=(networkInterfaces[k])
-						}
-						let updata = {}
-						updata.temp = body.temp
-						updata.times = time(new Date())
-						updata.name = IParr[1].address
-						updata.oldNum = body.oldEdition
-						updata.newNum = body.newEdition
-						setUpdata(updata,obj,res)
-					});
-			})
+            setTimeout(() => {
+                const serve = spawn('npm run build:up',{
+                    cwd:global.href + "\\" + body.temp,
+                    shell: true
+            });
+                // 执行完成触发
+                serve.once('close', function () {
+                    //改名
+                    let Desktop = require('path').join(require('os').homedir(), 'Desktop'); // 桌面路径
+                    let oldpath = Desktop + "\\dist\\"+body.temp+"\\temp";
+                    let newpath = Desktop + "\\dist\\"+body.temp+"\\"+body.newEdition
+                    fs.rename(oldpath,newpath,function (err) {
+                        if(err){
+                            obj.status_code = 400;
+                            obj.message =  body.temp+"打包失败";
+                            res.json(obj);
+                            return
+                        }
+                        // 动态获取IP地址
+                        let networkInterfaces = os.networkInterfaces();
+                        let IParr = new Object()
+                        for(let k in networkInterfaces){
+                                IParr=(networkInterfaces[k])
+                        }
+                        let updata = {}
+                        updata.temp = body.temp
+                        updata.times = time(new Date())
+                        updata.name = IParr[1].address
+                        updata.oldNum = body.oldEdition
+                        updata.newNum = body.newEdition
+                        setUpdata(updata,obj,res)
+                    });
+                })
+            }, 1000);
+			
 		}else{
 			obj.status_code = 400;
 			obj.message =  body.temp+"参数有误";
