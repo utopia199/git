@@ -47,7 +47,7 @@
               class="node_modedules">
               请执行初始化
             </p>
-            <div v-else>
+            <div v-else @click.self="activeIndex = index">
               以前版本 <span v-text="item.oldlevel"></span>&nbsp;&nbsp;&nbsp;
               新版本&nbsp;<input type="text" class="new_level" v-model.trim="item.level" >
             </div>
@@ -58,7 +58,16 @@
             </p>
           </div>
           <div class="operation" v-if="index === activeIndex" @click="activeIndex = -1">
-            操作日志
+            <p class="title">操作日志</p>
+						<div class="updataBox">
+							<div class="list" v-for="(data,e) in updata[item.file]" :key="e">
+								<span class="ip"><label>IP：</label>{{data.name}}</span>
+								<span class="time"><label>时间：</label>{{data.times}}</span>
+								<span><label>旧版本号：</label>{{data.oldNum}}</span>
+								<span><label>新版本号：</label>{{data.newNum}}</span>
+							</div>
+							<div class="no_updata" v-if="updata[item.file].length == 0">暂无更新</div>
+						</div>
           </div>
         </div>
         <div v-if="!showTemp.length && searchData || !showTemp.length && active!=='全部'">占无相应模板信息</div>
@@ -176,15 +185,18 @@
         },
 
         BUILD(item) {// 打包
+					let arr = []
           if(item.nodemodules) {
             if(!item.level) {
               this.alert = "请先输入版本号"
               return 
             }
             this.loading = true
-            $http({url:"api/build",data:{temp: item.file,newEdition: item.level,oldEdition: item.oldlevel}}).then(res=>{
+						arr.push({temp: item.file,newEdition: item.level,oldEdition: item.oldlevel})
+            $http({url:"api/build",data:arr}).then(res=>{
               this.alert = res.message
               this.loading = false
+							this.GET_TEMP()
             }).catch(message=>{
               this.alert = message
               this.loading = false
@@ -237,8 +249,11 @@
             this.alert = isbuild
           } else {
 						if(arr.length>0){
+							this.loading = true
 							$http({url:"api/build",data:arr}).then((res)=>{
-								console.log(res)
+								this.loading = false
+								this.alert = res.message
+								this.GET_TEMP()
 							}).catch((err)=>{
 								this.alert = err
 							})
@@ -266,7 +281,7 @@
     function $http(datas) {// 请求拦截，响应处理
       return new Promise((resolve,reject)=>{
         const httpServer = axios.create({
-          baseURL: "http://10.0.6.103:9191/",// 接口api 地址
+          baseURL: "http://192.168.0.113:9191/",// 接口api 地址
           timeout: 100000
         })
         // 请求拦截
@@ -276,7 +291,7 @@
           config.headers['token'] = "";
           
           if(config.url === "api/getDataBase"){// 只需要在获取模板的接口传路径
-            config.headers['path'] = "G:\\aoneQt";
+            config.headers['path'] = "F:\\aoneQt";
           }
           return config
         })

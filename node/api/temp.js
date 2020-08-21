@@ -73,7 +73,6 @@ exports.install = function (req,res){// 初始化下载node
 exports.build = function (req,res){// 打包模板
     let body = req.body;
     let obj = new Object();
-		console.log(body)
 		body.map((item,index)=>{
 			if(item.temp && item.newEdition && item.oldEdition>=0){
 				const serve = spawn('npm run build:up',{
@@ -84,8 +83,8 @@ exports.build = function (req,res){// 打包模板
 				serve.once('close', function () {
 						//改名
 						let Desktop = require('path').join(require('os').homedir(), 'Desktop'); // 桌面路径
-						let oldpath = Desktop + "\\temp";
-						let newpath = Desktop + "\\"+item.newEdition
+						let oldpath = Desktop + "\\dist\\temp";
+						let newpath = Desktop + "\\dist\\"+item.newEdition
 						fs.rename(oldpath,newpath,function (err) {
 							if(err){
 								obj.status_code = 400;
@@ -99,7 +98,6 @@ exports.build = function (req,res){// 打包模板
 							for(let k in networkInterfaces){
 									IParr=(networkInterfaces[k])
 							}
-							console.log(IParr[1].address)
 							let updata = {}
 							updata.temp = item.temp
 							updata.times = time(new Date())
