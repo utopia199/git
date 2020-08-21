@@ -58,6 +58,8 @@ app.post("/api/message", require("../api/socket.js").message);// soket
 
 app.post("/api/upcode", require("../api/upcode").upCode);// 更新代码
 
+app.post("/api/compression", require("../api/compression").compression);// 压缩文件
+
 
 // 动态获取IP地址
 let networkInterfaces = os.networkInterfaces();

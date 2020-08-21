@@ -25,7 +25,9 @@
         <p class="up_code" @click="UP_CODE">更新代码</p>
 
         <div class="svn_updata_message" v-if="svnUpdata">{{svnUpdata}}</div>
-
+				
+				<p class="compression" @click="COMPRESSION">压缩</p>
+				
         <p class="all_build" @click="ALL_BUILD">批量打包</p>
 
       </header>
@@ -36,7 +38,7 @@
           <div class="temp_data">
             <p>
               <label :for="item.file"> 
-                <input type="checkbox" name="" :id="item.file" :checked="item.checkbox" v-model="item.checkbox">
+                <input type="checkbox" name="" class="checked" :id="item.file" :checked="item.checkbox" v-model="item.checkbox" @change="CHECK_CHANGE($event)">
                 模板名称：<span v-text="item.file" class="temp_name"></span>
               </label>
             </p>
@@ -133,7 +135,6 @@
           this.NAV_CHANGE(to)
         }
 
-
       },
 
       methods: {
@@ -191,6 +192,18 @@
 					)
         },
 
+				CHECK_CHANGE(event){
+					let length = 0
+					this.showTemp.map((item,index)=>{
+						if(item.checkbox){
+							length ++ 
+						}
+					})
+					if(length>19){
+						this.alert = "一次打包不能超过20个"
+					}
+				},
+
         ALL_BUILD() {// 批量打包
           let arr = [],
 					isbuild = false;
@@ -247,6 +260,17 @@
               this.loading = false
             })
         },
+				
+				COMPRESSION(){ //压缩
+					this.loading = true
+					$http({url:"api/compression"}).then((res)=>{
+						this.alert = res.message
+						this.loading = false
+					}).catch((err)=>{
+						this.alert = err
+						this.loading = false
+					})
+				},
 				
 				NAV_CHANGE(to){
 					this.showTemp = []
