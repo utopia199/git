@@ -86,10 +86,11 @@ exports.build = function (req,res){// 打包模板
 				let newpath = Desktop + "\\dist\\"+body.temp+"\\"+body.newEdition
 				fs.rename(oldpath,newpath,function (err) {
 						if(err){
-								obj.status_code = 400;
-								obj.message =  body.temp+"打包失败";
-								res.json(obj);
-								return
+                            obj.status_code = 400;
+                            obj.message =  body.temp+"打包失败";
+                            obj.path =  require('os').homedir();
+                            res.json(obj);
+                            return
 						}
 						if(!fs.existsSync(Desktop + "\\dist\\instructions.txt")){
 							fs.writeFile(Desktop + "\\dist\\instructions.txt", "cb3_up\\static\\site-qt目录下,替换同名文件夹", 'utf8', (err) => {
@@ -98,7 +99,7 @@ exports.build = function (req,res){// 打包模板
 									let networkInterfaces = os.networkInterfaces();
 									let IParr = new Object()
 									for(let k in networkInterfaces){
-													IParr=(networkInterfaces[k])
+                                        IParr=(networkInterfaces[k])
 									}
 									let updata = {}
 									updata.temp = body.temp
@@ -114,7 +115,7 @@ exports.build = function (req,res){// 打包模板
 							let networkInterfaces = os.networkInterfaces();
 							let IParr = new Object()
 							for(let k in networkInterfaces){
-											IParr=(networkInterfaces[k])
+                                IParr=(networkInterfaces[k])
 							}
 							let updata = {}
 							updata.temp = body.temp

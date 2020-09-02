@@ -20,7 +20,7 @@
           <option :label="item.label" v-for="item in options" :key="item.type" :value="item.label"></option>
         </select>
         <!-- 搜索条件 -->
-        <input type="text" placeholder="输入模板名称搜索" class="search_input" v-model.trim="searchData">
+        <input type="text" placeholder="输入模板名称搜索" class="search_input" v-model.trim="searchData" @keydown.enter="Search">
       
         <p class="up_code" @click="UP_CODE('G:\\aoneQt')">更新代码</p>
 
@@ -158,6 +158,17 @@
       },
 
       methods: {
+        Search() {// 搜索
+          this.showTemp = []
+          if( this.searchData ){
+            this.active = "全部"
+          }
+          this.temp.forEach(data=>{
+            if(data.file.includes(this.searchData)){
+              this.showTemp.push(data)
+            }
+          })
+        },
         INSTALL(item) {// 初始化
           this.loading = true
           $http({url:"api/install",data:{temp: item.file}}).then(res=>{
