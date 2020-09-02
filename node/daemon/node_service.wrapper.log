@@ -342,3 +342,23 @@ Stacktrace:   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInte
    在 winsw.WrapperService.OnShutdown()
 2020-09-02 12:07:05 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\node\node_modules\node-windows\lib\wrapper.js --file G:\git\node\app.js --scriptoptions= --log "node_service wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
 2020-09-02 12:07:05 - Started 4448
+2020-09-02 16:42:23 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\node\node_modules\node-windows\lib\wrapper.js --file G:\git\node\app.js --scriptoptions= --log "node_service wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-09-02 16:42:23 - Started 4248
+2020-09-02 16:43:58 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\node\node_modules\node-windows\lib\wrapper.js --file G:\git\node\app.js --scriptoptions= --log "node_service wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-09-02 16:43:58 - Started 11056
+2020-09-02 16:47:00 - Stopping node_service.exe
+2020-09-02 16:47:00 - ProcessKill 11056
+2020-09-02 16:47:00 - Found child process: 8756 Name: conhost.exe
+2020-09-02 16:47:00 - Found child process: 16040 Name: node.exe
+2020-09-02 16:47:00 - Stopping process 8756
+2020-09-02 16:47:00 - Send SIGINT 8756
+2020-09-02 16:47:00 - SIGINT to 8756 failed - Killing as fallback
+2020-09-02 16:47:00 - Stopping process 16040
+2020-09-02 16:47:00 - Send SIGINT 16040
+2020-09-02 16:47:00 - SIGINT to 16040 failed - Killing as fallback
+2020-09-02 16:47:00 - Stopping process 11056
+2020-09-02 16:47:00 - Send SIGINT 11056
+2020-09-02 16:47:00 - SIGINT to 11056 failed - Killing as fallback
+2020-09-02 16:47:00 - Finished node_service.exe
+2020-09-02 16:47:09 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\node\node_modules\node-windows\lib\wrapper.js --file G:\git\node\app.js --scriptoptions= --log "node_service wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-09-02 16:47:09 - Started 7312

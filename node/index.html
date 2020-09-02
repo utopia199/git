@@ -24,7 +24,7 @@
       
         <p class="up_code" @click="UP_CODE('G:\\aoneQt')">更新代码</p>
 
-        <div class="svn_updata_message" v-if="svnUpdata">{{svnUpdata}}</div>
+        <!-- <div class="svn_updata_message" v-if="svnUpdata">{{svnUpdata}}</div> -->
 				
 				<p class="compression" @click="COMPRESSION">压缩</p>
 				
@@ -77,24 +77,7 @@
     </menu>
     <!-- 右侧边栏 -->
     <aside>
-      <div class="admin_build">
-        <p class="admin_title">网站后台</p>
-        <div class="admin_caozuo">
-          <p @click="UP_CODE('G:\\aonePkht')">更新代码</p>
-          <p @click="INSTALL_ADMIN">初始化</p>
-          <p @click="ADMIN_BUILD">打包代码</p>
-        </div>
-        <div class="admin_temp_list">
-          <div v-for="(item,index) in adminArr" :key="index" class="sub_admin">
-            <label :for="item.file"> 
-              <input type="checkbox" name="" :id="item.file" :checked="item.checkbox" v-model="item.checkbox">
-              模板名称：<span v-text="item.file" class="temp_name"></span>
-            </label>
-            <p>新版本<input type="text" class="new_level" v-model.trim="item.new_level" ></p>
-          </div>
-        </div>
-        
-      </div>
+      <div class="svn_updata_message" >{{svnUpdata}}</div>
     </aside>
 
     <!-- 弹窗 -->
@@ -131,7 +114,6 @@
         ],
         searchData: "", // input值
         svnUpdata:"",
-        adminArr: new Array(), // 网站后台模板数据
       },
 
       created() {
@@ -221,20 +203,6 @@
 					).catch(
 						this.loading = false
 					)
-          $http({url:"api/getAdmin",data:{path: "G:\\aonePkht"}}).then(res=>{
-            let arr = [];
-            res.item.forEach(data=>{
-              let obj = {
-                file: data,
-                checkbox: false,
-                new_level: ""
-              }
-              arr.push(obj) 
-            })
-            this.adminArr = arr
-          }).catch(err=>{
-
-          })
         },
 
 				CHECK_CHANGE(event){
@@ -305,48 +273,6 @@
               this.loading = false
             })
         },
-
-        INSTALL_ADMIN() {// 初始化网站后台代码
-          let active = [];
-          this.adminArr.forEach(data=>{
-            if(data.checkbox){
-              active.push(data.file)
-            }
-          })
-          if(active.length){
-            this.loading = true
-            $http({url:"/api/adminInstall",data: {temp: active, href: "G:\\aonePkht"}}).then(()=>{
-              this.loading = false
-              this.alert = "node包下载完成"
-            }).catch(err=>{
-              this.loading = false
-            })
-          } else {
-            this.alert = "请选择要初始化的模板"
-          }
-        },
-
-        ADMIN_BUILD() {// 打包网站后台
-          let arr = [];
-          this.adminArr.forEach(data=>{
-            console.log(data.checkbox ,  data.new_level)
-            if(data.checkbox &&  data.new_level) {
-              arr.push({temp: data.file,newEdition: data.new_level})
-            }
-          })
-          if(arr.legnth) {
-            this.loading = true
-            $http({url: "", data: {temp: arr}}).then(()=>{
-              this.alert = "打包成功"
-              this.loading = false
-            }).catch(()=>{
-              this.loading = false
-            })
-          } else {
-            this.alert = "请选择需要打包模板"
-          }
-        },
-				
 				COMPRESSION(){ //压缩
 					this.loading = true
 					$http({url:"api/compression"}).then((res)=>{

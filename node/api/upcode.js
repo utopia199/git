@@ -16,7 +16,7 @@ exports.upCode = function (req,res){// 执行svnup
             }
             if(data.includes("Updated to revision")); {
                 res.json({
-                    message: 'data',
+                    message: data,
                     status_code: 200
                 })
             }
