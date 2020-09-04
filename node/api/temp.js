@@ -11,8 +11,10 @@ exports.getTemp = function (req,res){// 获取模板
     function GetTemp() {
         let len = 1,
             i = 0,
+            file= null,
             ll = [];
         GetFile(global.href).then(files=>{
+            file = files
             for(let index = 0 ; index < files.length; index++) {
                 if(!files[index].includes('.')){
                     ll.push(files[index])
@@ -20,6 +22,7 @@ exports.getTemp = function (req,res){// 获取模板
             }
             len = ll.length
             pushList(global.href + "\\" + ll[i],type=>{
+                
                 filesObj.push({
                     file: ll[i],
                     nodemodules: type
@@ -32,13 +35,15 @@ exports.getTemp = function (req,res){// 获取模板
         })
         function pushList(href,callback) {
             GetFile(global.href + "\\" + ll[i]).then(files=>{
-                if( i < len-1) {
+                if( i <= len-1) {
                    callback( files.includes("node_modules"))
-                    i++
+                   
                    pushList(global.href + "\\" + ll[i],callback)
+                   i++
                 } else {
                     obj.status_code = 200;
                     obj.item = filesObj;
+                    obj.file = file;
                     res.json(obj);
                 }
             }).catch(()=>{
@@ -165,6 +170,7 @@ function setUpdata(data,obj,res){ //添加更新日志
 				oldNum: data.oldNum,
 				newNum: data.newNum
 			})
+            
 			fs.writeFile('updata.json', JSON.stringify(resolve), 'utf8', (err) => {
 				if(!err){
 					obj.status_code = 200;
