@@ -7,52 +7,27 @@ exports.getTemp = function (req,res){// 获取模板
     let obj = new Object();
     let body = req.body;
     let filesObj = [];
-    GetTemp()
-    function GetTemp() {
-        let len = 1,
-            i = 0,
-            file= null,
-            ll = [];
-        GetFile(global.href).then(files=>{
-            file = files
-            for(let index = 0 ; index < files.length; index++) {
-                if(!files[index].includes('.')){
-                    ll.push(files[index])
-                }
-            }
-            len = ll.length
-            pushList(global.href + "\\" + ll[i],type=>{
-                
-                filesObj.push({
-                    file: ll[i],
-                    nodemodules: type
-                })
-            })
-        }).catch(err=>{
-            obj.status_code = 400;
-            obj.message = "路径有误";
-            res.json(obj);
-        })
-        function pushList(href,callback) {
-            GetFile(global.href + "\\" + ll[i]).then(files=>{
-                if( i <= len-1) {
-                   callback( files.includes("node_modules"))
-                   
-                   pushList(global.href + "\\" + ll[i],callback)
-                   i++
-                } else {
-                    obj.status_code = 200;
-                    obj.item = filesObj;
-                    obj.file = file;
-                    res.json(obj);
-                }
-            }).catch(()=>{
-                obj.status_code = 400;
-                obj.message = "路径有误";
-                res.json(obj);
-            })
+    fs.readdir(global.href,function (err,files) {
+        if(err){
+            throw err
         }
-    }
+        let fil = [];
+        files.forEach((data,index)=>{
+            if(!data.includes('.')){
+                fs.readdir(global.href+'\\'+data,function (err,filess) {
+                    filesObj.push({
+                        file: files[index],
+                        nodemodules: fs.existsSync(global.href+'\\'+data + "\\node_modules")
+                    })
+                    if(index === files.length-1){
+                        obj.status_code = 200;
+                        obj.item = filesObj;
+                        res.json(obj);
+                    }
+                })
+            }
+        })
+    })
 }
 exports.install = function (req,res){// 初始化下载node
     let body = req.body;
@@ -78,7 +53,19 @@ exports.install = function (req,res){// 初始化下载node
 exports.build = function (req,res){// 打包模板
     let body = req.body;
     let obj = new Object();
+     
+        if(global.build){// 避免多终端打包
+            obj.status_code = 400;
+            obj.message =  body.temp+"打包进行中请稍后";
+            res.json(obj);
+            return 
+        } else {
+            global.build =true
+        }
+        
+    
 		if(body.temp && body.newEdition && body.oldEdition>=0){
+            
 			const serve = spawn('npm run build:up',{
                 cwd:global.href + "\\" + body.temp,
                 shell: true
@@ -95,6 +82,7 @@ exports.build = function (req,res){// 打包模板
                             obj.message =  body.temp+"打包失败";
                             obj.path =  require('os').homedir();
                             res.json(obj);
+                            global.build = false
                             return
 						}
 						if(!fs.existsSync(Desktop + "\\dist\\instructions.txt")){
@@ -139,16 +127,37 @@ exports.build = function (req,res){// 打包模板
 			return
 		}
 }
-function GetFile(href) {// 获取指定路径下的文件夹
-    return new Promise((resolve,reject)=>{
-        fs.readdir(href,function (err,files) {
-            if(err){
-                reject(false)
-                throw err
+exports.updata=function(req,res) {// 更新信息
+    let body = req.body;
+    let obj = new Object();
+    if (body.temp) {// 设置
+        global.GET_FILE_CONTENT('log.json').then(resolve=>{
+            let log = {
+                time: time(new Date()),
+                log: body.temp
             }
-            resolve(files)
+
+            resolve.items.push(log)
+
+            if(resolve.items.length >=10){
+                resolve.items.splice(0,resolve[data.temp].length-10)
+            } 
+            fs.writeFile('log.json', JSON.stringify(resolve), 'utf8', (err) => {
+				if(!err){
+					obj.status_code = 200;
+					obj.message =  "成功";
+                    res.json(obj); 
+				}
+			});
         })
-    })
+    } else {// 获取
+        global.GET_FILE_CONTENT('log.json').then(resolve=>{
+            obj.status_code = 200;
+            obj.items =  resolve.items
+            res.json(obj);    
+        })
+        
+    }
 }
 function time(tim) {//传时间戳
     let year, month, day, hour, minute, second, week
@@ -170,12 +179,16 @@ function setUpdata(data,obj,res){ //添加更新日志
 				oldNum: data.oldNum,
 				newNum: data.newNum
 			})
-            
+            // 只留三条日志
+            if(resolve[data.temp].length >=3){
+                resolve[data.temp].splice(0,resolve[data.temp].length-3)
+            }            
 			fs.writeFile('updata.json', JSON.stringify(resolve), 'utf8', (err) => {
 				if(!err){
 					obj.status_code = 200;
 					obj.message =  "打包成功";
 					res.json(obj);
+                    global.build = false
 					return
 				}
 			});

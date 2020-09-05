@@ -24,8 +24,6 @@
       
         <p class="up_code" @click="UP_CODE('G:\\aoneQt')">更新代码</p>
 
-        <!-- <div class="svn_updata_message" v-if="svnUpdata">{{svnUpdata}}</div> -->
-				
 				<p class="compression" @click="COMPRESSION">压缩</p>
 				
         <p class="all_build" @click="ALL_BUILD">批量打包</p>
@@ -33,12 +31,12 @@
       </header>
 
       <!-- 内容 -->
-      <article>
+      <article class="scroll">
         <div v-for="(item,index) in showTemp" :key="index" class="template_list">
           <div class="temp_data">
             <p>
               <label :for="item.file"> 
-                <input type="checkbox" name="" class="checked" :id="item.file" :checked="item.checkbox" v-model="item.checkbox" @change="CHECK_CHANGE($event)">
+                <input type="checkbox" name="" class="checked" :id="item.file" :checked="item.checkbox" v-model="item.checkbox" @change="INPUT_CHANGE($event,item)">
                 模板名称：<span v-text="item.file" class="temp_name"></span>
               </label>
             </p>
@@ -77,7 +75,22 @@
     </menu>
     <!-- 右侧边栏 -->
     <aside>
-      <div class="svn_updata_message" >{{svnUpdata}}</div>
+
+
+      <div class="log scroll">
+        <div v-for="(item,index) in dateLog" :key="index">
+          <p class="time" v-text="item.time">
+          </p>
+          <div v-for="(items,i) in item.log" :key="i" class="log_list">
+            <span><b v-text="items.temp"></b></span>&nbsp;
+            <span>最新版本号&nbsp;<b v-text="items.newEdition"></b></span>
+          </div>
+        </div>
+      </div>
+      <div class="message"></div>
+
+
+      <div class="svn_updata_message scroll" >{{svnUpdata}}</div>
     </aside>
 
     <!-- 弹窗 -->
@@ -113,7 +126,9 @@
           {label:"其他",type: "other"},
         ],
         searchData: "", // input值
-        svnUpdata:"",
+        svnUpdata:"",// svn更新信息
+        buildTemp: [],// 打包的模板信息
+        dateLog: [],// 最近打包信息
       },
 
       created() {
@@ -150,7 +165,8 @@
               this.showTemp.push(data)
             }
           })
-        },
+        }, 
+
         INSTALL(item) {// 初始化
           this.loading = true
           $http({url:"api/install",data:{temp: item.file}}).then(res=>{
@@ -162,104 +178,94 @@
           })
         },
 
-        BUILD(item) {// 打包
-          if(item.nodemodules) {
-            if(!item.level) {
-              this.alert = "请先输入版本号"
-              return 
-            }
-            this.loading = true
-            $http({url:"api/build",data:{temp: item.file,newEdition: item.level,oldEdition: item.oldlevel}}).then(res=>{
-              this.alert = res.message
-              this.loading = false
-							this.GET_TEMP()
-            }).catch(message=>{
-              this.alert = message
-              this.loading = false
+        INPUT_CHANGE(evt,data) {// input触发
+          if(evt.target.checked){// 选中
+            this.buildTemp.push(data)
+          } else {// 取消选中
+            this.buildTemp.forEach((sub,index)=>{
+              if(sub.file === data.file){
+                this.buildTemp.splice(index,1)
+              }
             })
-          } else {
-            this.alert = "请先初始化模板"
           }
+        },
+
+        BUILD(item) {// 打包
+          this.buildTemp = [item]
+          this.ALL_BUILD()
         },
 
         GET_TEMP(){// 获取网站模板
 					this.loading = true
-					axios.all([
-						$http({url:"api/getDataBase"}),
-						$http({url:"api/getUpdata"})
-						]).then(
-						axios.spread((temp,updata)=>{
+					axios.all([ $http({url:"api/getDataBase"}),	$http({url:"api/getUpdata"}), $http({url:"/api/updata"}) ]).then(
+						axios.spread((temp,updata,log)=>{
 							this.loading = false
 							temp.item.forEach(data=>{
 							  data.checkbox = false
 							  data.oldlevel = updata.items[data.file].length > 0 ?  updata.items[data.file][updata.items[data.file].length - 1].newNum : 0
 							  data.level = ""
 							})
-							this.temp = temp.item
-							this.showTemp = temp.item
-							this.updata = updata.items
+							this.temp = temp.item // 所有模板
+							this.showTemp = temp.item// 显示的模板
+							this.updata = updata.items // 更新的日志
 							this.NAV_CHANGE(this.active)
+              this.dateLog = log.items
 						})
 					).catch(
 						this.loading = false
 					)
         },
 
-				CHECK_CHANGE(event){
-					let length = 0
-					this.showTemp.map((item,index)=>{
-						if(item.checkbox){
-							length ++ 
-						}
-					})
-					if(length>19){
-						this.alert = "一次打包不能超过20个"
-					}
-				},
+        ALL_BUILD() {// 打包
+          if(this.buildTemp.length>0){
+            let arr=[],isbuild = false;
 
-        ALL_BUILD() {// 批量打包
-          let arr = [],
-					isbuild = false;
-          this.showTemp.forEach(data=>{
-            if(data.checkbox){
+            this.buildTemp.forEach(data=>{// 遍历判断是否有未填写版本号的
               let item = {
                 temp: data.file,
                 newEdition: data.level,
                 oldEdition: data.oldlevel
               }
+              arr.push(item)
               if(!data.level){
                 isbuild = `请填写 ${data.file}版本号`
                 return 
               }
-              arr.push(item)
+
+            })
+
+            if(isbuild){
+              this.alert = isbuild
+              return 
             }
-          })
-          if(isbuild) {
-            this.alert = isbuild
-          } else {
-						if(arr.length>0){
-              let index = 0
-              let that = this
-              this.loading = true
-              build()
-              function build(){
-                $http({url:"api/build",data:arr[index]}).then((res)=>{
-                  index ++
-                  if(index < arr.length){
-                    build()
-                  }else{
-                    that.loading = false
-                    that.alert = res.message
-                    that.GET_TEMP()
-                  }
-                }).catch((err)=>{
-                  that.alert = err
+
+            let index = 0
+            let that = this
+            this.loading = true
+            build()
+
+            function build(){
+              $http({url:"api/build",data:arr[index]}).then((res)=>{
+                index ++
+                if(index < arr.length){
+                  build()
+                }else{
                   that.loading = false
-                })
-              }
-						}else{
-							this.alert = "请选择要打包的文件"
-						}
+                  that.alert = res.message
+                  
+                  that.buildTemp = []
+                  $http({url:"/api/updata",data:{temp:arr}}).then(()=>{
+                    that.GET_TEMP()
+                  })
+                }
+              }).catch((err)=>{
+                that.alert = err
+                that.loading = false
+              })
+            }
+
+          }else{
+            this.alert = "请选择要打包的文件"
           }
         },
 
@@ -273,6 +279,7 @@
               this.loading = false
             })
         },
+
 				COMPRESSION(){ //压缩
 					this.loading = true
 					$http({url:"api/compression"}).then((res)=>{
@@ -284,7 +291,7 @@
 					})
 				},
 				
-				NAV_CHANGE(to){
+				NAV_CHANGE(to){// 下拉框  
 					this.showTemp = []
 					if(to !== "全部") {
 					  this.searchData = ""

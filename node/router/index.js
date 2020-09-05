@@ -56,11 +56,8 @@ app.post("/api/build", require("../api/temp.js").build);// 打包
 
 app.post("/api/upcode", require("../api/upcode").upCode);// 更新代码
 
-app.post("/api/getAdmin", require("../api/upcode").adminCode);// 获取网站后台代码
+app.post("/api/updata", require("../api/temp").updata);// 最近更新信息
 
-app.post("/api/adminInstall", require("../api/upcode").adminInstall);// 初始化网站后台代码
-
-app.post("/api/adminBuild", require("../api/upcode").adminBuild);// 打包网站后台代码
 app.post("/api/compression", require("../api/compression").compression);// 压缩文件
 
 
@@ -77,5 +74,6 @@ let server = app.listen(9191, IParr[1].address, function () {
     console.log("\n地址为 http://%s:%s", host, port);
     
 });
+global.build = false // 判断是否是在执行打包
 
 module.exports = app;
