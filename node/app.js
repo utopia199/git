@@ -3,7 +3,14 @@ const app = require('./router/index.js');
 const path = require("path");
 const fs = require("fs");
 // npm install -g supervisor  解决修改代码后需要重新运行   supervisor app.js
-
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://127.0.0.1:27017/node";
+ 
+MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
+  if (err) throw err;
+  console.log("数据库已创建!");
+  db.close();
+});
 
 
 // 原本应该是操作数据库的方法

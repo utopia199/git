@@ -14,6 +14,7 @@
     "chilkat_node10_win32": "^9.50.76",
     "express": "^4.17.1",
     "fstream": "^1.0.12",
+    "mongodb": "^3.6.1",
     "node-windows": "^1.0.0-beta.5",
     "supervisor": "^0.12.0",
     "svn-spawn": "^0.1.6",
