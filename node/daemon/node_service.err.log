@@ -327,3 +327,170 @@ svn: E155004: 'G:\aoneQt' is already locked.
     at ChildProcess.emit (events.js:198:13)
     at maybeClose (internal/child_process.js:982:16)
     at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)
+G:\git\node\app.js:10
+    if (err) throw err;
+    ^
+
+ReferenceError: err is not defined
+    at Object.<anonymous> (G:\git\node\app.js:10:5)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:829:12)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+G:\git\node\app.js:10
+    if (err) throw err;
+    ^
+
+ReferenceError: err is not defined
+    at Object.<anonymous> (G:\git\node\app.js:10:5)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:829:12)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+G:\git\node\app.js:10
+    if (err) throw err;
+    ^
+
+ReferenceError: err is not defined
+    at Object.<anonymous> (G:\git\node\app.js:10:5)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:829:12)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+G:\git\node\app.js:10
+    if (err) throw err;
+    ^
+
+ReferenceError: err is not defined
+    at Object.<anonymous> (G:\git\node\app.js:10:5)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:829:12)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+G:\git\node\app.js:10
+    if (err) throw err;
+    ^
+
+ReferenceError: err is not defined
+    at Object.<anonymous> (G:\git\node\app.js:10:5)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:829:12)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+G:\git\node\app.js:10
+    if (err) throw err;
+    ^
+
+ReferenceError: err is not defined
+    at Object.<anonymous> (G:\git\node\app.js:10:5)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:829:12)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+(node:5792) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:5792) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:5792) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:5792) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:5792) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+(node:6544) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6544) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:6544) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:8096) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:8096) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:8096) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:8096) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:8096) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+(node:8096) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:8096) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+(node:8096) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:8096) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+(node:8096) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:8096) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+(node:8096) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:8096) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+(node:8096) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:8096) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 7)
+(node:6644) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6644) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:6644) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:6644) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6644) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+(node:6644) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6644) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+(node:6644) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6644) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+(node:6644) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6644) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+(node:6644) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6644) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+(node:6036) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6036) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:6036) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:6036) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6036) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+(node:6036) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6036) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
+(node:6036) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6036) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
+(node:6036) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6036) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
+(node:6036) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6036) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+(node:6036) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6036) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 7)
+(node:6036) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6036) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 8)
+(node:6036) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6036) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 9)
+(node:6036) UnhandledPromiseRejectionWarning: ReferenceError: data is not defined
+    at global.GET_FILE_CONTENT.then.resolve (G:\git\node\api\temp.js:143:48)
+(node:6036) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 10)
