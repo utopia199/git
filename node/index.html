@@ -22,7 +22,7 @@
         <!-- 搜索条件 -->
         <input type="text" placeholder="输入模板名称搜索" class="search_input" v-model.trim="searchData" @keydown.enter="Search">
       
-        <p class="up_code" @click="UP_CODE('E:\\aoneQt')">更新代码</p>
+        <p class="up_code" @click="UP_CODE(href)">更新代码</p>
 
 				<p class="compression" @click="COMPRESSION">压缩</p>
 				
@@ -60,13 +60,13 @@
           <div class="operation" v-if="index === activeIndex" @click="activeIndex = -1">
             <p class="title">操作日志</p>
 						<div class="updataBox">
-							<div class="list" v-for="(data,e) in updata[item.file]" :key="e">
+							<div class="list" v-for="(data,e) in item.updata" :key="e">
 								<span class="ip"><label>IP：</label>{{data.name}}</span>
 								<span class="time"><label>时间：</label>{{data.times}}</span>
 								<span><label>旧版本号：</label>{{data.oldNum}}</span>
 								<span><label>新版本号：</label>{{data.newNum}}</span>
 							</div>
-							<div class="no_updata" v-if="updata[item.file].length == 0">暂无更新</div>
+							<div class="no_updata" v-if="item.updata.length == 0">暂无更新</div>
 						</div>
           </div>
         </div>
@@ -129,6 +129,7 @@
         svnUpdata:"",// svn更新信息
         buildTemp: [],// 打包的模板信息
         dateLog: [],// 最近打包信息
+				href:'F:\\aoneQt'
       },
 
       created() {
@@ -201,9 +202,14 @@
 						axios.spread((temp,updata,log)=>{
 							this.loading = false
 							temp.item.forEach(data=>{
-							  data.checkbox = false
-							  data.oldlevel = updata.items[data.file].length > 0 ?  updata.items[data.file][updata.items[data.file].length - 1].newNum : 0
-							  data.level = ""
+								updata.items.map(sub=>{
+									if(data.file == sub.name){
+										data.checkbox = false
+										data.oldlevel = sub.item.length > 0 ?  sub.item[sub.item.length - 1].newNum : 0
+										data.level = ""
+										data.updata = sub.item
+									}
+								})
 							})
 							this.temp = temp.item // 所有模板
 							this.showTemp = temp.item// 显示的模板
@@ -218,6 +224,7 @@
 
         ALL_BUILD() {// 打包
           if(this.buildTemp.length>0){
+						this.UP_CODE(this.href)
             let arr=[],isbuild = false;
 
             this.buildTemp.forEach(data=>{// 遍历判断是否有未填写版本号的
@@ -270,13 +277,13 @@
         },
 
         UP_CODE(href){// 更新代码
-          this.loading = true
+          // this.loading = true
           $http({url:"api/upcode",data:{path:href}}).then(res=>{
               this.svnUpdata = res.message
-              this.loading = false
+              // this.loading = false
             }).catch(message=>{
               this.alert = message
-              this.loading = false
+              // this.loading = false
             })
         },
 
@@ -338,7 +345,7 @@
     function $http(datas) {// 请求拦截，响应处理
       return new Promise((resolve,reject)=>{
         const httpServer = axios.create({
-          baseURL: "http://192.168.101.6:9191/",// 接口api 地址
+          baseURL: "http://192.168.0.107:9191/",// 接口api 地址
           timeout: 100000
         })
         // 请求拦截
@@ -348,7 +355,7 @@
           config.headers['token'] = "";
           
           if(config.url === "api/getDataBase"){// 只需要在获取模板的接口传路径
-            config.headers['path'] = "E:\\aoneQt";
+            config.headers['path'] = "F:\\aoneQt";
           }
           return config
         })
