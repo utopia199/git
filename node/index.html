@@ -22,7 +22,7 @@
         <!-- 搜索条件 -->
         <input type="text" placeholder="输入模板名称搜索" class="search_input" v-model.trim="searchData" @keydown.enter="Search">
       
-        <p class="up_code" @click="UP_CODE('G:\\aoneQt')">更新代码</p>
+        <p class="up_code" @click="UP_CODE('E:\\aoneQt')">更新代码</p>
 
 				<p class="compression" @click="COMPRESSION">压缩</p>
 				
@@ -338,7 +338,7 @@
     function $http(datas) {// 请求拦截，响应处理
       return new Promise((resolve,reject)=>{
         const httpServer = axios.create({
-          baseURL: "http://10.0.6.103:9191/",// 接口api 地址
+          baseURL: "http://192.168.101.6:9191/",// 接口api 地址
           timeout: 100000
         })
         // 请求拦截
@@ -348,7 +348,7 @@
           config.headers['token'] = "";
           
           if(config.url === "api/getDataBase"){// 只需要在获取模板的接口传路径
-            config.headers['path'] = "G:\\aoneQt";
+            config.headers['path'] = "E:\\aoneQt";
           }
           return config
         })

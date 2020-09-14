@@ -18,7 +18,7 @@ module.exports = {
   },
   productionSourceMap: true,
   css: {
-    modules: true
+    // modules: true
   },
   outputDir: 'dist',
   indexPath: "index.html"
