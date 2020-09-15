@@ -8,12 +8,18 @@ const fs = require("fs");
 const MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://127.0.0.1:27017/";
 
-global.GET_MONGONDB = function(callback) {// 连接数据库
+global.GET_MONGONDB = function(callback,tab) {// 连接数据库 node
     const MongoClient = require('mongodb').MongoClient;
     const url = "mongodb://127.0.0.1:27017/";
     MongoClient.connect(url, { useUnifiedTopology: true }, function(err, db) {
         if(err) throw err
-        const dbs = db.db("node"); // 获取表
+        let dbs = null;
+        if(tab) {
+           dbs = db.db(tab);
+        } else {
+            dbs = db.db("node");
+        }
+       
         callback(dbs,db)
     })
 }

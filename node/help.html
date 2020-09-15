@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://upload.todojoy.com/static/uploads/image/a03/20200429/1588154329350610.png">
+    <link rel="stylesheet" href="./help.css">
+    <title>哈哈哈哈</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 左侧导航 -->
+        <aside>
+            <button @click="isAdd = true">添加</button>
+            <ul v-for="item in typeList" :key="item.id">
+                <h2 v-text="item.typeName"></h2>
+                <li v-for="items in item.list" :key="items.name" v-text="items.name" @contextmenu.prevent="MenuRight"></li>
+            </ul>
+        </aside>
+        <!-- 右侧内容 -->
+        <menu>
+
+        </menu>
+        <!-- 添加视图 -->
+        <div id="add_view" v-if="isAdd">
+            <div id="view">
+                <!-- 关闭按钮 -->
+                <div class="close cursor" @click="isAdd = false"></div>
+                <p>添加列表</p>
+                <input type="text" placeholder="分类名称" v-model="addList.typeName">
+                <input type="text" placeholder="列表名称" v-model="addList.name">
+                <div class="submit cursor" @click="QuickAdd">确认添加</div>
+            </div>
+        </div>
+        <!-- 编辑视图 -->
+        <div id="add_view" v-if="isEdit">
+            <div id="view">
+                <!-- 关闭按钮 -->
+                <div class="close cursor" @click="isAdd = false"></div>
+                <p>添加列表</p>
+                <input type="text" placeholder="分类名称" v-model="addList.typeName">
+                <input type="text" placeholder="列表名称" v-model="addList.name">
+                <div class="submit cursor" @click="QuickAdd">确认添加</div>
+            </div>
+        </div>
+        <!-- 弹窗 -->
+        <div id="alert" v-if="alertMessage">
+            <div class="view" >
+                <div class="close cursor" @click="alertMessage = false"></div>
+                <div v-html="alertMessage"></div>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" v-if="loading">
+        <span v-for="item in 5" :key="item"></span>
+        </div>
+    </div>
+    <script src="./help.js"></script>
+</body>
+</html>

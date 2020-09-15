@@ -40,7 +40,7 @@ app.post("/api/getData", require("../api/data.js").get);// 获取详情
 
 app.post("/api/setData", require("../api/data.js").set);// 设置详情
 
-app.post("/api/addList", require("../api/list.js").set);// 获取详情
+app.post("/api/addList", require("../api/list.js").set);// 添加列表
 
 app.post("/api/delList", require("../api/list.js").del);// 删除详情
 
