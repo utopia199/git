@@ -17,7 +17,6 @@
             <ul v-for="item in typeList" :key="item.id">
                 <h2 v-text="item.typeName"></h2>
                 <li v-for="items in item.list" :key="items.name" v-text="items.name" @contextmenu.prevent="MenuRight($event,items,item.typeName)"></li>
-                
             </ul>
             <!-- 编辑 -->
             <div class="edit_btn cursor" v-show="isEditBtn" ref="editBtn" @click="EditList">编辑</div>

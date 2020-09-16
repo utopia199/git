@@ -215,7 +215,7 @@
 							this.showTemp = temp.item// 显示的模板
 							this.updata = updata.items // 更新的日志
 							this.NAV_CHANGE(this.active)
-              this.dateLog = log.items
+              this.dateLog = log.items.reverse()
 						})
 					).catch(
 						this.loading = false
