@@ -6,11 +6,11 @@ const fs = require("fs");
 
 // MongnoDB 数据库
 const MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://127.0.0.1:27017/";
+
 
 global.GET_MONGONDB = function(callback,tab) {// 连接数据库 node
     const MongoClient = require('mongodb').MongoClient;
-    const url = "mongodb://127.0.0.1:27017/";
+    const url = "mongodb://10.0.6.103:27017/";
     MongoClient.connect(url, { useUnifiedTopology: true }, function(err, db) {
         if(err) throw err
         let dbs = null;

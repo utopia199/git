@@ -394,3 +394,15 @@ TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Re
 (node:7992) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
 (node:5588) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
 (node:5588) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+(node:15748) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:15748) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+G:\git\node\node_modules\mongodb\lib\utils.js:668
+          throw error;
+          ^
+
+MongoServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at Timeout.waitQueueMember.timer.setTimeout [as _onTimeout] (G:\git\node\node_modules\mongodb\lib\core\sdam\topology.js:438:30)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)

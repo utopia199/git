@@ -705,3 +705,18 @@ Updating '.':
 At revision 8898.
 Updating '.':
 At revision 8899.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+U    g85_pc\src\view\register.vue
+U    g85_pc\src\js\register.js
+U    g83_pc\src\view\register.vue
+U    g83_pc\src\js\register.js
+U    g87_pc\src\js\register.js
+U    g87_pc\src\view\register.vue
+U    g86_pc\src\js\register.js
+U    g86_pc\src\mock\register.js
+U    g86_pc\src\view\register.vue
+Updated to revision 8900.
+
+地址为 http://10.0.6.103:9191
