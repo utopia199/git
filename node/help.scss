@@ -1,6 +1,7 @@
 *{padding:0;margin:0;}
 li {list-style: none;}
 $blue: #409eff;
+$orange: #f8990a;
 html,body,#app{
     width: 100%;
     height: 100%;
@@ -32,6 +33,18 @@ aside{
                 color: $blue;
             }
         }
+    }
+    .edit_btn{
+        width: 120px;
+        line-height: 35px;
+        text-align: center;
+        background-color: $orange;
+        color:$blue;
+        color:#fff;
+        position: fixed;
+        left:0;top:0;
+        z-index: 2;
+        border-radius: 5px;
     }
 }
 menu{
@@ -83,6 +96,14 @@ menu{
             border-radius: 5px;
         }
     }
+    .Edite_list_btn_box{
+        display: flex;
+        justify-content: space-around;
+        width: 260px;
+        .del{
+            background-color: $orange !important;
+        }
+    }
 }
 .close{
     width: 15px;
@@ -120,6 +141,7 @@ menu{
         justify-content: center;
         color:red;
         font-weight: bold;
+        
     }
 }
 #loading {

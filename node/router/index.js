@@ -42,9 +42,7 @@ app.post("/api/setData", require("../api/data.js").set);// 设置详情
 
 app.post("/api/addList", require("../api/list.js").set);// 添加列表
 
-app.post("/api/delList", require("../api/list.js").del);// 删除详情
-
-app.post("/api/ediList", require("../api/list.js").edi);// 修改详情
+app.post("/api/delList", require("../api/list.js").del);// 删除列表
 
 app.post("/api/getDataBase", require("../api/temp.js").getTemp);// 获取模板
 

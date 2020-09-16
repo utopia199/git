@@ -47,6 +47,20 @@ aside ul li:hover {
   color: #409eff;
 }
 
+aside .edit_btn {
+  width: 120px;
+  line-height: 35px;
+  text-align: center;
+  background-color: #f8990a;
+  color: #409eff;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  border-radius: 5px;
+}
+
 menu {
   flex: 1;
   padding: 10px 10px 10px 40px;
@@ -101,6 +115,16 @@ menu {
   text-align: center;
   margin-top: 40px;
   border-radius: 5px;
+}
+
+#add_view .Edite_list_btn_box {
+  display: flex;
+  justify-content: space-around;
+  width: 260px;
+}
+
+#add_view .Edite_list_btn_box .del {
+  background-color: #f8990a !important;
 }
 
 .close {

@@ -392,3 +392,5 @@ TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Re
     at Layer.handle [as handle_request] (G:\git\node\node_modules\express\lib\router\layer.js:95:5)
 (node:7992) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
 (node:7992) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+(node:5588) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:5588) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
