@@ -71,6 +71,8 @@
           </div>
         </div>
         <div v-if="!showTemp.length && searchData || !showTemp.length && active!=='全部'">占无相应模板信息</div>
+        <!-- 更新信息 -->
+        <div class="svn_updata_message scroll" v-text="svnUpdata" v-if="svnUpdata"></div>
       </article>
     </menu>
     <!-- 右侧边栏 -->
@@ -89,19 +91,16 @@
       </div>
       <!-- 通讯 -->
       <div class="message">
-        <div class="new_message scroll">
+        <div class="new_message scroll" ref="message">
             <p v-for="(item,index) in messageArr" :key="index">
               <b v-text="item.ip"></b>&nbsp;&nbsp;<span v-text="item.message"></span>
             </p>
         </div>
         <div class="input">
-          <input type="text" v-model="socketMessage"><button @click="SubmitMessage">发送</button>
+          <input type="text" v-model="socketMessage" @keydown.enter="SubmitMessage"><button @click="SubmitMessage">发送</button>
         </div>
         
       </div>
-
-
-      <div class="svn_updata_message scroll" >{{svnUpdata}}</div>
     </aside>
 
     <!-- 弹窗 -->
@@ -153,6 +152,10 @@
         let socket = io.connect('http://10.0.6.103:4949');
         socket.on('message', message=> {
           this.messageArr.push(message)
+          setTimeout(() => {
+            this.$refs.message.scrollTo(0,this.$refs.message.scrollHeight)  
+          }, 100);
+          
         });
         socket.on('disconnect', function() {
           console.log("设备断开")
@@ -181,7 +184,12 @@
 
       methods: {
         SubmitMessage() {// 发送消息
-          this.socket.send(this.socketMessage);
+          if(this.socketMessage){
+            this.socket.send(this.socketMessage);
+            this.socketMessage = ""
+            //  this.$refs.message.scrollTo(0,this.$refs.message.scrollHeight)
+          }
+          
         },
 
         Search() {// 搜索
@@ -307,6 +315,10 @@
         UP_CODE(href){// 更新代码
           $http({url:"api/upcode",data:{path:href}}).then(res=>{
               this.svnUpdata = res.message
+              let up = setTimeout(() => {
+                this.svnUpdata= ""
+                clearTimeout(up)
+              }, 15000);
             }).catch(message=>{
               this.alert = message
             })

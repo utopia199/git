@@ -209,17 +209,6 @@ menu header .up_code {
   user-select: none;
 }
 
-menu header .svn_updata_message {
-  width: 500px;
-  background-color: #000;
-  height: 100%;
-  margin: 0 35px;
-  overflow-y: auto;
-  color: #fff;
-  overflow-x: hidden;
-  padding: 2px;
-}
-
 menu article {
   flex: 1;
   overflow-x: hidden;
@@ -227,6 +216,8 @@ menu article {
   padding-bottom: 15px;
   padding-left: 40px;
   box-sizing: border-box;
+  position: relative;
+  padding-bottom:100px;
 }
 .scroll::-webkit-scrollbar {
   width : 10px;
@@ -241,6 +232,15 @@ menu article {
   box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background   : transparent;
+}
+.svn_updata_message{
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  left:0;bottom:0;
+  background-color: rgba(0, 0, 0, 0.712);
+  color:#fff;
+  overflow-y: auto;
 }
 
 menu article .template_list {
@@ -354,14 +354,7 @@ aside {
   display: flex;
   flex-direction: column;
 }
-aside .svn_updata_message{
-  background-color: #000;
-  width: 100%;
-  height: 150px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  color:#fff;
-}
+
 aside .log{
   background-color: #fff;
   width: 100%;
@@ -370,6 +363,7 @@ aside .log{
   overflow-x: hidden;
   color:#000000;
   text-indent: 0.5em;
+  border-bottom:3px solid orange
 }
 aside .message{
   flex: 1;
@@ -395,10 +389,31 @@ aside .message{
 
 aside .message .new_message{
   flex: 1;
-  background-color: rgb(218, 218, 218);
+  padding:0;
+  box-sizing: border-box;
   overflow-y: auto;
+}
+aside .message .new_message p {
+  margin:5px 0;
+  font-size: 14px;
 }
 aside .message .input{
   height: 30px;
   display: flex;
+}
+aside .message .input input{
+  flex: 1;
+  border:1px solid orange;
+  padding-left:10px;
+  box-sizing: border-box;
+}
+aside .message .input button {
+  width: 100px;
+  background-color: #1e9fff;
+  color:#fff;
+  border:none;
+  cursor: pointer;
+}
+aside .message b{
+  color:blueviolet;
 }

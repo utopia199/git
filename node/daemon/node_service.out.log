@@ -757,3 +757,36 @@ Updated to revision 8915.
 Updating '.':
 U    b07_pc\src\store\mutationss.js
 Updated to revision 8916.
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+A    user001\src\components\tiops.vue
+U    user001\src\utils\request.js
+U    user001\src\components\pubilc.js
+U    user001\src\api\api.js
+U    user001\src\view\withdrawal.vue
+U    user001\src\store\actionss.js
+U    g83_wap\src\components\input\input.vue
+U    g83_wap\src\view\user\newblank\default.vue
+U    b07_pc\src\store\mutationss.js
+U    g85_wap\src\components\input\input.vue
+U    g85_wap\src\view\user\newblank\default.vue
+U    g86_wap\src\view\user\newblank\default.vue
+U    g86_wap\src\components\input\input.vue
+U    g87_wap\src\components\select\select.vue
+U    g87_wap\src\components\input\input.vue
+U    g87_wap\src\view\user\newblank\default.vue
+U    g87_wap\src\store\user.js
+U    waptemp\src\view\user\bank.vue
+U    waptemp\src\view\activity.vue
+Updated to revision 8928.
+Updating '.':
+At revision 8928.
+Updating '.':
+At revision 8928.
+Updating '.':
+At revision 8928.
+Updating '.':
+At revision 8928.
