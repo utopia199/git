@@ -93,7 +93,7 @@
       <div class="message">
         <div class="new_message scroll" ref="message">
             <p v-for="(item,index) in messageArr" :key="index">
-              <b v-text="item.ip.split('::ffff:')[1]"></b>&nbsp;&nbsp;<span v-text="item.message"></span>
+              <b  v-text="item.ip.split('::ffff:')[1]"></b>&nbsp;&nbsp;<span v-text="item.message"></span>
             </p>
         </div>
         <div class="input">
@@ -187,7 +187,6 @@
           if(this.socketMessage){
             this.socket.send(this.socketMessage);
             this.socketMessage = ""
-            //  this.$refs.message.scrollTo(0,this.$refs.message.scrollHeight)
           }
           
         },
@@ -315,10 +314,10 @@
         UP_CODE(href){// 更新代码
           $http({url:"api/upcode",data:{path:href}}).then(res=>{
               this.svnUpdata = res.message
-              let up = setTimeout(() => {
+              let out = setTimeout(() => {
                 this.svnUpdata= ""
-                clearTimeout(up)
-              }, 8000);
+                clearTimeout(out)
+              }, 1500);
             }).catch(message=>{
               this.alert = message
             })
