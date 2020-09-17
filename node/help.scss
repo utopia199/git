@@ -14,8 +14,13 @@ aside{
     width: 300px;
     height: 100%;
     border-right: 1px solid #dcdfe6;
-    padding-top: 10px;
     box-sizing: border-box;
+    .add_btn{
+        width: 100%;
+        background-color: $orange;
+        height: 5px;
+        margin-bottom:15px;
+    }
     ul{
         padding: 10px 0 0 20px;
         box-sizing: border-box;

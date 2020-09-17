@@ -21,8 +21,14 @@ aside {
   width: 300px;
   height: 100%;
   border-right: 1px solid #dcdfe6;
-  padding-top: 10px;
   box-sizing: border-box;
+}
+
+aside .add_btn {
+  width: 100%;
+  background-color: #f8990a;
+  height: 5px;
+  margin-bottom: 15px;
 }
 
 aside ul {

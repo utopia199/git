@@ -16,12 +16,6 @@ const app = new Vue({
     created() {
         this.GetTypeList()
     },
-    mounted() {
-       
-    },
-    watch: {
-
-    },
     methods: {
         GetTypeList() {// 获取列表（左侧）
             this.$http({url: "/api/type/list"}).then(res=>{
@@ -40,7 +34,6 @@ const app = new Vue({
         },
 
         EditList() {// 编辑列表按钮点击
-            
             this.isEditData = JSON.parse(JSON.stringify(this.isEditBtn))
             this.isEditBtn = false
         },

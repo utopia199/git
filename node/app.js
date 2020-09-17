@@ -2,6 +2,7 @@ const express = require("express");
 const app = require('./router/index.js');
 const path = require("path");
 const fs = require("fs");
+const sio = require('socket.io');
 // npm install -g supervisor  解决修改代码后需要重新运行   supervisor app.js
 
 // MongnoDB 数据库

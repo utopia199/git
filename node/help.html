@@ -13,7 +13,8 @@
     <div id="app">
         <!-- 左侧导航 -->
         <aside>
-            <button @click="isAdd = true">添加</button>
+            <!-- 添加按钮 -->
+            <div class="add_btn" @click="isAdd = true" title="点击添加"></div>
             <ul v-for="item in typeList" :key="item.id">
                 <h2 v-text="item.typeName"></h2>
                 <li v-for="items in item.list" :key="items.name" v-text="items.name" @contextmenu.prevent="MenuRight($event,items,item.typeName)"></li>

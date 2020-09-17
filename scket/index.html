@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>socket</title>
+    <script src="https://lib.baomitu.com/jquery/3.5.0/jquery.js"></script>
+  <script src="./socket.io/socket.io.js"></script>
+</head>
+<body>
+    <ul id="messages"></ul>
+    <input type="text" id="chatmsgS">
+    <button id="chatmsg">wef</button>
+  <script>
+          var socket = io.connect('http://10.0.6.103:4949');
+          console.log(socket)
+          socket.on('connect', function() {
+              socket.on('message', function(message) {
+                  $('#messages').append($('<li></li>').text(message));
+              });
+              socket.on('disconnect', function() {
+                  $('#messages').append('<li>Disconnected</li>');
+              });
+          });
+
+          var el = $('#chatmsgS');
+          $('#chatmsg').click(function(e) {
+                e.preventDefault();
+                socket.send(el.val());
+                $('#messages').append($('<li></li>').text(el.val()));
+                el.val('');
+          });
+
+    
+     
+
+  </script>
+</body>
+</html>

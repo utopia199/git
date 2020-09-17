@@ -32,13 +32,11 @@ exports.install = function(req, res) { // 初始化下载node
 	let body = req.body;
 	let obj = new Object();
 	if (typeof body.temp === "string") {
-		console.log("开始初始化-----", global.href + "\\" + body.temp)
 		const serve = spawn('npm install', {
 			cwd: global.href + "\\" + body.temp,
 			shell: true
 		})
 		serve.once('close', function() {
-			console.log("初始化完成-----", global.href + "\\" + body.temp)
 			obj.status_code = 200;
 			obj.message = "初始化完成";
 			res.json(obj);
@@ -144,10 +142,9 @@ exports.updata = function(req, res) { // 更新信息
 			});
 		})
 	} else { // 获取
-		global.GET_MONGONDB((dbs, db) => {
-			let start = new Date(new Date().toLocaleDateString()).getTime()
-			let end = new Date(new Date(new Date().toLocaleDateString()).getTime()+24*3*60*60*1000).getTime()
-			dbs.collection("log").find({userTime:{$lte:end,$gte:start}}).toArray(function(err, result){
+		global.GET_MONGONDB((dbs, db) => {// 只获取三天前的数据
+			let end = new Date().getTime()-24*3*60*60*1000
+			dbs.collection("log").find({userTime:{$gte:end}}).toArray(function(err, result){
 				if (err) throw err;
 				obj.status_code = 200;
 				obj.items = result;

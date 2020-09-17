@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./index.css">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
- 
+  <script src="http://10.0.6.103:4949/socket.io/socket.io.js"></script>
 </head>
 <body>
   <div id="app">
@@ -87,7 +87,18 @@
           </div>
         </div>
       </div>
-      <div class="message"></div>
+      <!-- 通讯 -->
+      <div class="message">
+        <div class="new_message scroll">
+            <p v-for="(item,index) in messageArr" :key="index">
+              <b v-text="item.ip"></b>&nbsp;&nbsp;<span v-text="item.message"></span>
+            </p>
+        </div>
+        <div class="input">
+          <input type="text" v-model="socketMessage"><button @click="SubmitMessage">发送</button>
+        </div>
+        
+      </div>
 
 
       <div class="svn_updata_message scroll" >{{svnUpdata}}</div>
@@ -129,11 +140,24 @@
         svnUpdata:"",// svn更新信息
         buildTemp: [],// 打包的模板信息
         dateLog: [],// 最近打包信息
-				href:'G:\\aoneQt'
+				href:'G:\\aoneQt',
+        socketMessage: "",// socket消息
+        socket: null,// socket事例
+        messageArr: [],
       },
 
       created() {
 			 this.GET_TEMP()
+      },
+      mounted() {
+        let socket = io.connect('http://10.0.6.103:4949');
+        socket.on('message', message=> {
+          this.messageArr.push(message)
+        });
+        socket.on('disconnect', function() {
+          console.log("设备断开")
+        });
+        this.socket = socket
       },
 
       watch: {
@@ -156,6 +180,10 @@
       },
 
       methods: {
+        SubmitMessage() {// 发送消息
+          this.socket.send(this.socketMessage);
+        },
+
         Search() {// 搜索
           this.showTemp = []
           if( this.searchData ){
