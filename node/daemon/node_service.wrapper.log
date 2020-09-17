@@ -910,3 +910,19 @@ Stacktrace:   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInte
    在 winsw.WrapperService.OnShutdown()
 2020-09-17 17:21:49 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\node\node_modules\node-windows\lib\wrapper.js --file G:\git\node\app.js --scriptoptions= --log "node_service wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
 2020-09-17 17:21:49 - Started 5060
+2020-09-17 17:34:18 - Stopping node_service.exe
+2020-09-17 17:34:18 - ProcessKill 5060
+2020-09-17 17:34:18 - Found child process: 5096 Name: conhost.exe
+2020-09-17 17:34:18 - Found child process: 5636 Name: node.exe
+2020-09-17 17:34:18 - Stopping process 5096
+2020-09-17 17:34:18 - Send SIGINT 5096
+2020-09-17 17:34:18 - SIGINT to 5096 failed - Killing as fallback
+2020-09-17 17:34:18 - Stopping process 5636
+2020-09-17 17:34:18 - Send SIGINT 5636
+2020-09-17 17:34:18 - SIGINT to 5636 failed - Killing as fallback
+2020-09-17 17:34:18 - Stopping process 5060
+2020-09-17 17:34:18 - Send SIGINT 5060
+2020-09-17 17:34:18 - SIGINT to 5060 failed - Killing as fallback
+2020-09-17 17:34:18 - Finished node_service.exe
+2020-09-17 17:42:48 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\node\node_modules\node-windows\lib\wrapper.js --file G:\git\node\app.js --scriptoptions= --log "node_service wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-09-17 17:42:48 - Started 11048

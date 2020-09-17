@@ -16,3 +16,19 @@ Stacktrace:   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInte
    在 winsw.WrapperService.OnShutdown()
 2020-09-17 17:21:48 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
 2020-09-17 17:21:49 - Started 5024
+2020-09-17 17:37:16 - Stopping node_socket.exe
+2020-09-17 17:37:16 - ProcessKill 5024
+2020-09-17 17:37:17 - Found child process: 5072 Name: conhost.exe
+2020-09-17 17:37:17 - Found child process: 5612 Name: node.exe
+2020-09-17 17:37:17 - Stopping process 5072
+2020-09-17 17:37:17 - Send SIGINT 5072
+2020-09-17 17:37:17 - SIGINT to 5072 failed - Killing as fallback
+2020-09-17 17:37:17 - Stopping process 5612
+2020-09-17 17:37:17 - Send SIGINT 5612
+2020-09-17 17:37:17 - SIGINT to 5612 failed - Killing as fallback
+2020-09-17 17:37:17 - Stopping process 5024
+2020-09-17 17:37:17 - Send SIGINT 5024
+2020-09-17 17:37:17 - SIGINT to 5024 failed - Killing as fallback
+2020-09-17 17:37:17 - Finished node_socket.exe
+2020-09-17 17:42:46 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-09-17 17:42:46 - Started 5888

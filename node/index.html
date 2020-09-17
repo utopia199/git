@@ -93,11 +93,11 @@
       <div class="message">
         <div class="new_message scroll" ref="message">
             <p v-for="(item,index) in messageArr" :key="index">
-              <b v-text="item.ip"></b>&nbsp;&nbsp;<span v-text="item.message"></span>
+              <b v-text="item.ip.split('::ffff:')[1]"></b>&nbsp;&nbsp;<span v-text="item.message"></span>
             </p>
         </div>
         <div class="input">
-          <input type="text" v-model="socketMessage" @keydown.enter="SubmitMessage"><button @click="SubmitMessage">发送</button>
+          <input type="text" v-model="socketMessage" @keydown.enter="SubmitMessage" placeholder="输入需要更新消息"><button @click="SubmitMessage">发送</button>
         </div>
         
       </div>
@@ -318,7 +318,7 @@
               let up = setTimeout(() => {
                 this.svnUpdata= ""
                 clearTimeout(up)
-              }, 15000);
+              }, 8000);
             }).catch(message=>{
               this.alert = message
             })
