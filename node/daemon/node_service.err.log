@@ -502,3 +502,78 @@ SyntaxError: Unexpected token )
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
 (node:1464) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
 (node:1464) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+svn: E155037: Previous operation has not finished; run 'cleanup' if it was interrupted
+G:\git\node\api\upcode.js:15
+                throw err
+                ^
+
+Error: svn: E155037: Previous operation has not finished; run 'cleanup' if it was interrupted
+
+    at ChildProcess.<anonymous> (G:\git\node\node_modules\easy-spawn\index.js:88:25)
+    at ChildProcess.emit (events.js:198:13)
+    at maybeClose (internal/child_process.js:982:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)
+svn: E155037: Previous operation has not finished; run 'cleanup' if it was interrupted
+G:\git\node\api\upcode.js:15
+                throw err
+                ^
+
+Error: svn: E155037: Previous operation has not finished; run 'cleanup' if it was interrupted
+
+    at ChildProcess.<anonymous> (G:\git\node\node_modules\easy-spawn\index.js:88:25)
+    at ChildProcess.emit (events.js:198:13)
+    at maybeClose (internal/child_process.js:982:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)
+svn: E155037: Previous operation has not finished; run 'cleanup' if it was interrupted
+G:\git\node\api\upcode.js:15
+                throw err
+                ^
+
+Error: svn: E155037: Previous operation has not finished; run 'cleanup' if it was interrupted
+
+    at ChildProcess.<anonymous> (G:\git\node\node_modules\easy-spawn\index.js:88:25)
+    at ChildProcess.emit (events.js:198:13)
+    at maybeClose (internal/child_process.js:982:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)
+svn: E155037: Previous operation has not finished; run 'cleanup' if it was interrupted
+G:\git\node\api\upcode.js:15
+                throw err
+                ^
+
+Error: svn: E155037: Previous operation has not finished; run 'cleanup' if it was interrupted
+
+    at ChildProcess.<anonymous> (G:\git\node\node_modules\easy-spawn\index.js:88:25)
+    at ChildProcess.emit (events.js:198:13)
+    at maybeClose (internal/child_process.js:982:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)
+svn: E155037: Previous operation has not finished; run 'cleanup' if it was interrupted
+G:\git\node\api\upcode.js:15
+                throw err
+                ^
+
+Error: svn: E155037: Previous operation has not finished; run 'cleanup' if it was interrupted
+
+    at ChildProcess.<anonymous> (G:\git\node\node_modules\easy-spawn\index.js:88:25)
+    at ChildProcess.emit (events.js:198:13)
+    at maybeClose (internal/child_process.js:982:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)
+svn: E155037: Previous operation has not finished; run 'cleanup' if it was interrupted
+G:\git\node\api\upcode.js:15
+                throw err
+                ^
+
+Error: svn: E155037: Previous operation has not finished; run 'cleanup' if it was interrupted
+
+    at ChildProcess.<anonymous> (G:\git\node\node_modules\easy-spawn\index.js:88:25)
+    at ChildProcess.emit (events.js:198:13)
+    at maybeClose (internal/child_process.js:982:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)
+(node:12504) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:12504) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+(node:6168) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:6168) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+(node:6428) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:6428) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+(node:6136) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:6136) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+(node:5020) DeprecationWarning: collection.remove is deprecated. Use deleteOne, deleteMany, or bulkWrite instead.

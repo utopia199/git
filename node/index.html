@@ -92,9 +92,10 @@
       <!-- 通讯 -->
       <div class="message">
         <div class="new_message scroll" ref="message">
-            <p v-for="(item,index) in messageArr" :key="index">
-              <b  v-text="item.ip.split('::ffff:')[1]"></b>&nbsp;&nbsp;<span v-text="item.message"></span>
-            </p>
+          <div v-for="(item,index) in messageArr" :key="index" :class="{'is_message':item.ip.split('::ffff:')[1] !== ip}" class="ip_box" @dblclick="DelMessage(item,index)">
+              <span  v-html="item.ip.split('::ffff:')[1]" class="ip"></span>
+              <span v-text="item.message"></span>
+          </div>
         </div>
         <div class="input">
           <input type="text" v-model="socketMessage" @keydown.enter="SubmitMessage" placeholder="输入需要更新消息"><button @click="SubmitMessage">发送</button>
@@ -143,6 +144,7 @@
         socketMessage: "",// socket消息
         socket: null,// socket事例
         messageArr: [],
+        ip: 0,
       },
 
       created() {
@@ -188,7 +190,17 @@
             this.socket.send(this.socketMessage);
             this.socketMessage = ""
           }
-          
+        },
+
+        DelMessage(item,index) {// 删除消息
+          if(item.ip.split('::ffff:')[1] === this.ip){
+            console.log(item._id)
+            $http({url:"api/delMessage",data: item}).then(res=>{
+              this.messageArr.splice(index,1)
+            }).catch(message=>{
+             
+            })
+          }
         },
 
         Search() {// 搜索
@@ -235,6 +247,7 @@
 					this.loading = true
 					axios.all([ $http({url:"api/getDataBase"}),	$http({url:"api/getUpdata"}), $http({url:"/api/updata"}) ]).then(
 						axios.spread((temp,updata,log)=>{
+              this.ip = temp.ip // 赋值客户端IP地址
 							this.loading = false
 							temp.item.forEach(data=>{
 								updata.items.map(sub=>{

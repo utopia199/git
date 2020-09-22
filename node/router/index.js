@@ -44,6 +44,8 @@ app.post("/api/addList", require("../api/list.js").set);// 添加列表
 
 app.post("/api/delList", require("../api/list.js").del);// 删除列表
 
+app.post("/api/delMessage", require("../api/updata.js").delMessage);// 删除消息
+
 app.post("/api/getDataBase", require("../api/temp.js").getTemp);// 获取模板
 
 app.post("/api/getUpdata", require("../api/updata.js").getUpdata);// 获取更新日志

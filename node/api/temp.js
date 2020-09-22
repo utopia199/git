@@ -8,6 +8,15 @@ exports.getTemp = function(req, res) { // 获取模板
 	let obj = new Object();
 	let body = req.body;
 	let filesObj = [];
+	let ipAddress;
+	let forwardedIpsStr = req.header('x-forwarded-for'); 
+	if (forwardedIpsStr) {
+		let forwardedIps = forwardedIpsStr.split(',');
+		ipAddress = forwardedIps[0];
+	}
+	if (!ipAddress) {
+		ipAddress = req.connection.remoteAddress;
+	}
 	fs.readdir(global.href, function(err, files) {
 		if (err) {
 			throw err
@@ -22,11 +31,13 @@ exports.getTemp = function(req, res) { // 获取模板
 				if (index === files.length - 1) {
 					obj.status_code = 200;
 					obj.item = filesObj;
+					obj.ip = ipAddress
 					res.json(obj);
 				}
 			}
 		})
 	})
+	
 }
 exports.install = function(req, res) { // 初始化下载node
 	let body = req.body;
@@ -81,35 +92,33 @@ exports.build = function(req, res) { // 打包模板
 					global.build = false
 					return
 				}
+				let ipAddress;
+				let forwardedIpsStr = req.header('x-forwarded-for'); 
+				if (forwardedIpsStr) {
+					let forwardedIps = forwardedIpsStr.split(',');
+					ipAddress = forwardedIps[0];
+				}
+				if (!ipAddress) {
+					ipAddress = req.connection.remoteAddress;
+				}
+			
 				if (!fs.existsSync(Desktop + "\\dist\\instructions.txt")) {
 					fs.writeFile(Desktop + "\\dist\\instructions.txt", "cb3_up\\static\\site-qt目录下,替换同名文件夹", 'utf8', (err) => {
 						if (!err) {
-							// 动态获取IP地址
-							let networkInterfaces = os.networkInterfaces();
-							let IParr = new Object()
-							for (let k in networkInterfaces) {
-								IParr = (networkInterfaces[k])
-							}
 							let updata = {}
 							updata.temp = body.temp
 							updata.times = time(new Date())
-							updata.name = IParr[1].address
+							updata.name = ipAddress
 							updata.oldNum = body.oldEdition
 							updata.newNum = body.newEdition
 							setUpdata(updata, obj, res)
 						}
 					});
 				} else {
-					// 动态获取IP地址
-					let networkInterfaces = os.networkInterfaces();
-					let IParr = new Object()
-					for (let k in networkInterfaces) {
-						IParr = (networkInterfaces[k])
-					}
 					let updata = {}
 					updata.temp = body.temp
 					updata.times = time(new Date())
-					updata.name = IParr[1].address
+					updata.name = ipAddress
 					updata.oldNum = body.oldEdition
 					updata.newNum = body.newEdition
 					setUpdata(updata, obj, res)

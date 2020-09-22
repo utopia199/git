@@ -393,10 +393,49 @@ aside .message .new_message{
   box-sizing: border-box;
   overflow-y: auto;
 }
-aside .message .new_message p {
+aside .message .new_message .ip_box {
+  margin:5px;
+  font-size: 14px;
+  border-radius: 5px;
+  padding:10px;
+  box-sizing: border-box;
+  float: left;
+  display: flex;
+  flex-direction: column; 
+  min-width: 195px;
+  background-color: #1e9fff;
+  box-shadow: 1px 1px 3px #1e9fff;
+  color:#fff;
+}
+aside .message .new_message .ip_box .ip{
+  font-weight: bold;
+  color: red;
+}
+aside .message .new_message .is_message {
   margin:5px 0;
   font-size: 14px;
+  background-color: #009688;
+  box-shadow: 1px 1px 3px #ccc;
+  text-align: right;
+  float: right;
+  
 }
+
+
+aside .message .new_message .is_message .ip{
+  color:red;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
 aside .message .input{
   height: 30px;
   display: flex;

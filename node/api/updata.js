@@ -1,4 +1,4 @@
-const fs = require("fs")
+const fs = require("fs");
 exports.getUpdata = function(req,res){ //获取更新日志
 	let obj = new Object();
 	let items = []
@@ -63,6 +63,25 @@ exports.getUpdata = function(req,res){ //获取更新日志
 				}
 			})
 		});
+	})
+};
+exports.delMessage = function(req,res){ // 删除消息
+	let body = req.body;
+	let obj = new Object();
+	global.GET_MONGONDB((dbs,db)=>{
+		if(body){
+			dbs.collection("message").remove({ip:body.ip,message: body.message},(err, result2)=>{
+				if(err) throw err
+				obj.status_code = 200;
+				obj.message = '删除成功';
+				res.json(obj)
+				db.close();
+			})
+		} else {
+			obj.status_code = 400;
+			obj.message = 'id不能为空';
+			res.json(obj)	
+		}
 	})
 };
 

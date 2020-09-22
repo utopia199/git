@@ -790,3 +790,685 @@ Updating '.':
 At revision 8928.
 Updating '.':
 At revision 8928.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+At revision 8928.
+Updating '.':
+U    g33_wap\src\main.js
+U    g33_wap\src\view\register\default.vue
+U    g33_wap\src\view\login\default.vue
+U    g33_wap\src\App.vue
+Updated to revision 8929.
+Updating '.':
+U    user001\src\api\api.js
+U    user001\src\view\withdrawal.vue
+U    user001\src\store\actionss.js
+Updated to revision 8930.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+A    g33_wap\src\components\vipPopup
+U    g83_pc\index.html
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+U    b78_pc\src\components\marquee\index.vue
+U    b78_pc\index.html
+U    g33_wap\src\view\login\default.vue
+U    g33_wap\src\view\user\pay2\default.vue
+A    g33_wap\src\components\vipPopup\vipPopup.vue
+A    g33_wap\src\components\vipPopup\index.js
+U    g33_wap\src\components\public.js
+U    g33_wap\src\components\roll\scroll.vue
+U    b07_pc\src\js\egame.js
+U    g85_wap\config\index.js
+U    g85_wap\src\components\roll\scroll.vue
+U    g83_pc\src\components\rollnotice.vue
+U    b78_wap\src\components\roll\scroll.vue
+U    b78_wap\index.html
+ U   .
+Updated to revision 8949.
+Updating '.':
+At revision 8950.
+Updating '.':
+U    g33_wap\src\components\vipPopup\vipPopup.vue
+U    g33_wap\src\view\user\usernews2\usernewslist\default.vue
+U    g83_wap\src\components\roll\scroll.vue
+Updated to revision 8952.
+Updating '.':
+At revision 8952.
+Updating '.':
+At revision 8952.
+Updating '.':
+U    b07_pc\src\view\esports\default.vue
+U    b07_pc\src\view\egame\default.vue
+U    g83_pc\src\components\rollnotice.vue
+Updated to revision 8954.
+Updating '.':
+At revision 8954.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+U    user003\src\view\user\userBank\default.vue
+Updated to revision 8955.
+Updating '.':
+U    g33_wap\src\view\user\newblank\default.vue
+C    g33_wap\src\view\register\default.vue
+Updated to revision 8956.
+Summary of conflicts:
+  Text conflicts: 1
+Updating '.':
+At revision 8956.
+Updating '.':
+At revision 8957.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+U    g83_wap\src\view\user\usersetup\default.vue
+A    g83_wap\src\components\vipPopup
+A    g83_wap\src\components\vipPopup\index.js
+A    g87_wap\src\components\vipPopup
+A    g87_wap\src\components\vipPopup\index.js
+U    g33_wap\src\components\vipPopup\vipPopup.vue
+U    g33_wap\src\view\user\newblank\default.vue
+U    g33_wap\src\view\user\bank\default.vue
+U    user003\src\view\Cawithd\default.vue
+U    g83_wap\src\view\user\withdrawal\default.vue
+U    g83_wap\src\view\user\bank\default.vue
+U    g83_wap\src\view\user\pay2\default.vue
+U    g83_wap\src\view\user\newblank\default.vue
+A    g83_wap\src\components\vipPopup\vipPopup.vue
+U    g83_wap\src\components\public.js
+A    g87_wap\src\components\vipPopup\vipPopup.vue
+U    g87_wap\src\components\public.js
+U    g87_wap\src\view\user\usersetup\default.vue
+U    g87_wap\src\view\user\withdrawal\default.vue
+U    g87_wap\src\view\user\bank\default.vue
+U    g87_wap\src\view\user\pay2\default.vue
+Updated to revision 8977.
+Updating '.':
+At revision 8983.
+Updating '.':
+At revision 8983.
+Updating '.':
+U    g33_wap\src\view\user\usersetup\default.vue
+U    g85_wap\src\view\user\pay2\default.vue
+A    g85_wap\src\components\vipPopup
+A    g85_wap\src\components\vipPopup\index.js
+U    g33_wap\src\view\user\newblank\default.vue
+U    g33_wap\src\view\user\bank\default.vue
+U    g85_wap\src\view\user\bank\default.vue
+U    g85_wap\src\view\user\usersetup\default.vue
+U    g85_wap\src\view\user\newblank\default.vue
+U    g85_wap\src\view\user\withdrawal\default.vue
+A    g85_wap\src\components\vipPopup\vipPopup.vue
+U    g85_wap\src\components\public.js
+U    b04_app\src\view\user\newblank\default.vue
+U    b04_app\src\view\user\bank\default.vue
+Updated to revision 8984.
+Updating '.':
+At revision 9008.
+Updating '.':
+U    b81_wap\src\view\user\pay2.vue
+U    g83_wap\src\view\user\usersetup\default.vue
+U    g83_wap\src\view\user\newblank\default.vue
+U    g83_wap\src\view\user\pay2\default.vue
+U    g86_wap\src\view\user\pay2\default.vue
+U    g86_wap\src\view\user\usersetup\default.vue
+U    g86_wap\src\view\user\newblank\default.vue
+U    g87_wap\src\view\user\pay2\default.vue
+U    g87_wap\src\view\user\usersetup\default.vue
+U    g87_wap\src\view\user\newblank\default.vue
+Updated to revision 9013.
+Updating '.':
+U    g85_wap\src\view\user\usersetup\default.vue
+U    g85_wap\src\view\user\newblank\default.vue
+U    g85_wap\src\view\user\pay2\default.vue
+Updated to revision 9015.
+Updating '.':
+At revision 9015.
+Updating '.':
+U    usert02\src\view\home\default.vue
+U    usert02\src\view\user\userBank\default.vue
+U    usert02\src\view\user\userInfo\default.vue
+U    usert02\src\view\Cawithd\default.vue
+U    usert02\src\router\index.js
+U    usert02\src\components\popup\popup.vue
+U    user003\src\view\user\userBank\default.vue
+Updated to revision 9018.
+Updating '.':
+At revision 9018.
+Updating '.':
+At revision 9018.
+Updating '.':
+At revision 9018.
+Updating '.':
+At revision 9018.
+Updating '.':
+U    app2\static\img\add_number.png
+U    app2\src\view\user\payment\default.vue
+U    b04_app\src\view\user\newblank\default.vue
+Updated to revision 9019.
+Updating '.':
+At revision 9019.
+Updating '.':
+At revision 9019.
+Updating '.':
+At revision 9019.
+Updating '.':
+At revision 9019.
+Updating '.':
+Restored 'usery01\usery001'
+Restored 'usery01\usery001\css'
+Restored 'usery01\usery001\css\font'
+Restored 'usery01\usery001\css\font\iconfont.svg'
+Restored 'usery01\usery001\css\font\demo_index.html'
+Restored 'usery01\usery001\css\font\iconfont.woff'
+Restored 'usery01\usery001\css\font\iconfont.woff2'
+Restored 'usery01\usery001\css\font\iconfont.eot'
+Restored 'usery01\usery001\css\font\iconfont.css'
+Restored 'usery01\usery001\css\font\iconfont.json'
+Restored 'usery01\usery001\css\font\iconfont.js'
+Restored 'usery01\usery001\css\font\demo.css'
+Restored 'usery01\usery001\css\font\iconfont.ttf'
+Restored 'usery01\usery001\css\font2'
+Restored 'usery01\usery001\css\font2\iconfont.js'
+Restored 'usery01\usery001\css\font2\demo.css'
+Restored 'usery01\usery001\css\font2\iconfont.ttf'
+Restored 'usery01\usery001\css\font2\iconfont.svg'
+Restored 'usery01\usery001\css\font2\demo_index.html'
+Restored 'usery01\usery001\css\font2\iconfont.woff'
+Restored 'usery01\usery001\css\font2\iconfont.woff2'
+Restored 'usery01\usery001\css\font2\iconfont.eot'
+Restored 'usery01\usery001\css\font2\iconfont.css'
+Restored 'usery01\usery001\css\font2\iconfont.json'
+Restored 'usery01\usery001\css\reset.css'
+Restored 'usery01\usery001\css\app.v23.css'
+Restored 'usery01\usery001\element.md'
+Restored 'usery01\usery001\fonts'
+Restored 'usery01\usery001\fonts\element-icons.6f0a763.ttf'
+Restored 'usery01\usery001\img'
+Restored 'usery01\usery001\img\iconfont.3d8484e.svg'
+Restored 'usery01\usery001\img\czjl.376c325.png'
+Restored 'usery01\usery001\img\shiwan.bb4880c.jpg'
+Restored 'usery01\usery001\img\tuiguang.9ff71ac.jpg'
+Restored 'usery01\usery001\img\rukou.376c325.png'
+Restored 'usery01\usery001\img\iconfont.1942a35.svg'
+Restored 'usery01\usery001\img\fsjl.684fe6d.png'
+Restored 'usery01\usery001\img\xshk.376c325.png'
+Restored 'usery01\usery001\js'
+Restored 'usery01\usery001\js\42.05cce6e35cf329d5ab72.js'
+Restored 'usery01\usery001\js\37.341c1197b8cb7934ef58.js'
+Restored 'usery01\usery001\js\27.9b21193e3f1f15e70ec4.js'
+Restored 'usery01\usery001\js\24.72fcca07fe10b6a37ca6.js'
+Restored 'usery01\usery001\js\14.54c568e153391847822b.js'
+Restored 'usery01\usery001\js\2.b2c3b5215aa103fdece9.js'
+Restored 'usery01\usery001\js\69.7d8c2d8412fa1555f1c9.js'
+Restored 'usery01\usery001\js\62.8b4ad4d814f9d258d753.js'
+Restored 'usery01\usery001\js\63.1edd1ade5771bb8891bb.js'
+Restored 'usery01\usery001\js\51.6d1457bc243d350ebd32.js'
+Restored 'usery01\usery001\js\23.1e9b09874dccc50f1e85.js'
+Restored 'usery01\usery001\js\6.629bd54421bef76a7c48.js'
+Restored 'usery01\usery001\js\0.75df1ae776f6b62d0667.js'
+Restored 'usery01\usery001\js\36.6d3c64f7ff093d6e8592.js'
+Restored 'usery01\usery001\js\54.892319a4f78ea4fa3c6a.js'
+Restored 'usery01\usery001\js\53.0c503707d3c0fab9d719.js'
+Restored 'usery01\usery001\js\12.588de579cff9422feed8.js'
+Restored 'usery01\usery001\js\73.023fb49d873891fa7b44.js'
+Restored 'usery01\usery001\js\3.e668123162219900de9c.js'
+Restored 'usery01\usery001\js\49.d0a7c705cbfa4b90873a.js'
+Restored 'usery01\usery001\js\vendor.v23.js'
+Restored 'usery01\usery001\js\65.e7d8c4552c94bc64ba1c.js'
+Restored 'usery01\usery001\js\57.b8dca337a1ad8ad22c16.js'
+Restored 'usery01\usery001\js\72.70e73b039bb5f8c7f2be.js'
+Restored 'usery01\usery001\js\tool.js'
+Restored 'usery01\usery001\js\10.b9d97a45a1306fbfbbe5.js'
+Restored 'usery01\usery001\js\68.c15caed2490e3ae7a0f2.js'
+Restored 'usery01\usery001\js\48.6f6bd6d2a2fef506e626.js'
+Restored 'usery01\usery001\js\manifest.v23.js'
+Restored 'usery01\usery001\js\61.c9115fc513e77c730b34.js'
+Restored 'usery01\usery001\js\18.a86a8106bbf2a2729246.js'
+Restored 'usery01\usery001\js\7.8871e4c62bb02a3099bd.js'
+Restored 'usery01\usery001\js\5.2353930a62bc01c435fd.js'
+Restored 'usery01\usery001\js\50.3a4cccf0ef5a93fd8417.js'
+Restored 'usery01\usery001\js\47.cb63553ace8c7f225999.js'
+Restored 'usery01\usery001\js\11.9bc94d7b83b7063b1665.js'
+Restored 'usery01\usery001\js\39.09ebb41bcb9271e1d1d0.js'
+Restored 'usery01\usery001\js\66.17dba4a1614fa862c007.js'
+Restored 'usery01\usery001\js\56.03e6083912d12c7e6593.js'
+Restored 'usery01\usery001\js\35.9ab135693de0567a8a38.js'
+Restored 'usery01\usery001\js\38.21b65ef7b9e33e16aefe.js'
+Restored 'usery01\usery001\js\67.91a24355bf391c534818.js'
+Restored 'usery01\usery001\js\30.3e40cf549b6465dd226a.js'
+Restored 'usery01\usery001\js\34.fc785bf79128ada789c0.js'
+Restored 'usery01\usery001\js\20.3bb23ab1364d53afabbf.js'
+Restored 'usery01\usery001\js\16.9f84504218e66716db1e.js'
+Restored 'usery01\usery001\js\8.cbced1cab4271c1cdb61.js'
+Restored 'usery01\usery001\js\52.065aa8ecffabb456ce6a.js'
+Restored 'usery01\usery001\js\40.49274bcedb3a06f938a0.js'
+Restored 'usery01\usery001\js\26.6e5fa637713557b3d924.js'
+Restored 'usery01\usery001\js\31.d1bad1d75095729d0f7e.js'
+Restored 'usery01\usery001\js\19.acd5df1266f3ea362fb7.js'
+Restored 'usery01\usery001\js\59.668fafd070960ea42232.js'
+Restored 'usery01\usery001\js\28.1238cfd4bb340ef199b8.js'
+Restored 'usery01\usery001\js\app.v23.js'
+Restored 'usery01\usery001\js\60.6cef689293ffd7c75761.js'
+Restored 'usery01\usery001\js\33.461fbbb240576d77c37a.js'
+Restored 'usery01\usery001\js\71.93989881eb08c16a0634.js'
+Restored 'usery01\usery001\js\44.170aa40fb6020b9a1929.js'
+Restored 'usery01\usery001\js\29.4f86d5dc4991b47d5b2e.js'
+Restored 'usery01\usery001\js\22.1cfde3a94abd8f790508.js'
+Restored 'usery01\usery001\js\55.2059a21043161042d569.js'
+Restored 'usery01\usery001\js\1.266cdab2b0415f00eebe.js'
+Restored 'usery01\usery001\js\25.c09ff436aa103487f59f.js'
+Restored 'usery01\usery001\js\45.fd86bac051c78ab70aa5.js'
+Restored 'usery01\usery001\js\4.57421ea59bb47452250d.js'
+Restored 'usery01\usery001\js\17.6ce41e0bfabc8081fb63.js'
+Restored 'usery01\usery001\js\9.9ab9a522d50ae0ec476a.js'
+Restored 'usery01\usery001\js\58.bd7d389a2ee57c1b7c44.js'
+Restored 'usery01\usery001\js\43.aab278b18c734bbd4078.js'
+Restored 'usery01\usery001\js\32.e3c4d300d0aa8fb9451a.js'
+Restored 'usery01\usery001\js\13.5e8321ee1df26c79b6a1.js'
+Restored 'usery01\usery001\js\21.a6c601b42a8caa59f51c.js'
+Restored 'usery01\usery001\js\64.ed410abae4b2ed4b665a.js'
+Restored 'usery01\usery001\js\46.e6cfffb5ebc45847af93.js'
+Restored 'usery01\usery001\js\41.e73af9a7db215e1d8086.js'
+Restored 'usery01\usery001\js\15.5a6f93e1a4d4786f15dc.js'
+Restored 'usery01\usery001\js\70.9838b14422f7b6e73c1f.js'
+U    g33_wap\index.html
+U    app2\src\view\user\payment\default.vue
+U    g33_wap\src\view\user\usersetup\default.vue
+U    g33_wap\src\view\user\newblank\default.vue
+U    g33_wap\src\view\user\bank\default.vue
+U    g33_wap\src\view\user\pay2\default.vue
+U    g33_wap\src\view\user\default.vue
+U    b67_wap\src\view\user\usersetup.vue
+U    b67_wap\src\view\user\bank.vue
+U    waptemp\src\view\login.vue
+Updated to revision 9021.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+U    b07_wap\src\router\router.js
+U    b07_wap\src\api\API.js
+U    b07_wap\src\view\user\usersetup\default.vue
+U    b07_wap\src\view\user\newblank\default.vue
+U    b07_wap\src\view\user\withdrawal\default.vue
+U    b07_wap\src\store\user.js
+U    b67_wap\src\view\user\usersetup.vue
+Updated to revision 9045.
+Updating '.':
+U    b07_wap\src\view\agentReg\default.vue
+U    b07_wap\src\view\register\default.vue
+U    b07_wap\src\view\login\default.vue
+Updated to revision 9046.
+Updating '.':
+At revision 9046.
+Updating '.':
+U    g33_wap\src\router\router.js
+U    g33_wap\src\view\user\newblank\default.vue
+U    g33_wap\src\view\user\withdrawal\default.vue
+U    g33_wap\src\view\user\usersetup\default.vue
+U    b04_app\src\view\register\default.vue
+U    b04_app\src\view\login\default.vue
+U    b04_app\src\view\user\pay2\default.vue
+U    b04_app\src\view\user\usersetup\default.vue
+U    b04_app\src\view\user\newblank\default.vue
+U    b04_app\src\store\user.js
+U    b04_app\src\router\router.js
+Updated to revision 9051.
+Updating '.':
+At revision 9051.
+Updating '.':
+At revision 9051.
+Updating '.':
+U    b07_wap\src\components\input\input.vue
+U    b07_wap\src\view\user\usersetup\default.vue
+U    b12_wap\src\components\input\input.vue
+U    b12_wap\src\view\login.vue
+U    b12_wap\src\view\user\withdrawal.vue
+U    b12_wap\src\view\user\bank.vue
+U    b12_wap\src\view\user\pay2.vue
+U    b12_wap\src\view\user\usersetup.vue
+U    b12_wap\src\view\user\newblank.vue
+U    b12_wap\src\view\register.vue
+U    b12_wap\src\view\agentReg.vue
+U    b12_wap\src\store\user.js
+U    b12_wap\src\router\router.js
+U    b12_wap\index.html
+Updated to revision 9053.
+Updating '.':
+U    g33_wap\src\components\input\input.vue
+U    g33_wap\src\view\register\default.vue
+U    g33_wap\src\view\login\default.vue
+U    g33_wap\src\view\agentReg\default.vue
+U    g33_wap\src\view\user\newblank\default.vue
+Updated to revision 9054.
+Updating '.':
+At revision 9054.
+Updating '.':
+U    b17_wap\src\router\router.js
+U    b17_wap\src\view\user\user.vue
+U    b04_app\src\components\input\input.vue
+U    b04_wap\src\components\input\input.vue
+U    b04_wap\src\view\user\pay2.vue
+U    b04_wap\src\view\user\usersetup.vue
+U    b04_wap\src\view\user\newblank.vue
+U    b04_wap\src\view\register.vue
+U    b04_wap\src\view\login.vue
+U    b04_wap\src\router\router.js
+U    b07_wap\src\view\user\default.vue
+U    b07_wap\src\router\router.js
+U    b12_wap\src\view\user\user.vue
+U    b17_wap\src\components\input\input.vue
+U    b17_wap\src\view\user\usersetup.vue
+U    b17_wap\src\view\user\newblank.vue
+U    b17_wap\src\view\user\pay.vue
+U    b17_wap\src\view\user\withdrawal.vue
+U    b17_wap\src\view\user\bank.vue
+U    b17_wap\src\view\register.vue
+U    b17_wap\src\view\agentReg.vue
+U    b17_wap\src\view\login.vue
+U    b17_wap\src\store\user.js
+U    b17_wap\index.html
+Updated to revision 9062.
+Updating '.':
+U    b04_wap\src\view\user\pay2.vue
+Updated to revision 9064.
+Updating '.':
+U    g83_wap\src\view\user\usersetup\default.vue
+U    g83_wap\src\router\router.js
+U    g83_wap\src\components\input\input.vue
+U    g83_wap\src\view\register\default.vue
+U    g83_wap\src\view\login\default.vue
+U    g83_wap\src\view\agentReg\default.vue
+U    g83_wap\src\view\user\newblank\default.vue
+U    g83_wap\src\view\user\withdrawal\default.vue
+U    g83_wap\src\view\user\bank\default.vue
+U    g83_wap\src\view\user\default.vue
+Updated to revision 9065.
+Updating '.':
+U    b37_wap\src\router\router.js
+U    b37_wap\src\view\register\default.vue
+U    b37_wap\src\view\login\default.vue
+U    b37_wap\src\view\agentReg\default.vue
+U    b37_wap\src\view\user\usersetup\default.vue
+U    b37_wap\src\view\user\newblank\default.vue
+U    b37_wap\src\view\user\index.vue
+U    b37_wap\src\view\user\withdrawal\default.vue
+U    b37_wap\src\view\user\bank\default.vue
+U    b37_wap\src\view\user\pay2\default.vue
+U    b37_wap\src\store\user.js
+U    b37_wap\src\components\input\input.vue
+U    b37_wap\index.html
+Updated to revision 9067.
+Updating '.':
+At revision 9067.
+Updating '.':
+U    b37_wap\src\view\user\pay2\default.vue
+U    b07_wap\src\view\user\pay2\default.vue
+U    b12_wap\src\view\user\pay2.vue
+U    b17_wap\src\view\user\pay.vue
+Updated to revision 9071.
+Updating '.':
+U    k01_wap\src\router\router.js
+U    k01_wap\src\view\user\usersetup\default.vue
+U    b04_wap\src\view\user\pay2.vue
+U    k01_wap\src\view\login\default.vue
+U    k01_wap\src\view\user\newblank\default.vue
+U    k01_wap\src\view\user\withdrawal\default.vue
+U    k01_wap\src\view\user\bank\default.vue
+U    k01_wap\src\view\user\pay2\default.vue
+U    k01_wap\src\view\register\default.vue
+U    g85_wap\src\view\agentReg\default.vue
+U    g85_wap\src\view\user\default.vue
+U    g85_wap\src\view\user\usersetup\default.vue
+U    g85_wap\src\view\user\newblank\default.vue
+U    g85_wap\src\view\user\withdrawal\default.vue
+U    g85_wap\src\view\user\bank\default.vue
+U    g85_wap\src\view\register\default.vue
+U    g85_wap\src\view\login\default.vue
+U    g85_wap\src\components\input\input.vue
+U    y01_wap\index.html
+U    b04_app\src\view\user\pay2\default.vue
+U    b04_app\src\view\user\bank\default.vue
+Updated to revision 9075.
+Updating '.':
+At revision 9079.
+Updating '.':
+At revision 9079.
+Updating '.':
+At revision 9079.
+Updating '.':
+At revision 9079.
+Updating '.':
+At revision 9079.
+Updating '.':
+At revision 9079.
+Updating '.':
+U    g83_wap\src\view\user\newblank\default.vue
+U    g85_wap\src\view\user\newblank\default.vue
+U    b04_wap\src\view\user\withdrawal.vue
+U    b04_wap\src\view\user\bank.vue
+U    b04_wap\src\view\user\newblank.vue
+U    b07_wap\src\components\select\select.vue
+U    b58_wap\src\view\user\withdrawal.vue
+U    b67_wap\src\components\select\select.vue
+U    b67_wap\src\view\user\bank.vue
+U    b67_wap\src\view\user\newblank.vue
+U    g83_wap\src\view\user\usersetup\default.vue
+U    g85_wap\src\view\user\usersetup\default.vue
+U    g85_wap\src\view\user\bank\default.vue
+U    b37_wap\src\components\select\select.vue
+U    g86_wap\src\view\user\usersetup\default.vue
+U    b07_wap\src\components\select\index.js
+U    b07_wap\src\view\user\bank\default.vue
+U    b07_wap\src\view\user\usersetup\default.vue
+U    b07_wap\src\view\user\newblank\default.vue
+U    g86_wap\src\view\user\newblank\default.vue
+U    g87_wap\src\view\user\bank\default.vue
+U    b07_wap\src\view\user\withdrawal\default.vue
+U    b12_wap\src\components\select\select.vue
+U    b12_wap\src\view\user\withdrawal.vue
+U    b12_wap\src\view\user\bank.vue
+U    g87_wap\src\view\user\usersetup\default.vue
+U    b12_wap\src\view\user\usersetup.vue
+U    b12_wap\src\view\user\newblank.vue
+U    b17_wap\src\components\select\select.vue
+U    b17_wap\src\view\user\usersetup.vue
+U    b04_app\src\view\user\usersetup\default.vue
+U    g86_wap\src\view\user\bank\default.vue
+U    g87_wap\src\view\user\withdrawal\default.vue
+U    b04_app\src\view\user\bank\default.vue
+U    b37_wap\src\view\user\bank\default.vue
+U    b37_wap\src\view\user\withdrawal\default.vue
+U    b04_app\src\view\user\newblank\default.vue
+U    b37_wap\src\view\user\usersetup\default.vue
+U    b17_wap\src\view\user\withdrawal.vue
+U    b17_wap\src\view\user\bank.vue
+U    b17_wap\src\view\user\newblank.vue
+U    g33_wap\src\view\user\usersetup\default.vue
+U    g33_wap\src\view\user\newblank\default.vue
+U    g33_wap\src\view\user\withdrawal\default.vue
+U    g33_wap\src\view\user\bank\default.vue
+U    b58_wap\src\view\user\newblank.vue
+U    b58_wap\src\view\user\usersetup.vue
+U    b58_wap\src\view\user\bank.vue
+U    b67_wap\src\view\user\withdrawal.vue
+U    b67_wap\src\view\user\usersetup.vue
+U    g83_wap\src\view\user\bank\default.vue
+U    g83_wap\src\view\user\withdrawal\default.vue
+U    g85_wap\src\view\user\withdrawal\default.vue
+U    g86_wap\src\view\user\withdrawal\default.vue
+U    g87_wap\src\view\user\newblank\default.vue
+U    b04_app\src\view\user\withdrawal\default.vue
+U    b37_wap\src\view\user\newblank\default.vue
+Updated to revision 9109.
+Updating '.':
+U    g85_wap\src\router\router.js
+U    g86_wap\src\router\router.js
+U    g87_wap\src\router\router.js
+Updated to revision 9110.
+Updating '.':
+At revision 9111.
+Updating '.':
+U    b72_wap\src\components\select\select.vue
+U    k01_wap\src\view\user\bank\default.vue
+U    k01_wap\src\view\user\usersetup\default.vue
+U    k01_wap\src\view\user\newblank\default.vue
+U    b72_wap\src\view\user\usersetup.vue
+U    b72_wap\src\view\user\withdrawal.vue
+U    b72_wap\src\view\user\bank.vue
+U    b72_wap\src\view\user\newblank.vue
+U    b04_wap\src\view\user\withdrawal.vue
+U    k01_wap\src\view\user\withdrawal\default.vue
+U    b04_app\config\index.js
+U    b04_app\src\view\user\withdrawal\default.vue
+Updated to revision 9115.
+Updating '.':
+At revision 9115.
+Updating '.':
+At revision 9116.
+Updating '.':
+At revision 9119.
+Updating '.':
+U    waptemp\src\router\router.js
+U    waptemp\src\components\select\select.vue
+U    y01_wap\src\view\user\pay2.vue
+U    usert02\src\components\component.js
+U    usert02\src\view\user\userBank\default.vue
+U    usert02\src\view\Cawithd\default.vue
+U    user003\src\components\component.js
+U    user003\src\view\user\userBank\default.vue
+U    user003\src\view\Cawithd\default.vue
+U    user003\config\index.js
+U    usery01\src\temp\yinhangAdd\yinhangAdd.vue
+U    usery01\src\temp\userPhone\userPhone.vue
+U    usery01\src\view\userBank\yinhang_cn.vue
+U    usery01\src\view\tixian\tixian_cn.vue
+U    usery01\src\main.js
+U    waptemp\src\components\input\input.vue
+U    waptemp\src\view\register.vue
+U    waptemp\src\view\agentReg.vue
+U    waptemp\src\view\login.vue
+U    waptemp\src\view\user\usersetup.vue
+U    waptemp\src\view\user\newblank.vue
+U    waptemp\src\view\user\user.vue
+U    waptemp\src\view\user\pay.vue
+U    waptemp\src\view\user\withdrawal.vue
+U    waptemp\src\view\user\bank.vue
+U    waptemp\src\view\user\pay2.vue
+U    waptemp\src\store\user.js
+Updated to revision 9122.
+Updating '.':
+At revision 9122.
+Updating '.':
+At revision 9122.
+Updating '.':
+At revision 9125.
+Updating '.':
+U    usery01\src\temp\userPhone\userPhone.vue
+Updated to revision 9127.
+Updating '.':
+At revision 9127.
+Updating '.':
+At revision 9130.
+Updating '.':
+U    usert02\src\view\user\userBank\default.vue
+U    usert02\src\view\Cawithd\default.vue
+U    user003\src\view\user\userBank\default.vue
+U    user003\src\view\Cawithd\default.vue
+U    usery01\src\temp\userPhone\userPhone.vue
+Updated to revision 9132.
+Updating '.':
+U    app2\static\img\add_number.png
+U    app2\config\prod.env.js
+U    app2\src\view\user\payment\default.vue
+Updated to revision 9135.
+Updating '.':
+D    t01_wap\index.html
+U    t01_wap\config\index.js
+U    t01_wap\src\view\user\usersetup.vue
+U    t01_wap\src\view\user\withdrawal.vue
+U    t01_wap\src\view\user\bank.vue
+U    t01_wap\src\view\user\pay.vue
+U    t01_wap\src\view\user\newblank.vue
+A    t01_wap\index.html
+U    b04_app\src\view\user\pay2\default.vue
+Updated to revision 9138.
+Updating '.':
+U    b04_app\src\view\user\bank\default.vue
+U    b04_wap\src\view\user\bank.vue
+U    g33_wap\src\view\user\newblank\default.vue
+U    g33_wap\src\components\input\input.vue
+U    waph001\src\view\user\payment\default.vue
+U    waph001\src\view\user\bank\default.vue
+U    waph001\src\components\plugVue\mentInfo.vue
+U    waph001\src\components\plugVue\register.vue
+U    waph001\src\components\plugVue\login.vue
+U    k01_wap\src\view\user\bank\default.vue
+Updated to revision 9143.
+Updating '.':
+U    usery01\src\view\userBank\yinhang_cn.vue
+U    g87_pc\src\components\header.vue
+U    g87_pc\index.html
+U    usert02\src\view\user\userBank\default.vue
+U    user003\src\view\user\userBank\default.vue
+Updated to revision 9144.
+Updating '.':
+U    g33_wap\config\index.js
+Updated to revision 9145.
+Updating '.':
+U    b04_wap\src\view\user\user.vue
+U    b04_wap\src\view\user\bank.vue
+U    b04_wap\src\view\user\usersetup.vue
+Updated to revision 9146.
+Updating '.':
+U    b77_wap\index.html
+U    k01_wap\src\view\user\usersetup\default.vue
+U    k01_wap\src\view\user\index.vue
+U    k01_wap\src\view\user\withdrawal\default.vue
+U    k01_wap\src\view\user\bank\default.vue
+U    b04_app\src\view\user\usersetup\default.vue
+U    b04_app\src\view\user\index.vue
+U    b04_app\src\view\user\withdrawal\default.vue
+U    b77_wap\src\view\user\newblank.vue
+Updated to revision 9149.
+Updating '.':
+At revision 9149.
+Updating '.':
+U    b04_app\src\view\user\usersetup\default.vue
+U    b77_wap\src\view\user\newblank.vue
+U    t01_wap\src\view\user\usersetup.vue
+U    t01_wap\src\view\user\user.vue
+Updated to revision 9152.
+Updating '.':
+At revision 9152.
+Updating '.':
+U    g87_pc\src\components\header.vue
+U    user003\src\view\Cawithd\default.vue
+U    usery01\src\view\tixian\tixian_cn.vue
+U    b04_wap\src\view\user\usersetup.vue
+U    usert02\src\view\Cawithd\default.vue
+Updated to revision 9154.
+Updating '.':
+At revision 9154.
+Updating '.':
+At revision 9154.
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
