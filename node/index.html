@@ -22,7 +22,7 @@
         <!-- 搜索条件 -->
         <input type="text" placeholder="输入模板名称搜索" class="search_input" v-model.trim="searchData" @keydown.enter="Search">
       
-        <p class="up_code" @click="UP_CODE(href)">更新代码</p>
+        <p class="up_code" @click="UP_CODE_lin(href)">更新代码</p>
 
 				<p class="compression" @click="COMPRESSION">压缩</p>
 				
@@ -331,6 +331,19 @@
                 this.svnUpdata= ""
                 clearTimeout(out)
               }, 1500);
+            }).catch(message=>{
+              this.alert = message
+            })
+        },
+        UP_CODE_lin(href){// 更新代码
+          this.loading = true
+          $http({url:"api/upcode",data:{path:href}}).then(res=>{
+              this.svnUpdata = res.message
+              let out = setTimeout(() => {
+                this.svnUpdata= ""
+                clearTimeout(out)
+              }, 1500);
+              this.loading = false
             }).catch(message=>{
               this.alert = message
             })

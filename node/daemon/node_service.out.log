@@ -1472,3 +1472,1047 @@ At revision 9154.
 地址为 http://10.0.6.103:9191
 
 地址为 http://10.0.6.103:9191
+Updating '.':
+U    b78_pc\index.html
+U    a01_wap\src\router\router.js
+U    a01_wap\src\view\user\usersetup\default.vue
+U    g87_pc\src\components\header.vue
+U    g86_pc\src\components\header.vue
+U    g86_pc\src\js\header.js
+U    g86_pc\index.html
+U    g33_wap\src\components\input\input.vue
+U    b78_pc\src\components\view\header\default.vue
+A    b78_pc\static\img\yaboLogo.png
+U    g85_pc\static\img\fs.png
+U    g85_pc\static\img\fs2.png
+U    a01_wap\src\view\user\newblank\default.vue
+U    a01_wap\src\view\user\withdrawal\default.vue
+U    a01_wap\src\view\user\bank\default.vue
+U    a01_wap\src\view\user\pay2\default.vue
+Updated to revision 9161.
+Updating '.':
+At revision 9161.
+Updating '.':
+U    g85_pc\src\components\header.vue
+U    g85_pc\src\js\header.js
+U    g85_pc\index.html
+U    a11_wap\index.html
+U    a11_wap\src\view\login.vue
+U    a11_wap\src\view\user\usersetup.vue
+U    a11_wap\src\view\user\withdrawal.vue
+U    a11_wap\src\view\user\pay2.vue
+U    a11_wap\src\view\user\bank.vue
+U    a11_wap\src\view\user\newblank.vue
+U    a11_wap\src\view\user\user.vue
+U    a11_wap\src\view\register.vue
+U    a12_wap\config\index.js
+U    a12_wap\src\view\user\newblank.vue
+U    a12_wap\src\view\user\user.vue
+U    a12_wap\src\view\user\bank.vue
+U    a12_wap\src\view\user\pay2.vue
+U    a12_wap\index.html
+U    b07_pc\src\components\view\header\header.css
+U    b07_pc\src\components\view\header\default.vue
+U    b07_pc\src\js\header.js
+U    b07_pc\package-lock.json
+U    b07_pc\index.html
+Updated to revision 9169.
+Updating '.':
+U    b04_pc\package-lock.json
+U    a02_wap\src\router\router.js
+U    b04_app\src\view\user\bank\default.vue
+U    a13_wap\src\view\user\usersetup\default.vue
+U    a13_wap\src\view\user\newblank\default.vue
+U    a13_wap\src\view\user\index.vue
+U    a13_wap\src\view\user\withdrawal\default.vue
+U    a22_wap\src\view\user\newblank.vue
+G    a22_wap\index.html
+U    a01_pc\package-lock.json
+U    a21_wap\src\view\user\pay.vue
+U    a21_wap\src\view\user\newblank.vue
+U    a21_wap\index.html
+U    b81_pc\src\js\agentRegister.js
+U    b81_pc\src\js\register.js
+U    b81_pc\src\store\actionss.js
+U    b79_pc\src\js\agentRegister.js
+U    b79_pc\src\js\register.js
+U    b04_pc\src\js\agentRegister.js
+U    a22_wap\src\view\user\pay.vue
+U    a22_wap\src\view\login.vue
+U    b04_pc\src\store\actionss.js
+U    b78_pc\src\js\registerUser.js
+U    a01_wap\src\view\user\bank\default.vue
+U    a02_wap\src\view\user\newblank\default.vue
+U    a02_wap\src\view\user\withdrawal\default.vue
+U    a02_wap\src\view\user\pay2\default.vue
+U    a02_wap\src\view\user\bank\default.vue
+U    a02_wap\src\view\user\usersetup\default.vue
+U    a02_wap\src\view\register\default.vue
+U    a02_wap\src\view\login\default.vue
+U    a02_wap\index.html
+U    g85_wap\src\components\header\publicheader.vue
+U    a12_wap\src\view\login.vue
+U    a12_wap\src\view\register.vue
+U    a13_wap\src\view\user\bank\default.vue
+U    a13_wap\src\view\user\pay2\default.vue
+U    a13_wap\src\view\register\default.vue
+U    a13_wap\src\view\login\default.vue
+U    a13_wap\index.html
+U    a21_wap\src\view\login.vue
+U    a21_wap\src\view\user\withdrawal.vue
+U    a21_wap\src\view\register.vue
+U    a22_wap\config\index.js
+U    a22_wap\src\view\register.vue
+Updated to revision 9179.
+Updating '.':
+U    a02_wap\src\view\user\index.vue
+U    a12_wap\src\view\user\withdrawal.vue
+U    a12_wap\src\view\user\usersetup.vue
+U    b37_pc\src\js\agentRegister.js
+U    b67_pc\src\view\home.vue
+U    b67_pc\src\js\home.js
+U    b12_pc\src\js\agentRegister.js
+U    b12_pc\src\js\register.js
+U    b12_pc\src\store\actionss.js
+U    b12_pc\package-lock.json
+U    b58_pc\package-lock.json
+U    b58_pc\src\js\register.js
+U    b78_pc\src\js\registerUser.js
+U    g85_pc\src\js\agentRegister.js
+U    b17_pc\src\store\actionss.js
+U    b37_pc\package-lock.json
+U    b67_pc\src\js\register.js
+U    b12_pc\index.html
+U    b72_pc\src\js\agentRegister.js
+U    b72_pc\src\js\register.js
+U    b72_pc\src\store\actionss.js
+U    g33_pc\src\js\agentRegister.js
+U    g33_pc\src\store\actionss.js
+U    b77_pc\src\js\register.js
+U    g83_pc\src\view\agentRegister.vue
+U    g83_pc\src\view\register.vue
+U    g83_pc\src\js\agentRegister.js
+U    g83_pc\src\store\actionss.js
+U    g83_pc\index.html
+U    g87_pc\src\js\agentRegister.js
+U    g87_pc\src\store\actionss.js
+U    b79_pc\src\js\agentRegister.js
+U    g86_pc\src\js\agentRegister.js
+U    g86_pc\src\js\register.js
+U    g86_pc\src\store\actionss.js
+U    g86_pc\src\components\pubilc.js
+U    a01_wap\src\view\user\withdrawal\default.vue
+U    a02_wap\src\view\user\withdrawal\default.vue
+U    b04_pc\src\js\agentRegister.js
+U    b58_pc\src\js\agentRegister.js
+U    b58_pc\src\store\actionss.js
+U    b78_pc\src\js\agentRegister.js
+U    g85_pc\src\store\actionss.js
+U    b07_pc\src\store\actionss.js
+U    b37_pc\src\store\actionss.js
+U    b67_pc\src\js\agentRegister.js
+U    b77_pc\src\js\agentRegister.js
+Updated to revision 9187.
+Updating '.':
+At revision 9187.
+Updating '.':
+At revision 9187.
+Updating '.':
+U    b07_wap\src\router\index.js
+U    b07_wap\src\components\header\publicheader.vue
+U    b07_wap\src\components\roll\scroll.vue
+A    b07_wap\src\view\user\payline.vue
+A    b07_wap\src\view\user\paytransfe.vue
+A    b07_wap\src\view\user\pay.vue
+U    b17_wap\src\view\user\payline.vue
+U    b17_wap\src\view\user\paytransfe.vue
+Updated to revision 9189.
+Updating '.':
+U    t01_wap\src\view\activitydata.vue
+U    t01_wap\src\view\activity.vue
+U    t01_wap\index.html
+Updated to revision 9190.
+Updating '.':
+U    b07_wap\src\view\user\pay2\transfe\default.vue
+U    b07_wap\src\view\user\pay2\line\default.vue
+Updated to revision 9194.
+Updating '.':
+U    HtmlVue\index.html
+Updated to revision 9196.
+Updating '.':
+At revision 9196.
+Updating '.':
+At revision 9196.
+Updating '.':
+At revision 9196.
+Updating '.':
+U    t01_pc\src\js\agentRegister.js
+U    t01_pc\src\js\register.js
+Updated to revision 9197.
+Updating '.':
+U    k01_pc\src\js\agentRegister.js
+U    k01_pc\src\js\register.js
+Updated to revision 9198.
+Updating '.':
+At revision 9198.
+Updating '.':
+U    y01_pc\src\js\agentRegister.js
+U    y01_pc\src\store\actionss.js
+Updated to revision 9199.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+U    a02_pc\src\js\agentRegister.js
+U    a02_pc\src\store\actionss.js
+U    a12_pc\src\js\agentRegister.js
+U    a12_pc\src\store\actionss.js
+U    a22_pc\src\js\agentRegister.js
+U    a22_pc\src\store\actionss.js
+U    t01_wap\src\view\activity.vue
+U    b17_pc\src\js\agentRegister.js
+U    a01_pc\src\js\agentRegister.js
+U    a01_pc\src\store\actionss.js
+U    a01_pc\src\components\header.vue
+U    a11_pc\src\js\agentRegister.js
+U    a11_pc\src\store\actionss.js
+U    a11_pc\package-lock.json
+U    a21_pc\src\js\agentRegister.js
+U    a21_pc\src\store\actionss.js
+U    g87_wap\src\view\user\pay2\line\default.vue
+U    a13_pc\src\js\agentRegister.js
+U    a13_pc\src\store\actionss.js
+Updated to revision 9207.
+Updating '.':
+U    nodeMui\html\home.html
+Updated to revision 9209.
+Updating '.':
+U    g33_pc\src\js\activity.js
+U    g33_pc\index.html
+U    b58_wap\src\view\home.vue
+Updated to revision 9213.
+Updating '.':
+U    b58_wap\src\view\home.vue
+U    g33_pc\src\js\activity.js
+Updated to revision 9215.
+Updating '.':
+U    a21_pc\src\store\actionss.js
+U    a22_pc\src\store\actionss.js
+Updated to revision 9216.
+Updating '.':
+U    b07_pc\src\js\header.js
+U    b07_pc\src\components\view\header\header.css
+U    b07_pc\src\components\view\header\header.min.css
+U    b07_pc\src\components\view\header\default.vue
+U    b07_pc\src\components\view\header\header.scss
+Updated to revision 9217.
+Updating '.':
+At revision 9218.
+Updating '.':
+U    b07_pc\src\js\header.js
+Updated to revision 9219.
+Updating '.':
+Restored 'h83_pc\static\img\static'
+U    b07_pc\src\js\header.js
+U    g33_wap\config\index.js
+U    g33_wap\src\components\roll\scroll.vue
+U    g33_wap\src\components\tool.js
+U    g33_wap\src\components\header\publicheader.vue
+U    g33_wap\src\components\tabbar\tabbar.vue
+U    g33_wap\src\components\footer\publicfooter.vue
+U    g33_wap\src\view\home\default.vue
+A    g33_wap\static\img\home_qk.svg
+A    g33_wap\static\img\home_yh.svg
+A    g33_wap\static\img\ck.svg
+A    g33_wap\static\img\home_ck.svg
+A    g33_wap\static\img\zh.png
+A    g33_wap\static\img\kf.png
+A    g33_wap\static\img\qd.svg
+A    g33_wap\static\img\mue.png
+A    g33_wap\static\img\qk.svg
+A    g33_wap\static\img\home_qd.svg
+U    g33_wap\index.html
+Updated to revision 9225.
+Updating '.':
+At revision 9225.
+Updating '.':
+At revision 9225.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+At revision 9225.
+Updating '.':
+At revision 9225.
+Updating '.':
+At revision 9225.
+Updating '.':
+At revision 9225.
+Updating '.':
+At revision 9225.
+Updating '.':
+At revision 9225.
+Updating '.':
+At revision 9225.
+Updating '.':
+At revision 9225.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+At revision 9225.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+U    g83_wap\src\view\register\default.vue
+U    g85_wap\src\view\register\default.vue
+Updated to revision 9233.
+Updating '.':
+U    g86_wap\src\view\register\default.vue
+U    g87_wap\src\view\register\default.vue
+Updated to revision 9237.
+Updating '.':
+U    g86_pc\src\view\activity.vue
+U    g86_pc\src\view\chess.vue
+U    g86_pc\src\view\egame.vue
+U    g86_pc\src\js\activity.js
+U    g86_pc\src\js\egame.js
+U    g86_pc\index.html
+U    g85_pc\src\view\activity.vue
+U    g85_pc\src\js\activity.js
+U    g85_pc\src\js\egame.js
+U    g87_pc\src\view\activity.vue
+U    g87_pc\src\js\activity.js
+Updated to revision 9246.
+Updating '.':
+U    g33_pc\src\js\activity.js
+U    g83_pc\src\js\activity.js
+U    g86_pc\src\view\activity.vue
+U    g85_pc\src\view\activity.vue
+U    g33_pc\src\view\activity.vue
+U    g33_pc\src\js\egame.js
+U    g83_pc\src\view\activity.vue
+U    g83_pc\src\js\egame.js
+U    g87_pc\src\view\activity.vue
+U    g87_pc\src\js\activity.js
+Updated to revision 9253.
+Updating '.':
+U    b79_pc\src\components\advert.vue
+U    b79_pc\package-lock.json
+U    b81_pc\src\js\egame.js
+U    b79_pc\src\components\header.vue
+U    b79_pc\src\js\egame.js
+U    b79_pc\src\store\mutationss.js
+U    b78_pc\src\js\egame.js
+U    b78_pc\src\js\chess.js
+U    b78_pc\package-lock.json
+Updated to revision 9256.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+A    HtmlVue\axios
+A    HtmlVue\api
+A    HtmlVue\store
+U    g33_wap\config\index.js
+A    HtmlVue\axios\axios.min.js
+A    HtmlVue\axios\request.js
+U    HtmlVue\html\footer.html
+U    HtmlVue\html\header.html
+U    HtmlVue\html\home.html
+A    HtmlVue\api\api.js
+U    HtmlVue\index.html
+U    HtmlVue\js\pubilc.js
+U    HtmlVue\js\home.js
+A    HtmlVue\store\store.js
+U    g33_wap\src\components\input\input.vue
+U    g33_wap\src\view\register\default.vue
+U    g33_wap\src\view\home\default.vue
+U    g33_wap\src\view\login\default.vue
+U    g33_wap\src\main.js
+U    g33_wap\package-lock.json
+U    g33_wap\package.json
+U    b77_pc\src\js\egame.js
+U    b77_pc\src\store\mutationss.js
+U    b77_pc\src\components\header.vue
+U    b77_pc\index.html
+Updated to revision 9261.
+Updating '.':
+At revision 9262.
+Updating '.':
+U    g33_wap\src\main.js
+Updated to revision 9263.
+Updating '.':
+U    g33_wap\src\components\tabbar\tabbar.vue
+U    g33_wap\src\view\home\default.vue
+Updated to revision 9273.
+Updating '.':
+U    b72_pc\src\components\rollnotice.vue
+U    b72_pc\src\components\advert.vue
+U    b72_pc\src\view\activity.vue
+U    b72_pc\src\js\activity.js
+U    b72_pc\src\js\egame.js
+U    b72_pc\package-lock.json
+U    b72_pc\index.html
+U    g33_wap\src\components\tabbar\tabbar.vue
+U    g33_wap\src\view\home\default.vue
+Updated to revision 9276.
+Updating '.':
+U    g33_wap\package.json
+U    g33_wap\config\index.js
+U    g33_wap\src\view\register\default.vue
+U    g33_wap\package-lock.json
+U    g83_wap\config\index.js
+Updated to revision 9277.
+Updating '.':
+U    g33_wap\src\view\register\default.vue
+Updated to revision 9278.
+Updating '.':
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+At revision 9279.
+Updating '.':
+At revision 9279.
+Updating '.':
+U    b72_pc\index.html
+U    b72_pc\src\components\header.vue
+U    b72_pc\src\store\mutationss.js
+U    g33_wap\src\components\header\publicheader.vue
+U    g33_wap\src\view\home\default.vue
+Updated to revision 9282.
+Updating '.':
+U    g33_wap\src\view\home\default.vue
+Updated to revision 9284.
+Updating '.':
+At revision 9284.
+Updating '.':
+U    b67_pc\src\js\activity.js
+U    b67_pc\src\js\egame.js
+U    b67_pc\src\store\mutationss.js
+U    b67_pc\src\components\rollnotice.vue
+U    b67_pc\src\components\advert.vue
+U    b67_pc\src\components\header.vue
+U    b67_pc\src\components\pubilc.js
+U    b67_pc\src\view\activity.vue
+U    b67_pc\package-lock.json
+U    b67_pc\index.html
+Updated to revision 9285.
+Updating '.':
+U    b67_pc\src\view\activity.vue
+Updated to revision 9286.
+Updating '.':
+U    b12_pc\src\store\mutationss.js
+U    g33_wap\src\view\home\default.vue
+U    b12_pc\src\js\header.js
+U    b12_pc\src\store\actionss.js
+U    b12_pc\src\components\advert.vue
+U    b12_pc\src\components\header.vue
+U    mockpc\src\js\header.js
+Updated to revision 9289.
+Updating '.':
+U    b58_pc\src\js\egame.js
+U    b58_pc\src\js\header.js
+U    b58_pc\src\js\activity.js
+U    b58_pc\src\components\header.vue
+U    g83_wap\package.json
+U    g83_wap\src\view\register\default.vue
+U    g83_wap\src\main.js
+U    g83_wap\src\components\input\input.vue
+U    g83_wap\static\css\reset.css
+U    g83_wap\package-lock.json
+U    g83_wap\index.html
+Updated to revision 9293.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+U    t01_wap\src\view\user\pay.vue
+U    g33_wap\src\router\router.js
+U    g33_wap\src\view\register\default.vue
+U    g33_wap\src\App.vue
+U    g33_wap\static\css\reset.css
+U    h83_pc\src\js\header.js
+U    h83_pc\src\js\activity.js
+U    h83_pc\src\store\mutationss.js
+U    h83_pc\src\components\view\header\default.vue
+Updated to revision 9300.
+Updating '.':
+U    b37_pc\src\js\activity.js
+U    g83_wap\src\router\router.js
+U    b37_pc\package-lock.json
+U    b37_pc\src\components\header.vue
+U    b37_pc\src\components\rollnotice.vue
+U    b37_pc\src\components\advert.vue
+U    b37_pc\src\view\activity.vue
+U    b37_pc\src\js\egame.js
+U    b37_pc\src\store\mutationss.js
+U    g86_pc\src\components\header.vue
+Updated to revision 9303.
+Updating '.':
+At revision 9303.
+Updating '.':
+U    g33_wap\config\index.js
+U    g83_wap\src\router\router.js
+U    g83_wap\index.html
+U    h83_pc\src\view\activity\default.vue
+U    h83_pc\src\js\activity.js
+U    k01_pc\src\view\activity.vue
+U    k01_pc\src\js\activity.js
+U    k01_pc\src\js\egame.js
+U    k01_pc\src\store\mutationss.js
+U    k01_pc\src\components\header.vue
+U    g33_wap\src\router\router.js
+U    g33_wap\src\components\tool.js
+U    g33_wap\src\components\header\publicheader.vue
+U    g33_wap\src\components\sign\sign.vue
+U    g33_wap\index.html
+U    b37_pc\src\js\activity.js
+U    b12_pc\src\components\header.vue
+U    b12_pc\src\js\activity.js
+Updated to revision 9308.
+Updating '.':
+At revision 9308.
+Updating '.':
+At revision 9308.
+Updating '.':
+U    t01_pc\src\js\activity.js
+U    g87_wap\src\view\register\default.vue
+U    g87_wap\src\router\router.js
+U    b58_pc\src\view\activity.vue
+U    b58_pc\src\store\mutationss.js
+U    b37_pc\src\store\mutationss.js
+U    t01_pc\src\js\header.js
+U    g86_wap\src\components\input\input.vue
+U    g86_wap\src\view\login\default.vue
+U    g86_wap\static\css\reset.css
+U    g87_wap\package.json
+U    g87_wap\src\view\activity\default.vue
+U    g87_wap\src\main.js
+U    g87_wap\src\components\sign\sign.vue
+U    t01_pc\src\js\egame.js
+U    t01_pc\src\store\mutationss.js
+U    t01_pc\src\components\advert.vue
+U    t01_pc\src\components\header.vue
+U    t01_pc\src\view\activity.vue
+U    y01_pc\src\js\egame.js
+U    y01_pc\index.html
+U    y01_pc\src\components\rollnotice.vue
+U    g87_wap\static\css\reset.css
+U    y01_pc\src\store\mutationss.js
+U    t01_pc\src\view\index.vue
+U    t01_pc\src\view\egame.vue
+U    g85_wap\package.json
+U    g85_wap\config\index.js
+U    g85_wap\src\view\login\default.vue
+U    g85_wap\src\view\register\default.vue
+U    g85_wap\src\main.js
+U    g85_wap\src\router\router.js
+U    g85_wap\src\components\input\input.vue
+U    g85_wap\src\components\sign\sign.vue
+U    g85_wap\static\css\reset.css
+U    g85_wap\package-lock.json
+U    g86_wap\package.json
+U    g86_wap\config\index.js
+U    g86_wap\src\main.js
+U    g86_wap\src\router\router.js
+U    g86_wap\src\components\sign\sign.vue
+U    g86_wap\src\view\register\default.vue
+U    g86_wap\package-lock.json
+U    g87_wap\config\index.js
+U    g87_wap\src\view\login\default.vue
+U    g87_wap\src\components\input\input.vue
+U    g87_wap\package-lock.json
+U    y01_pc\src\components\header.vue
+Updated to revision 9316.
+Updating '.':
+At revision 9316.
+Updating '.':
+At revision 9316.
+Updating '.':
+U    h83_pc\src\js\chess.js
+U    h83_pc\src\js\activity.js
+U    h83_pc\src\store\actionss.js
+U    g86_pc\src\components\header.vue
+Updated to revision 9321.
+Updating '.':
+U    g85_wap\src\main.js
+U    g86_wap\index.html
+U    g87_wap\index.html
+Updated to revision 9322.
+Updating '.':
+At revision 9322.
+Updating '.':
+U    HtmlVue\axios\request.js
+U    b07_pc\static\img\activitybanner.jpg
+U    b17_pc\src\components\view\header\default.vue
+U    b17_pc\src\view\activity\default.vue
+U    b17_pc\src\js\activity.js
+U    b17_pc\src\store\actionss.js
+U    b17_pc\static\img\hd_banner.jpg
+Updated to revision 9327.
+Updating '.':
+U    b17_pc\src\components\view\header\default.vue
+Updated to revision 9329.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+At revision 9334.
+Updating '.':
+U    g85_pc\src\components\header.vue
+Updated to revision 9335.
+Updating '.':
+At revision 9337.
+Updating '.':
+At revision 9337.
+Updating '.':
+U    t01_wap\package.json
+U    t01_wap\src\main.js
+U    t01_wap\package-lock.json
+U    b81_wap\src\view\user\newblank.vue
+U    b81_wap\src\view\register.vue
+U    t01_wap\config\index.js
+U    t01_wap\src\router\router.js
+U    t01_wap\src\components\input\input.vue
+U    t01_wap\src\components\hotGame\hotGame.vue
+U    t01_wap\src\view\activity.vue
+U    t01_wap\src\view\user\newblank.vue
+U    t01_wap\src\view\register.vue
+U    t01_wap\static\css\reset.css
+U    g86_pc\src\view\home.vue
+U    g86_pc\src\js\home.js
+U    g86_pc\src\components\rollnotice.vue
+U    g86_pc\src\components\pubilc.js
+A    g86_pc\static\img\jc_bg.png
+A    g86_pc\static\img\gg_bg.png
+A    g86_pc\static\img\cjyj.png
+Updated to revision 9339.
+Updating '.':
+U    b79_wap\package.json
+U    b79_wap\package-lock.json
+U    b79_wap\config\index.js
+U    b79_wap\src\main.js
+U    b79_wap\src\components\input\input.vue
+U    b79_wap\src\view\user\newblank.vue
+U    b79_wap\src\view\register.vue
+U    b79_wap\static\css\reset.css
+U    b79_wap\index.html
+Updated to revision 9342.
+Updating '.':
+At revision 9342.
+Updating '.':
+U    g85_pc\src\components\header.vue
+A    g85_pc\static\img\top_bg.jpg
+A    g85_pc\static\img\logo1.png
+U    g85_wap\index.html
+U    g85_wap\config\index.js
+U    g85_wap\src\components\header\publicheader.vue
+U    g85_wap\src\components\footer\publicfooter.vue
+U    g85_wap\src\components\roll\scroll.vue
+U    g85_wap\src\view\activity\default.vue
+U    g85_wap\src\view\user\default.vue
+U    g85_wap\src\view\user\pay2\transfe\default.vue
+U    g85_wap\src\view\register\default.vue
+U    g85_wap\src\view\search\default.vue
+U    g85_wap\src\view\home\default.vue
+U    g85_wap\src\view\login\default.vue
+Updated to revision 9343.
+Updating '.':
+At revision 9343.
+Updating '.':
+U    g85_wap\static\img\alertMarquee2.png
+U    g85_wap\src\view\user\extend\extend.vue
+U    g85_wap\src\view\user\bank\default.vue
+U    g85_wap\src\view\activity\activitydata\default.vue
+U    g85_wap\src\view\activity\default.vue
+U    g85_wap\src\components\header\publicheader.vue
+U    g85_wap\src\components\footer\publicfooter.vue
+U    g85_wap\static\img\loginLog.png
+A    g85_wap\static\img\ydlogo.png
+U    g86_pc\src\view\home.vue
+Updated to revision 9345.
+Updating '.':
+U    g86_pc\src\view\home.vue
+Updated to revision 9346.
+Updating '.':
+At revision 9346.
+Updating '.':
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+U    g85_wap\src\components\header\publicheader.vue
+Updated to revision 9348.
+Updating '.':
+At revision 9348.
+Updating '.':
+U    b78_wap\package.json
+A    h83_wap
+A    h83_wap\package.json
+A    h83_wap\.project
+A    h83_wap\.gitignore
+A    h83_wap\config
+A    h83_wap\config\dev.env.js
+A    h83_wap\config\prod.env.js
+A    h83_wap\config\ups.env.js
+A    h83_wap\src
+A    h83_wap\src\api
+A    h83_wap\src\api\API.js
+A    h83_wap\src\view
+A    h83_wap\src\view\register
+A    h83_wap\src\view\register\index.vue
+A    h83_wap\src\view\index.vue
+A    h83_wap\src\view\search
+A    h83_wap\src\view\search\default.vue
+A    h83_wap\src\view\search\index.vue
+A    h83_wap\src\view\forget
+A    h83_wap\src\view\forget\defauit.vue
+A    h83_wap\src\view\forget\index.vue
+A    h83_wap\src\view\404
+A    h83_wap\src\view\404\index.vue
+A    h83_wap\src\view\home
+A    h83_wap\src\view\home\default.vue
+A    h83_wap\src\view\home\index.vue
+A    h83_wap\src\view\login
+A    h83_wap\src\view\login\default.vue
+A    h83_wap\src\view\login\index.vue
+A    h83_wap\src\view\game
+A    h83_wap\src\view\game\default.vue
+A    h83_wap\src\view\game\index.vue
+A    h83_wap\src\view\activity
+A    h83_wap\src\view\activity\default.vue
+A    h83_wap\src\view\activity\index.vue
+A    h83_wap\src\view\activity\activitydata
+A    h83_wap\src\view\activity\activitydata\default.vue
+A    h83_wap\src\view\activity\activitydata\index.vue
+A    h83_wap\src\view\agentReg
+A    h83_wap\src\view\agentReg\default.vue
+A    h83_wap\src\view\agentReg\index.vue
+A    h83_wap\src\view\gameinit
+A    h83_wap\src\view\gameinit\index.vue
+A    h83_wap\src\view\user
+A    h83_wap\src\view\user\activityRecord.vue
+A    h83_wap\src\view\user\usernews2
+A    h83_wap\src\view\user\usernews2\default.vue
+A    h83_wap\src\view\user\usernews2\index.vue
+A    h83_wap\src\view\user\usersetup
+A    h83_wap\src\view\user\usersetup\default.vue
+A    h83_wap\src\view\user\usersetup\index.vue
+A    h83_wap\src\view\user\loginPass
+A    h83_wap\src\view\user\loginPass\default.vue
+A    h83_wap\src\view\user\loginPass\index.vue
+A    h83_wap\src\view\user\newblank
+A    h83_wap\src\view\user\newblank\index.vue
+A    h83_wap\src\view\user\userinit
+A    h83_wap\src\view\user\userinit\default.vue
+A    h83_wap\src\view\user\userinit\index.vue
+A    h83_wap\src\view\user\fsrecord.vue
+A    h83_wap\src\view\user\index.vue
+A    h83_wap\src\view\user\withdrawal
+A    h83_wap\src\view\user\withdrawal\default.vue
+A    h83_wap\src\view\user\withdrawal\index.vue
+A    h83_wap\src\view\user\gamerecord
+A    h83_wap\src\view\user\gamerecord\gamerecordlist.vue
+A    h83_wap\src\view\user\gamerecord\gamerecord.vue
+A    h83_wap\src\view\user\qkpassworld
+A    h83_wap\src\view\user\qkpassworld\index.vue
+A    h83_wap\src\view\user\qkpassworld\default.vue
+A    h83_wap\src\view\user\usernews
+A    h83_wap\src\view\user\usernews\default.vue
+A    h83_wap\src\view\user\usernews\index.vue
+A    h83_wap\src\view\user\usernews\usernewslist
+A    h83_wap\src\view\user\usernews\usernewslist\default.vue
+A    h83_wap\src\view\user\usernews\usernewslist\index.vue
+A    h83_wap\src\view\user\bank
+A    h83_wap\src\view\user\bank\index.vue
+A    h83_wap\src\view\user\bank\default.vue
+A    h83_wap\src\view\user\pay2
+A    h83_wap\src\view\user\pay2\default.vue
+A    h83_wap\src\view\user\pay2\transfe
+A    h83_wap\src\view\user\pay2\transfe\index.vue
+A    h83_wap\src\view\user\pay2\transfe\default.vue
+A    h83_wap\src\view\user\pay2\index.vue
+A    h83_wap\src\view\user\pay2\line
+A    h83_wap\src\view\user\pay2\line\default.vue
+A    h83_wap\src\view\user\pay2\line\index.vue
+A    h83_wap\src\view\user\tixianjilu.vue
+A    h83_wap\src\view\user\record
+A    h83_wap\src\view\user\record\default.vue
+A    h83_wap\src\view\user\record\components
+A    h83_wap\src\view\user\record\components\flowrecord.vue
+A    h83_wap\src\view\user\record\components\fsrecord.vue
+A    h83_wap\src\view\user\record\components\payrecord.vue
+A    h83_wap\src\view\user\record\components\activerecord.vue
+A    h83_wap\src\view\user\record\components\cashrecord.vue
+A    h83_wap\src\view\user\record\index.vue
+A    h83_wap\src\view\user\bill.vue
+A    h83_wap\src\view\user\payteacth
+A    h83_wap\src\view\user\payteacth\default.vue
+A    h83_wap\src\view\user\payteacth\index.vue
+A    h83_wap\src\view\user\payteacth\payteacthDetail
+A    h83_wap\src\view\user\payteacth\payteacthDetail\index.vue
+A    h83_wap\src\view\user\payteacth\payteacthDetail\default.vue
+A    h83_wap\src\view\user\article
+A    h83_wap\src\view\user\article\default.vue
+A    h83_wap\src\view\user\article\index.vue
+A    h83_wap\src\view\user\payrecord.vue
+A    h83_wap\src\view\user\extend
+A    h83_wap\src\view\user\extend\extend.vue
+A    h83_wap\src\view\user\extend\extendList.vue
+A    h83_wap\src\view\maintain
+A    h83_wap\src\view\maintain\index.vue
+A    h83_wap\src\store
+A    h83_wap\src\store\state.js
+A    h83_wap\src\store\actionss.js
+A    h83_wap\src\store\mutations.js
+A    h83_wap\src\store\publicStore.js
+A    h83_wap\src\store\user.js
+A    h83_wap\src\App.vue
+A    h83_wap\src\router
+A    h83_wap\src\router\index.js
+A    h83_wap\src\router\router.js
+A    h83_wap\src\utils
+A    h83_wap\src\utils\request.js
+A    h83_wap\src\assets
+A    h83_wap\src\components
+A    h83_wap\src\components\recordType
+A    h83_wap\src\components\recordType\recordType.vue
+A    h83_wap\src\components\recordType\index.js
+A    h83_wap\src\components\lydate
+A    h83_wap\src\components\lydate\remad.md
+A    h83_wap\src\components\lydate\date.vue
+A    h83_wap\src\components\lydate\index.js
+A    h83_wap\src\components\tool.js
+A    h83_wap\src\components\header
+A    h83_wap\src\components\header\publicheader.vue
+A    h83_wap\src\components\header\remad.md
+A    h83_wap\src\components\public.js
+A    h83_wap\src\components\tabbar
+A    h83_wap\src\components\tabbar\tabbarList.vue
+A    h83_wap\src\components\tabbar\remad.md
+A    h83_wap\src\components\tabbar\tabbar.vue
+A    h83_wap\src\components\recordtime
+A    h83_wap\src\components\recordtime\remad.md
+A    h83_wap\src\components\recordtime\recordtime.vue
+A    h83_wap\src\components\footer
+A    h83_wap\src\components\footer\remad.md
+A    h83_wap\src\components\footer\publicfooter.vue
+A    h83_wap\src\components\input
+A    h83_wap\src\components\input\remad.md
+A    h83_wap\src\components\stop.js
+A    h83_wap\src\components\sign
+A    h83_wap\src\components\sign\sign.vue
+A    h83_wap\src\components\sign\index.js
+A    h83_wap\src\components\components.js
+A    h83_wap\src\components\keyboard
+A    h83_wap\src\components\keyboard\keyboard.vue
+A    h83_wap\src\components\recordDetail
+A    h83_wap\src\components\recordDetail\recordDetail.vue
+A    h83_wap\src\components\recordDetail\remad.md
+A    h83_wap\src\components\popup
+A    h83_wap\src\components\popup\remad.md
+A    h83_wap\src\components\popup\popup.vue
+A    h83_wap\src\components\grabred
+A    h83_wap\src\components\grabred\grabred.js
+A    h83_wap\src\components\grabred\index.js
+A    h83_wap\src\components\grabred\grabred.vue
+A    h83_wap\src\components\grabred\index.vue
+A    h83_wap\src\components\grabred\remad.md
+A    h83_wap\src\components\bankList
+A    h83_wap\src\components\bankList\remad.md
+A    h83_wap\src\components\bankList\index.js
+A    h83_wap\src\components\bankList\bankList.vue
+A    h83_wap\src\components\roll
+A    h83_wap\src\components\roll\notice_list.vue
+A    h83_wap\src\components\roll\scroll.vue
+A    h83_wap\src\components\roll\notice_list_popup.vue
+A    h83_wap\src\components\list
+A    h83_wap\src\components\list\remad.md
+A    h83_wap\src\components\list\list.vue
+A    h83_wap\src\components\button
+A    h83_wap\src\components\button\remad.md
+A    h83_wap\src\components\button\button.vue
+A    h83_wap\src\components\loading
+A    h83_wap\src\components\loading\index.js
+A    h83_wap\src\components\loading\index.vue
+A    h83_wap\src\components\loading\remad.md
+A    h83_wap\src\components\select
+A    h83_wap\src\components\select\index.js
+A    h83_wap\src\components\select\remad.md
+A    h83_wap\src\components\select\select.vue
+A    h83_wap\static
+A    h83_wap\static\img
+A    h83_wap\static\img\nopage.jpg
+A    h83_wap\static\img\youhuijl.png
+A    h83_wap\static\img\xitong.png
+A    h83_wap\static\img\gamet.svg
+A    h83_wap\static\img\sign_icon.png
+A    h83_wap\static\img\zhucejiusong.png
+A    h83_wap\static\img\config_user.svg
+A    h83_wap\static\img\file.png
+A    h83_wap\static\img\xianshang.png
+A    h83_wap\static\img\login_passwolrd.svg
+A    h83_wap\static\img\red_bg.png
+A    h83_wap\static\img\temp
+A    h83_wap\static\img\temp\1.svg
+A    h83_wap\static\img\temp\2.svg
+A    h83_wap\static\img\temp\3.svg
+A    h83_wap\static\img\temp\4.svg
+A    h83_wap\static\img\temp\5.svg
+A    h83_wap\static\img\temp\6.svg
+A    h83_wap\static\img\temp\cn.png
+A    h83_wap\static\img\temp\7.svg
+A    h83_wap\static\img\temp\en.png
+A    h83_wap\static\img\temp\loadingsearch.gif
+A    h83_wap\static\img\temp\alertMarquee.png
+A    h83_wap\static\img\refres.png
+A    h83_wap\static\img\icon_deposit_home.png
+A    h83_wap\static\img\pay_jl.svg
+A    h83_wap\static\img\qred.png
+A    h83_wap\static\img\extedn.svg
+A    h83_wap\static\img\new.svg
+A    h83_wap\static\img\close.png
+A    h83_wap\static\img\marquee_bg.png
+A    h83_wap\static\img\load.jpg
+A    h83_wap\static\img\shenqingcanyu.png
+A    h83_wap\static\img\sportsbanner.jpg
+A    h83_wap\static\img\weix.png
+A    h83_wap\static\img\tixianjl.png
+A    h83_wap\static\img\yue1.png
+A    h83_wap\static\img\passworld.svg
+A    h83_wap\static\img\user_activity.png
+A    h83_wap\static\img\atm.svg
+A    h83_wap\static\img\user_touzhu.png
+A    h83_wap\static\img\juan.png
+A    h83_wap\static\img\loading.gif
+A    h83_wap\static\img\logo.png
+A    h83_wap\static\img\maintain_timer.png
+A    h83_wap\static\img\usertop.png
+A    h83_wap\static\img\lh.png
+A    h83_wap\static\img\register_banner.jpg
+A    h83_wap\static\img\server.png
+A    h83_wap\static\img\money_1.png
+A    h83_wap\static\img\fasong.png
+A    h83_wap\static\img\zhuanzhang.png
+A    h83_wap\static\img\ls.png
+A    h83_wap\static\img\fanshuijl.png
+A    h83_wap\static\img\loadingsearch.gif
+A    h83_wap\static\img\huiyuanshengqing.png
+A    h83_wap\static\img\money.png
+A    h83_wap\static\img\user_pay.png
+A    h83_wap\static\img\chongz.png
+A    h83_wap\static\img\login_banner.jpg
+A    h83_wap\static\img\zhangdan.png
+A    h83_wap\static\img\red.gif
+A    h83_wap\static\img\activity_jl.svg
+A    h83_wap\static\img\tixian.png
+A    h83_wap\static\img\Explain.png
+A    h83_wap\static\img\guang.png
+A    h83_wap\static\img\blanknew.png
+A    h83_wap\static\img\hot.svg
+A    h83_wap\static\img\withdrawal_jl.svg
+A    h83_wap\static\img\x.png
+A    h83_wap\static\img\gg.svg
+A    h83_wap\static\img\sign_bg.png
+A    h83_wap\static\img\maintain_bg.png
+A    h83_wap\static\img\top.svg
+A    h83_wap\static\img\livebanner.jpg
+A    h83_wap\static\img\qq.png
+A    h83_wap\static\img\lotterybanner.jpg
+A    h83_wap\static\img\error.jpg
+A    h83_wap\static\img\blank.png
+A    h83_wap\static\img\user_info.png
+A    h83_wap\static\img\hongbaoyu.png
+A    h83_wap\static\img\FZJZJW.TTF
+A    h83_wap\static\img\fanshui_jl.svg
+A    h83_wap\static\img\VIP.png
+A    h83_wap\static\img\chongzhijl.png
+A    h83_wap\static\img\egamebanner.jpg
+A    h83_wap\static\.gitkeep
+A    h83_wap\static\css
+A    h83_wap\static\css\Animate.css
+A    h83_wap\static\css\reset.css
+A    h83_wap\.babelrc
+A    h83_wap\.editorconfig
+A    h83_wap\index.html
+A    h83_wap\.postcssrc.js
+A    h83_wap\README.md
+A    h83_wap\README.zj.md
+A    h83_wap\build
+A    h83_wap\build\webpack.dev.conf.js
+A    h83_wap\build\build.js
+A    h83_wap\build\utils.js
+A    h83_wap\build\check-versions.js
+A    h83_wap\build\webpack.prod.conf.js
+A    h83_wap\build\vue-loader.conf.js
+A    h83_wap\build\webpack.base.conf.js
+U    k01_wap\package.json
+U    k01_wap\static\css\reset.css
+U    b78_wap\config\index.js
+U    b78_wap\src\view\user\newblank\default.vue
+U    b78_wap\src\view\user\bank\default.vue
+U    b78_wap\src\view\register\default.vue
+U    b78_wap\src\main.js
+U    b78_wap\src\components\input\input.vue
+U    b78_wap\static\css\reset.css
+U    b78_wap\package-lock.json
+U    b79_wap\src\App.vue
+U    b79_wap\src\view\user\newblank.vue
+A    h83_wap\config\index.js
+A    h83_wap\src\view\register\default.vue
+A    h83_wap\src\view\user\newblank\default.vue
+A    h83_wap\src\main.js
+A    h83_wap\src\components\input\input.vue
+A    h83_wap\package-lock.json
+U    t01_wap\src\router\router.js
+U    t01_wap\src\view\user\paytransfe.vue
+U    k01_wap\config\index.js
+U    k01_wap\src\view\user\newblank\default.vue
+U    k01_wap\src\view\register\default.vue
+U    k01_wap\src\main.js
+U    k01_wap\src\components\input\input.vue
+U    k01_wap\package-lock.json
+Updated to revision 9352.
+Updating '.':
+U    b77_wap\package.json
+U    b77_wap\src\view\register.vue
+U    b77_wap\src\main.js
+G    b77_wap\package-lock.json
+U    b77_wap\config\index.js
+U    b77_wap\src\view\user\newblank.vue
+U    b77_wap\src\components\input\input.vue
+U    b77_wap\static\css\reset.css
+U    b78_wap\config\index.js
+U    b78_wap\src\components\recordtime\recordtime.vue
+G    b78_wap\package-lock.json
+Updated to revision 9354.
+Updating '.':
+At revision 9354.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+At revision 9354.
