@@ -2516,3 +2516,273 @@ At revision 9354.
 地址为 http://10.0.6.103:9191
 Updating '.':
 At revision 9354.
+Updating '.':
+U    g86_pc\src\components\pubilc.js
+U    g86_pc\src\view\home.vue
+U    g86_pc\static\img\home_fish.png
+U    g86_pc\package-lock.json
+Updated to revision 9355.
+Updating '.':
+U    b78_wap\src\components\recordtime\recordtime.vue
+Updated to revision 9356.
+Updating '.':
+U    usert02\src\view\pay\xshk\default.vue
+Updated to revision 9357.
+Updating '.':
+U    b72_wap\package.json
+U    b72_wap\src\main.js
+U    b72_wap\static\css\reset.css
+U    b72_wap\package-lock.json
+U    b72_wap\config\index.js
+U    b72_wap\src\view\register.vue
+U    b72_wap\src\components\input\input.vue
+U    b72_wap\index.html
+U    b77_wap\src\view\user\newblank.vue
+U    b77_wap\src\view\register.vue
+U    b77_wap\src\store\user.js
+U    b78_wap\src\view\register\default.vue
+U    b78_wap\src\view\user\newblank\default.vue
+U    b79_wap\src\view\user\newblank.vue
+U    b79_wap\src\view\register.vue
+U    b81_wap\src\view\user\newblank.vue
+U    b81_wap\src\view\register.vue
+U    t01_wap\src\view\user\newblank.vue
+U    t01_wap\src\view\register.vue
+U    k01_wap\src\view\user\newblank\default.vue
+U    k01_wap\src\view\register\default.vue
+Updated to revision 9358.
+Updating '.':
+U    b78_wap\src\view\user\usersetup\default.vue
+U    b78_wap\src\view\user\withdrawal\default.vue
+U    HtmlVue\css\reset.css
+U    HtmlVue\css\home.css
+U    HtmlVue\index.html
+U    HtmlVue\js\home.js
+G    HtmlVue\js\pubilc.js
+U    HtmlVue\html\home.html
+U    t01_wap\config\index.js
+U    t01_wap\src\components\footer\publicfooter.vue
+U    t01_wap\src\view\home.vue
+G    t01_wap\package-lock.json
+U    k01_wap\src\view\user\withdrawal\default.vue
+Updated to revision 9361.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+At revision 9367.
+Updating '.':
+At revision 9367.
+Updating '.':
+U    b58_wap\src\view\register.vue
+U    b37_wap\package-lock.json
+U    b37_wap\index.html
+U    b37_wap\package.json
+U    b37_wap\config\index.js
+U    b37_wap\src\components\input\input.vue
+U    b37_wap\src\view\user\usersetup\default.vue
+U    b37_wap\src\view\user\newblank\default.vue
+U    b37_wap\src\view\user\withdrawal\default.vue
+U    b37_wap\src\view\register\default.vue
+U    b37_wap\src\main.js
+U    b37_wap\src\router\router.js
+U    b37_wap\static\css\reset.css
+U    g86_pc\src\view\home.vue
+U    g85_pc\src\components\header.vue
+U    g85_pc\src\view\home.vue
+U    g85_pc\src\js\header.js
+U    g85_pc\static\img\home_sj1.png
+Updated to revision 9374.
+Updating '.':
+U    t01_wap\src\view\user\pay.vue
+U    t01_wap\src\view\user\paytransfe.vue
+U    t01_wap\src\view\user\usersetup.vue
+U    t01_wap\src\view\user\payline.vue
+Updated to revision 9375.
+Updating '.':
+At revision 9375.
+Updating '.':
+U    b17_wap\package.json
+U    b17_wap\src\main.js
+U    b17_wap\static\css\reset.css
+U    b17_wap\package-lock.json
+U    b17_wap\config\index.js
+U    b17_wap\src\router\router.js
+U    b17_wap\src\components\input\input.vue
+U    b17_wap\src\view\user\newblank.vue
+U    b17_wap\src\view\register.vue
+U    b17_wap\src\view\activity.vue
+Updated to revision 9376.
+Updating '.':
+U    h83_pc\src\view\line\default.vue
+U    h83_pc\README.md
+Updated to revision 9379.
+Updating '.':
+U    t01_wap\src\view\user\newblank.vue
+U    t01_wap\src\view\register.vue
+Updated to revision 9381.
+Updating '.':
+U    g85_pc\src\components\header.vue
+Updated to revision 9382.
+Updating '.':
+U    b07_wap\static\css\reset.css
+U    g83_wap\src\view\register\default.vue
+U    g83_wap\src\view\user\newblank\default.vue
+U    g83_wap\static\css\reset.css
+U    b07_wap\src\main.js
+U    b07_wap\src\router\router.js
+U    b07_wap\src\components\input\input.vue
+U    b07_wap\src\view\register\default.vue
+U    b07_wap\src\view\user\newblank\default.vue
+U    b07_wap\src\view\user\default.vue
+U    b17_wap\src\view\user\newblank.vue
+U    g33_wap\src\view\register\default.vue
+U    g33_wap\src\view\user\newblank\default.vue
+Updated to revision 9383.
+Updating '.':
+U    b04_app\package.json
+U    b04_app\src\components\input\input.vue
+U    b04_app\src\view\user\newblank\default.vue
+U    b04_app\src\view\register\default.vue
+U    b04_app\package-lock.json
+U    b04_wap\package-lock.json
+U    b04_wap\package.json
+U    b04_wap\src\main.js
+U    h83_wap\src\view\user\newblank\default.vue
+U    h83_wap\src\view\user\withdrawal\default.vue
+U    h83_wap\src\view\register\default.vue
+U    g33_wap\src\view\register\default.vue
+U    g85_wap\src\view\register\default.vue
+U    g85_wap\src\view\user\newblank\default.vue
+U    g86_wap\src\view\register\default.vue
+U    g86_wap\src\view\user\newblank\default.vue
+U    g87_wap\src\view\register\default.vue
+U    g87_wap\src\view\user\newblank\default.vue
+U    b04_app\config\index.js
+U    b04_app\src\main.js
+U    b04_app\src\view\user\withdrawal\default.vue
+U    b04_app\static\css\reset.css
+U    g85_pc\src\components\rollnotice.vue
+U    g85_pc\package-lock.json
+U    b04_wap\config\index.js
+U    b04_wap\src\view\user\newblank.vue
+U    b04_wap\src\view\register.vue
+U    b04_wap\src\view\home.vue
+U    b04_wap\src\router\router.js
+U    b04_wap\src\components\input\input.vue
+U    b04_wap\static\css\reset.css
+Updated to revision 9388.
+Updating '.':
+At revision 9388.
+Updating '.':
+At revision 9388.
+Updating '.':
+U    g85_pc\src\components\header.vue
+Updated to revision 9389.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+Restored 'HtmlVue\js\public.js'
+U    b04_wap\src\view\user\usersetup.vue
+U    b04_wap\src\view\user\newblank.vue
+U    b04_wap\src\view\register.vue
+U    b07_wap\src\view\register\default.vue
+U    b07_wap\src\view\home\default.vue
+U    b07_wap\src\view\user\usersetup\default.vue
+U    b07_wap\src\view\user\newblank\default.vue
+U    b12_wap\src\view\user\usersetup.vue
+U    b04_app\src\view\user\usersetup\default.vue
+U    b04_app\src\view\user\newblank\default.vue
+U    b04_app\src\view\register\default.vue
+Updated to revision 9395.
+Updating '.':
+At revision 9395.
+Updating '.':
+U    b12_wap\src\view\user\usersetup.vue
+U    b12_wap\src\view\user\newblank.vue
+U    b12_wap\src\view\register.vue
+U    b17_wap\src\view\user\newblank.vue
+U    b17_wap\src\view\user\usersetup.vue
+U    b17_wap\src\view\register.vue
+U    b78_pc\package-lock.json
+U    b78_pc\src\view\home\default.vue
+U    b37_wap\src\view\user\usersetup\default.vue
+U    b37_wap\src\view\user\newblank\default.vue
+U    b37_wap\src\view\register\default.vue
+Updated to revision 9398.
+Updating '.':
+U    b58_wap\src\view\user\usersetup.vue
+U    b58_wap\src\view\user\newblank.vue
+U    b58_wap\src\view\register.vue
+U    g83_pc\index.html
+U    g83_pc\src\js\home.js
+Updated to revision 9400.
+Updating '.':
+G    b07_wap\package.json
+G    b07_wap\package-lock.json
+U    g86_pc\src\view\home.vue
+U    b67_wap\src\view\user\usersetup.vue
+U    b67_wap\src\view\user\newblank.vue
+U    b67_wap\src\view\register.vue
+U    b72_wap\src\view\register.vue
+U    b72_wap\src\view\user\newblank.vue
+U    b72_wap\src\view\user\usersetup.vue
+Updated to revision 9403.
+Updating '.':
+At revision 9403.
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+At revision 9403.
+Updating '.':
+U    b78_wap\config\index.js
+U    b81_wap\src\view\user\usersetup.vue
+U    b81_wap\src\view\user\newblank.vue
+U    b81_wap\src\view\register.vue
+U    b77_wap\src\view\user\newblank.vue
+U    b77_wap\src\view\user\usersetup.vue
+U    b77_wap\src\view\register.vue
+U    b78_wap\src\view\user\usersetup\default.vue
+U    b78_wap\src\view\user\newblank\default.vue
+U    b78_wap\src\view\register\default.vue
+U    b79_wap\src\view\user\usersetup.vue
+U    b79_wap\src\view\user\newblank.vue
+U    b79_wap\src\view\register.vue
+Updated to revision 9407.
+Updating '.':
+U    k01_wap\src\view\user\newblank\default.vue
+U    y01_wap\src\main.js
+U    y01_wap\static\css\reset.css
+U    y01_wap\package-lock.json
+U    y01_wap\package.json
+U    t01_wap\config\index.js
+U    k01_wap\src\view\register\default.vue
+U    k01_wap\src\view\user\usersetup\default.vue
+U    y01_wap\src\components\input\input.vue
+U    y01_wap\src\view\user\usersetup.vue
+U    y01_wap\src\view\user\newblank.vue
+U    y01_wap\src\view\register.vue
+U    y01_wap\config\index.js
+U    t01_wap\src\view\user\newblank.vue
+U    t01_wap\src\view\user\usersetup.vue
+U    t01_wap\src\view\register.vue
+Updated to revision 9410.
+Updating '.':
+At revision 9410.
+Updating '.':
+U    g33_wap\src\view\user\usersetup\default.vue
+U    g33_wap\src\view\user\newblank\default.vue
+U    g33_wap\src\view\register\default.vue
+U    g83_wap\src\view\user\usersetup\default.vue
+U    g83_wap\src\view\user\newblank\default.vue
+U    g85_wap\src\view\user\usersetup\default.vue
+U    g86_wap\src\view\user\usersetup\default.vue
+U    g86_wap\src\view\user\newblank\default.vue
+U    g86_wap\index.html
+U    g87_wap\src\view\user\usersetup\default.vue
+U    g87_wap\src\view\user\newblank\default.vue
+Updated to revision 9415.
+Updating '.':
+U    h83_pc\src\store\actionss.js
+U    h83_pc\package-lock.json
+U    h83_pc\index.html
+Updated to revision 9416.

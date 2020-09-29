@@ -1158,3 +1158,41 @@ Emitted 'error' event at:
     at process._tickCallback (internal/process/next_tick.js:63:19)
 (node:15236) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
 (node:15236) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+(node:18012) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:18012) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+svn: E155004: Run 'svn cleanup' to remove locks (type 'svn help cleanup' for details)
+svn: E155004: Working copy 'G:\aoneQt' locked.
+svn: E155004: 'G:\aoneQt' is already locked.
+G:\git\node\api\upcode.js:15
+                throw err
+                ^
+
+Error: svn: E155004: Run 'svn cleanup' to remove locks (type 'svn help cleanup' for details)
+svn: E155004: Working copy 'G:\aoneQt' locked.
+svn: E155004: 'G:\aoneQt' is already locked.
+
+    at ChildProcess.<anonymous> (G:\git\node\node_modules\easy-spawn\index.js:88:25)
+    at ChildProcess.emit (events.js:198:13)
+    at maybeClose (internal/child_process.js:982:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)
+(node:11072) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:11072) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+(node:5548) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:5548) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+svn: E155004: Run 'svn cleanup' to remove locks (type 'svn help cleanup' for details)
+svn: E155004: Working copy 'G:\aoneQt' locked.
+svn: E155004: 'G:\aoneQt' is already locked.
+G:\git\node\api\upcode.js:15
+                throw err
+                ^
+
+Error: svn: E155004: Run 'svn cleanup' to remove locks (type 'svn help cleanup' for details)
+svn: E155004: Working copy 'G:\aoneQt' locked.
+svn: E155004: 'G:\aoneQt' is already locked.
+
+    at ChildProcess.<anonymous> (G:\git\node\node_modules\easy-spawn\index.js:88:25)
+    at ChildProcess.emit (events.js:198:13)
+    at maybeClose (internal/child_process.js:982:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)
+(node:15864) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:15864) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.

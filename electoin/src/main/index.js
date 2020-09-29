@@ -20,7 +20,8 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     height: 563,
     useContentSize: true,
-    width: 1000
+    width: 1000,
+    autoHideMenuBar: true, // 因此工具栏  按alt 显示
   })
 
   mainWindow.loadURL(winURL)
