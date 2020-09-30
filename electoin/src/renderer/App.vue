@@ -6,7 +6,10 @@
 
 <script>
   export default {
-    name: 'elect'
+    name: 'elect',
+    mounted() {
+      // this.$router.push('/login')
+    },
   }
 </script>
 

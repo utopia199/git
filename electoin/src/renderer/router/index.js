@@ -11,13 +11,13 @@ export default new Router({
       component: require('@/components/LandingPage').default
     },
     {
-      path: '/',
+      path: '/login',
       name: 'login',
-      component: require('@/components/LandingPage').default
+      component: require('@/view/login').default
     },
     {
       path: '*',
-      redirect: '/'
+      redirect: '/login'
     }
   ]
 })
