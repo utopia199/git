@@ -8,7 +8,7 @@
   export default {
     name: 'elect',
     mounted() {
-      // this.$router.push('/login')
+     
     },
   }
 </script>

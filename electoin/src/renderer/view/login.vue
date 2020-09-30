@@ -18,6 +18,7 @@
     </div>
 </template>
 <script>
+import fs from "fs"
 export default {
     name: "login",
     data() {
@@ -30,7 +31,12 @@ export default {
         }
     },
     mounted() {
-        console.log(this.$db.find({tt:'tt.txt'}))
+        fs.readFile('./login.json', 'utf-8', function(err, data) {
+            if (err) {
+                throw err;
+            }
+            console.log(JSON.parse(data))
+        });
     },
 
     methods: {
@@ -41,7 +47,14 @@ export default {
                 this.$message({
                     message: res.message,
                     type: 'success'
-                }); 
+                });
+                fs.writeFile('./login.json', JSON.stringify(this.axiosConfig), function(err) {
+                    if (err) {
+                        throw err;
+                    }
+                  
+                    
+                });
             }).catch(err=>{
                 this.isloading = false    
             })
