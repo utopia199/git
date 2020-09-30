@@ -1196,3 +1196,16 @@ svn: E155004: 'G:\aoneQt' is already locked.
     at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)
 (node:15864) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
 (node:15864) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+svn: E730054: Error running context: Ô¶³ÌÖ÷»úÇ¿ÆÈ¹Ø±ÕÁËÒ»¸öÏÖÓÐµÄÁ¬½Ó¡£  
+G:\git\node\api\upcode.js:15
+                throw err
+                ^
+
+Error: svn: E730054: Error running context: Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½È¹Ø±ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Ó¡ï¿½  
+
+    at ChildProcess.<anonymous> (G:\git\node\node_modules\easy-spawn\index.js:88:25)
+    at ChildProcess.emit (events.js:198:13)
+    at maybeClose (internal/child_process.js:982:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)
+(node:6504) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:6504) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.

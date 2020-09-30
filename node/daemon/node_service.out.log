@@ -2786,3 +2786,55 @@ U    h83_pc\src\store\actionss.js
 U    h83_pc\package-lock.json
 U    h83_pc\index.html
 Updated to revision 9416.
+Updating '.':
+U    b78_pc\src\view\home\default.vue
+Updated to revision 9417.
+Updating '.':
+U    g33_wap\src\view\user\usernews2\default.vue
+U    g83_wap\src\view\user\usernews2\default.vue
+U    g85_wap\config\index.js
+U    g85_wap\src\view\user\usernews2\default.vue
+U    g86_wap\src\view\user\usernews2\default.vue
+U    g87_wap\src\view\user\usernews2\default.vue
+Updated to revision 9418.
+Updating '.':
+At revision 9418.
+Updating '.':
+D    HtmlVue\js\pubilc.js
+U    h83_wap\src\view\user\usersetup\default.vue
+U    h83_wap\src\view\user\newblank\default.vue
+U    h83_wap\src\view\register\default.vue
+U    h83_wap\package-lock.json
+U    b07_pc\src\view\home\default.vue
+A    b07_pc\static\img\legqipai.png
+U    b07_pc\package-lock.json
+U    HtmlVue\api\api.js
+U    HtmlVue\index.html
+U    HtmlVue\js\public.js
+A    HtmlVue\js\index.js
+U    HtmlVue\js\home.js
+U    HtmlVue\require\main.js
+U    HtmlVue\store\store.js
+U    HtmlVue\axios\request.js
+U    HtmlVue\html\home.html
+Updated to revision 9421.
+Updating '.':
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+At revision 9423.
+Updating '.':
+U    h83_pc\index.html
+U    b77_wap\src\view\user\usernews.vue
+U    b77_wap\src\view\user\usernews2.vue
+U    b78_wap\src\components\public.js
+U    b78_wap\src\view\user\usernews\default.vue
+U    h83_pc\src\view\activity\default.vue
+U    h83_pc\src\components\publicVue\homeNotice.vue
+Updated to revision 9425.
+Updating '.':
+U    h83_wap\src\view\user\usernews2\default.vue
+U    k01_wap\src\view\user\usernews2\default.vue
+Updated to revision 9426.
+
+地址为 http://10.0.6.103:9191
