@@ -19,10 +19,6 @@ app.all("*", function(req, res, next) {
     // 跨域允许的请求方式 
     res.header("Access-Control-Allow-Methods","POST,GET");
     res.header("Access-Content-Type","application/x-www-form-urlencoded");
-    // 通过请求头获取代码的路径
-    if (req.url === '/api/getDataBase') {
-        global.href = req.headers.path
-    }
     next();
 });
 
@@ -37,20 +33,21 @@ app.get('*', function(req, res){
 app.post("/api/login", require("../api/user.js").Login);// 登录
 
 
+const interfaces = require('os').networkInterfaces(); // 在开发环境中获取局域网中的本机iP地址
+let IPAdress = '';
+for(var devName in interfaces){  
+  var iface = interfaces[devName];  
+  for(var i=0;i<iface.length;i++){  
+        var alias = iface[i];  
+        if(alias.family === 'IPv4' && alias.address !== '127.0.0.1' && !alias.internal){  
+            IPAdress = alias.address;  
+        }  
+  }  
+} 
 
-// 动态获取IP地址
-let networkInterfaces = os.networkInterfaces();
-let IParr = new Object()
-for(let k in networkInterfaces){
-    IParr=(networkInterfaces[k])
-}
-
-let server = app.listen(9527, IParr[1].address, function () {
-    let host = server.address().address;
-    let port = server.address().port;
-    console.log("\n地址为 http://%s:%s", host, port);
+let server = app.listen(9527, IPAdress, function () {
+    console.log("\n地址为 http://"+IPAdress+':'+9527);
     
 });
-global.build = false // 判断是否是在执行打包
 
 module.exports = app;

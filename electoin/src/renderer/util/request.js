@@ -1,6 +1,6 @@
 import axios from "axios"
 const httpServer = axios.create({
-    baseURL: 'http://10.0.6.103:9527/',// 接口api 地址
+    baseURL: 'http://192.168.0.113:9527/',// 接口api 地址
     timeout: 40000,
 })
 // 请求拦截
