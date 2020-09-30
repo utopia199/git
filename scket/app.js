@@ -7,7 +7,7 @@ var server = http.createServer(function(req, res) {
     res.end(fs.readFileSync('./index.html'));
 });
 server.listen(4949, function() {
-    console.log('Scket Server http://10.0.6.103:4949/');
+    console.log('Scket Server http://192.168.0.113:4949/');
 });
 io = sio.listen(server);
 io.sockets.on('connection', function(socket) {

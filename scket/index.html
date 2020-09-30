@@ -12,7 +12,7 @@
     <input type="text" id="chatmsgS">
     <button id="chatmsg">wef</button>
   <script>
-          var socket = io.connect('http://10.0.6.103:4949');
+          var socket = io.connect('http://192.168.0.113:4949/');
           console.log(socket)
           socket.on('connect', function() {
               socket.on('message', function(message) {

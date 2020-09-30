@@ -15,6 +15,14 @@ if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
 
+
+import db from './datastore'
+
+/* 其它代码 */
+
+Vue.prototype.$db = db
+
+
 new Vue({
   components: { App },
   router,

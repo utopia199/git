@@ -240,3 +240,83 @@ Stacktrace:   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInte
    在 winsw.WrapperService.OnShutdown()
 2020-09-30 09:09:16 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
 2020-09-30 09:09:16 - Started 5664
+2020-09-30 16:04:25 - Stopping node_socket.exe
+2020-09-30 16:04:25 - ProcessKill 5664
+2020-09-30 16:04:25 - Found child process: 5752 Name: conhost.exe
+2020-09-30 16:04:25 - Found child process: 6212 Name: node.exe
+2020-09-30 16:04:25 - Stopping process 5752
+2020-09-30 16:04:25 - Send SIGINT 5752
+2020-09-30 16:04:25 - SIGINT to 5752 failed - Killing as fallback
+2020-09-30 16:04:25 - Stopping process 6212
+2020-09-30 16:04:25 - Send SIGINT 6212
+2020-09-30 16:04:25 - SIGINT to 6212 failed - Killing as fallback
+2020-09-30 16:04:25 - Stopping process 5664
+2020-09-30 16:04:25 - Send SIGINT 5664
+2020-09-30 16:04:25 - SIGINT to 5664 failed - Killing as fallback
+2020-09-30 16:04:25 - Finished node_socket.exe
+2020-09-30 16:04:27 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-09-30 16:04:27 - Started 12552
+2020-09-30 16:04:50 - Stopping node_socket.exe
+2020-09-30 16:04:50 - ProcessKill 12552
+2020-09-30 16:04:50 - Found child process: 17328 Name: conhost.exe
+2020-09-30 16:04:50 - Found child process: 22752 Name: node.exe
+2020-09-30 16:04:50 - Stopping process 17328
+2020-09-30 16:04:50 - Send SIGINT 17328
+2020-09-30 16:04:50 - SIGINT to 17328 failed - Killing as fallback
+2020-09-30 16:04:50 - Stopping process 22752
+2020-09-30 16:04:51 - Send SIGINT 22752
+2020-09-30 16:04:51 - SIGINT to 22752 failed - Killing as fallback
+2020-09-30 16:04:51 - Stopping process 12552
+2020-09-30 16:04:51 - Send SIGINT 12552
+2020-09-30 16:04:51 - SIGINT to 12552 failed - Killing as fallback
+2020-09-30 16:04:51 - Finished node_socket.exe
+2020-09-30 16:08:04 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-09-30 16:08:04 - Started 22888
+2020-09-30 16:30:52 - Stopping node_socket.exe
+2020-09-30 16:30:52 - ProcessKill 22888
+2020-09-30 16:30:52 - Found child process: 19600 Name: conhost.exe
+2020-09-30 16:30:52 - Found child process: 21044 Name: node.exe
+2020-09-30 16:30:52 - Stopping process 19600
+2020-09-30 16:30:52 - Send SIGINT 19600
+2020-09-30 16:30:52 - SIGINT to 19600 failed - Killing as fallback
+2020-09-30 16:30:53 - Stopping process 21044
+2020-09-30 16:30:53 - Send SIGINT 21044
+2020-09-30 16:30:53 - SIGINT to 21044 failed - Killing as fallback
+2020-09-30 16:30:53 - Stopping process 22888
+2020-09-30 16:30:53 - Send SIGINT 22888
+2020-09-30 16:30:53 - SIGINT to 22888 failed - Killing as fallback
+2020-09-30 16:30:53 - Finished node_socket.exe
+2020-09-30 16:30:54 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-09-30 16:30:54 - Started 17176
+2020-09-30 16:32:20 - Stopping node_socket.exe
+2020-09-30 16:32:20 - ProcessKill 17176
+2020-09-30 16:32:20 - Found child process: 21216 Name: conhost.exe
+2020-09-30 16:32:20 - Found child process: 23332 Name: node.exe
+2020-09-30 16:32:20 - Stopping process 21216
+2020-09-30 16:32:20 - Send SIGINT 21216
+2020-09-30 16:32:20 - SIGINT to 21216 failed - Killing as fallback
+2020-09-30 16:32:20 - Stopping process 23332
+2020-09-30 16:32:20 - Send SIGINT 23332
+2020-09-30 16:32:20 - SIGINT to 23332 failed - Killing as fallback
+2020-09-30 16:32:20 - Stopping process 17176
+2020-09-30 16:32:20 - Send SIGINT 17176
+2020-09-30 16:32:20 - SIGINT to 17176 failed - Killing as fallback
+2020-09-30 16:32:20 - Finished node_socket.exe
+2020-09-30 16:48:07 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-09-30 16:48:07 - Started 18824
+2020-09-30 16:48:56 - Stopping node_socket.exe
+2020-09-30 16:48:56 - ProcessKill 18824
+2020-09-30 16:48:56 - Found child process: 23268 Name: conhost.exe
+2020-09-30 16:48:56 - Found child process: 9328 Name: node.exe
+2020-09-30 16:48:56 - Stopping process 23268
+2020-09-30 16:48:56 - Send SIGINT 23268
+2020-09-30 16:48:56 - SIGINT to 23268 failed - Killing as fallback
+2020-09-30 16:48:56 - Stopping process 9328
+2020-09-30 16:48:56 - Send SIGINT 9328
+2020-09-30 16:48:56 - SIGINT to 9328 failed - Killing as fallback
+2020-09-30 16:48:56 - Stopping process 18824
+2020-09-30 16:48:56 - Send SIGINT 18824
+2020-09-30 16:48:56 - SIGINT to 18824 failed - Killing as fallback
+2020-09-30 16:48:56 - Finished node_socket.exe
+2020-09-30 16:50:53 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-09-30 16:50:53 - Started 12960

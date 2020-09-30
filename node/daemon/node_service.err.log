@@ -1209,3 +1209,105 @@ Error: svn: E730054: Error running context: Զ������ǿ�ȹر���
     at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)
 (node:6504) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
 (node:6504) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+(node:6192) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:6192) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 10.0.6.103:9191
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at doListen (net.js:1460:7)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:832:11)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+Emitted 'error' event at:
+    at emitErrorNT (net.js:1306:8)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+    [... lines matching original stack trace ...]
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 10.0.6.103:9191
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at doListen (net.js:1460:7)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:832:11)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+Emitted 'error' event at:
+    at emitErrorNT (net.js:1306:8)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+    [... lines matching original stack trace ...]
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 10.0.6.103:9191
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at doListen (net.js:1460:7)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:832:11)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+Emitted 'error' event at:
+    at emitErrorNT (net.js:1306:8)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+    [... lines matching original stack trace ...]
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+(node:22400) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:22400) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+G:\git\node\router\index.js:71
+let server = app.listen(9191, IParr[1].address, function () {
+                                       ^
+
+TypeError: Cannot read property 'address' of undefined
+    at Object.<anonymous> (G:\git\node\router\index.js:71:40)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:690:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (G:\git\node\app.js:2:13)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+G:\git\node\router\index.js:71
+let server = app.listen(9191, IParr[1].address, function () {
+                                       ^
+
+TypeError: Cannot read property 'address' of undefined
+    at Object.<anonymous> (G:\git\node\router\index.js:71:40)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:690:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (G:\git\node\app.js:2:13)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+G:\git\node\router\index.js:71
+let server = app.listen(9191, IParr[1].address, function () {
+                                       ^
+
+TypeError: Cannot read property 'address' of undefined
+    at Object.<anonymous> (G:\git\node\router\index.js:71:40)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:690:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (G:\git\node\app.js:2:13)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+(node:16216) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:16216) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.

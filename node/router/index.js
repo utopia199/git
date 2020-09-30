@@ -61,6 +61,24 @@ app.post("/api/updata", require("../api/temp").updata);// 最近更新信息
 app.post("/api/compression", require("../api/compression").compression);// 压缩文件
 
 
+/* 修改 */
+
+const interfaces = require('os').networkInterfaces(); // 在开发环境中获取局域网中的本机iP地址
+let IPAdress = '';
+for(var devName in interfaces){  
+  var iface = interfaces[devName];  
+  for(var i=0;i<iface.length;i++){  
+        var alias = iface[i];  
+        if(alias.family === 'IPv4' && alias.address !== '127.0.0.1' && !alias.internal){  
+            IPAdress = alias.address;  
+        }  
+  }  
+} 
+
+
+
+
+
 // 动态获取IP地址
 let networkInterfaces = os.networkInterfaces();
 let IParr = new Object()
@@ -68,12 +86,19 @@ for(let k in networkInterfaces){
     IParr=(networkInterfaces[k])
 }
 
-let server = app.listen(9191, IParr[1].address, function () {
+/* 修改 */
+let server = app.listen(9191, IPAdress, function () {
     let host = server.address().address;
     let port = server.address().port;
-    console.log("\n地址为 http://%s:%s", host, port);
+    console.log("\n地址为 http://"+IPAdress+':'+9191);
     
 });
+// let server = app.listen(9191, IParr[1].address, function () {
+//     let host = server.address().address;
+//     let port = server.address().port;
+//     console.log("\n地址为 http://%s:%s", host, port);
+    
+// });
 global.build = false // 判断是否是在执行打包
 
 module.exports = app;

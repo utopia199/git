@@ -2838,3 +2838,153 @@ U    k01_wap\src\view\user\usernews2\default.vue
 Updated to revision 9426.
 
 地址为 http://10.0.6.103:9191
+Updating '.':
+U    b17_pc\package-lock.json
+U    a01_wap\src\main.js
+U    a02_wap\src\main.js
+U    a02_wap\static\css\reset.css
+U    a02_wap\package-lock.json
+U    a02_wap\package.json
+U    b17_pc\src\components\view\header\default.vue
+U    a01_wap\package.json
+U    a01_wap\config\index.js
+U    a01_wap\src\components\input\input.vue
+U    a01_wap\src\view\register\default.vue
+U    a01_wap\src\view\user\usersetup\default.vue
+U    a01_wap\src\view\user\newblank\default.vue
+U    a01_wap\static\css\reset.css
+U    a01_wap\package-lock.json
+U    a02_wap\config\index.js
+U    a02_wap\src\components\input\input.vue
+U    a02_wap\src\view\user\usersetup\default.vue
+U    a02_wap\src\view\user\newblank\default.vue
+U    a02_wap\src\view\user\withdrawal\default.vue
+U    a02_wap\src\view\register\default.vue
+Updated to revision 9431.
+Updating '.':
+U    a11_wap\package.json
+U    a11_wap\src\main.js
+U    a11_wap\package-lock.json
+U    g83_pc\index.html
+U    a11_wap\config\index.js
+U    a11_wap\src\components\input\input.vue
+U    a11_wap\src\view\user\usersetup.vue
+U    a11_wap\src\view\user\newblank.vue
+U    a11_wap\src\view\register.vue
+U    a11_wap\static\css\reset.css
+U    b37_wap\src\view\user\usersetup\default.vue
+U    b37_wap\src\view\user\newblank\default.vue
+U    b37_wap\index.html
+U    b37_wap\config\index.js
+U    user003\src\view\Cawithd\default.vue
+U    user003\src\view\user\userBank\default.vue
+U    user003\index.html
+Updated to revision 9433.
+Updating '.':
+U    a01_wap\src\view\user\usernews2\default.vue
+U    a02_wap\src\view\user\usernews2\default.vue
+Updated to revision 9435.
+Updating '.':
+At revision 9435.
+Updating '.':
+U    a12_wap\config\index.js
+U    a12_wap\src\components\tool.js
+U    a12_wap\src\components\tabbar\tabbar.vue
+U    a12_wap\src\components\input\input.vue
+U    a12_wap\src\components\popup\popup.vue
+U    a12_wap\src\view\user\usersetup.vue
+U    a12_wap\src\view\user\record.vue
+U    a12_wap\src\view\user\newblank.vue
+U    a12_wap\src\view\user\usernewslist.vue
+U    a12_wap\src\view\register.vue
+U    a12_wap\src\view\activitydata.vue
+U    a12_wap\src\view\home.vue
+U    a12_wap\src\view\gameInit.vue
+U    a12_wap\src\view\login.vue
+U    a12_wap\src\view\game.vue
+U    a12_wap\src\store\actionss.js
+U    a12_wap\src\store\user.js
+U    a12_wap\src\main.js
+U    a12_wap\static\css\reset.css
+U    a12_wap\package-lock.json
+U    a12_wap\package.json
+Updated to revision 9436.
+Updating '.':
+At revision 9436.
+Updating '.':
+U    a12_wap\config\index.js
+U    h83_wap\config\index.js
+Updated to revision 9438.
+Updating '.':
+At revision 9438.
+Updating '.':
+At revision 9438.
+Updating '.':
+At revision 9438.
+
+地址为 http://10.0.6.103:9191
+
+地址为 http://10.0.6.103:9191
+Updating '.':
+U    a13_wap\src\main.js
+U    a13_wap\src\view\user\withdrawal\default.vue
+U    a13_wap\static\css\reset.css
+U    a13_wap\package-lock.json
+U    a13_wap\package.json
+U    a15_wap\package.json
+U    a15_wap\src\main.js
+U    a15_wap\package-lock.json
+U    a21_wap\package.json
+U    a21_wap\src\main.js
+U    a21_wap\static\css\reset.css
+U    a21_wap\package-lock.json
+U    a22_wap\package.json
+U    a22_wap\src\main.js
+U    a22_wap\static\css\reset.css
+U    a22_wap\package-lock.json
+U    g85_pc\src\js\header.js
+U    user003\index.html
+U    a13_wap\src\components\input\input.vue
+U    a13_wap\src\view\user\usernews2\default.vue
+U    a13_wap\src\view\user\usersetup\default.vue
+U    a13_wap\src\view\user\newblank\default.vue
+U    a13_wap\src\view\register\default.vue
+U    a13_wap\config\index.js
+U    a15_wap\config\index.js
+U    a15_wap\src\components\input\input.vue
+U    a15_wap\src\view\user\usernews2.vue
+U    a15_wap\src\view\user\usersetup.vue
+U    a15_wap\src\view\user\newblank.vue
+U    a15_wap\src\view\register.vue
+U    a15_wap\static\css\reset.css
+U    a21_wap\config\index.js
+U    a21_wap\src\components\input\input.vue
+U    a21_wap\src\view\user\newblank.vue
+U    a21_wap\src\view\user\usernews2.vue
+U    a21_wap\src\view\user\usersetup.vue
+U    a21_wap\src\view\register.vue
+U    a22_wap\config\index.js
+U    a22_wap\src\components\input\input.vue
+U    a22_wap\src\view\user\usernews2.vue
+U    a22_wap\src\view\user\usersetup.vue
+U    a22_wap\src\view\user\newblank.vue
+U    a22_wap\src\view\register.vue
+U    user003\src\view\pay\xshk\zzhk.vue
+U    user003\config\dev.env.js
+Updated to revision 9443.
+Updating '.':
+At revision 9443.
+
+地址为 http://192.168.0.113:9191
+
+地址为 http://192.168.0.113:9191
+Updating '.':
+U    g83_pc\package-lock.json
+U    g83_pc\index.html
+U    g83_pc\config\dev.env.js
+U    g83_pc\src\js\activity.js
+Updated to revision 9445.
+Updating '.':
+At revision 9445.
+Updating '.':
+At revision 9445.

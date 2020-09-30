@@ -1,3 +1,4 @@
+<!-- 登陆注册 -->
 <template>
     <div id="login">
         <div class="main">
@@ -11,7 +12,8 @@
                 <template slot="prepend">密码</template>
             </el-input>
 
-            <el-button type="primary" :loading="isloading" @click="Login" width="100px">登录</el-button>
+            <el-button type="primary" :loading="isloading" @click="Login" >登录</el-button>
+            <p class="register cursor" @click="Register">注册</p>
         </div>
     </div>
 </template>
@@ -28,16 +30,40 @@ export default {
         }
     },
     mounted() {
-        
+        console.log(this.$db.find({tt:'tt.txt'}))
     },
 
     methods: {
-        Login() {
+        Login() {// 登陆
             this.isloading = true
             this.$api.Login(this.axiosConfig).then(res=>{
-                this.isloading = false    
+                this.isloading = false   
+                this.$message({
+                    message: res.message,
+                    type: 'success'
+                }); 
             }).catch(err=>{
                 this.isloading = false    
+            })
+        },
+
+        Register() {// 注册
+            this.axiosConfig.type = 1
+            const loading = this.$loading({
+                lock: true,
+                text: 'Loading',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)'
+            });
+            
+            this.$api.Login(this.axiosConfig).then(res=>{
+                this.$message({
+                    message: res.message,
+                    type: 'success'
+                });
+                loading.close();
+            }).catch(err=>{
+                loading.close();
             })
         }
     },
@@ -63,6 +89,7 @@ export default {
             animation: shodw 2s infinite;
             justify-content: flex-start;
             align-items: center;
+            position: relative;
             @keyframes shodw {
                 0%{
                     box-shadow: 0px 0px 1px #43e819;
@@ -89,6 +116,14 @@ export default {
             button[type='button']{
                 width: 100px;
                 margin:25px auto 0;
+            }
+            .register{
+                position: absolute;
+                right:15px;bottom:15px;
+                font-size: 14px;
+                &:hover{
+                    color:#1989fa;
+                }
             }
         }
     }
