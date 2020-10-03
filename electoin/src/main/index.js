@@ -18,7 +18,7 @@ function createWindow () {
    * Initial window options
    */
   mainWindow = new BrowserWindow({
-    height: 563,
+    height: 900,
     useContentSize: true,
     width: 1000,
     autoHideMenuBar: true, // 因此工具栏  按alt 显示

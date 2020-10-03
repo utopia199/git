@@ -2988,3 +2988,78 @@ Updating '.':
 At revision 9445.
 Updating '.':
 At revision 9445.
+Updating '.':
+U    b17_pc\config\dev.env.js
+U    b17_pc\src\store\mutationss.js
+U    b17_pc\index.html
+Updated to revision 9446.
+Updating '.':
+U    user003\src\view\Cawithd\default.vue
+U    user003\index.html
+Updated to revision 9447.
+Updating '.':
+U    a13_wap\index.html
+U    a13_wap\config\dev.env.js
+U    a15_wap\config\dev.env.js
+U    a15_wap\src\view\user\usernews2.vue
+U    a15_wap\src\view\register.vue
+U    a15_wap\static\css\reset.css
+U    a15_wap\index.html
+U    a21_wap\src\view\register.vue
+U    a21_wap\index.html
+U    a21_wap\config\dev.env.js
+U    a22_wap\config\dev.env.js
+U    a22_wap\src\view\register.vue
+U    a22_wap\index.html
+Updated to revision 9448.
+Updating '.':
+At revision 9448.
+Updating '.':
+D    HtmlVue\html\b78\footer.html
+D    HtmlVue\html\b78\user.html
+D    HtmlVue\html\b78\header.html
+D    HtmlVue\html\b78\home.html
+D    HtmlVue\html\b78\game.html
+A    HtmlVue\html\b78\home.js
+A    HtmlVue\html\b78\game.js
+U    HtmlVue\html\home.html
+U    HtmlVue\index.html
+U    HtmlVue\js\home.js
+U    HtmlVue\js\game.js
+U    HtmlVue\js\public.js
+U    HtmlVue\require\main.js
+A    HtmlVue\require\text.js
+U    user003\src\view\Cawithd\default.vue
+Updated to revision 9450.
+
+地址为 http://:9191
+Updating '.':
+U    g86_pc\config\dev.env.js
+U    g85_pc\config\dev.env.js
+U    g86_pc\index.html
+U    g86_pc\src\components\grabred.vue
+U    g86_pc\src\view\home.vue
+U    g86_pc\src\view\index.vue
+A    g86_pc\static\img\red1.png
+U    g85_pc\index.html
+U    g85_pc\src\components\grabred.vue
+U    g85_pc\src\view\index.vue
+U    g85_pc\src\view\home.vue
+A    g85_pc\static\img\red1.png
+U    b17_pc\src\components\view\header\default.vue
+Updated to revision 9455.
+Updating '.':
+U    b17_pc\src\components\view\header\default.vue
+Updated to revision 9456.
+
+地址为 http://:9191
+Updating '.':
+U    h83_wap\config\dev.env.js
+U    h83_wap\package-lock.json
+U    h83_wap\index.html
+U    h83_wap\config\index.js
+U    h83_wap\src\view\activity\default.vue
+U    h83_wap\src\view\activity\activitydata\default.vue
+Updated to revision 9460.
+
+地址为 http://:9191

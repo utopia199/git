@@ -30,14 +30,6 @@ export default {
             isloading: false
         }
     },
-    mounted() {
-        fs.readFile('./login.json', 'utf-8', function(err, data) {
-            if (err) {
-                throw err;
-            }
-            console.log(JSON.parse(data))
-        });
-    },
 
     methods: {
         Login() {// 登陆
@@ -48,12 +40,14 @@ export default {
                     message: res.message,
                     type: 'success'
                 });
-                fs.writeFile('./login.json', JSON.stringify(this.axiosConfig), function(err) {
+                let key = new Object()
+                key[this.axiosConfig.userName] = res.key
+                fs.writeFile('./login.json', JSON.stringify(key), err=> {
                     if (err) {
                         throw err;
                     }
-                  
-                    
+                    window.localStorage.setItem("key",key)
+                    this.$router.push('/home')
                 });
             }).catch(err=>{
                 this.isloading = false    
@@ -70,6 +64,14 @@ export default {
             });
             
             this.$api.Login(this.axiosConfig).then(res=>{
+                let key = new Object()
+                key[this.axiosConfig.userName] = res.key
+                fs.writeFile('./login.json', JSON.stringify(key), err=> {
+                    if (err) {
+                        throw err;
+                    }
+                    this.$router.push('/home')
+                });
                 this.$message({
                     message: res.message,
                     type: 'success'

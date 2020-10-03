@@ -1,6 +1,7 @@
 import request from "./request"
 const config = {
     Login: "/api/login",// 登录
+    UserInfo: "/api/userInfo",// 用户信息
 }
 
 

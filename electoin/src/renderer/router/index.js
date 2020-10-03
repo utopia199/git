@@ -34,7 +34,8 @@ router.beforeEach((to,from,next)=>{
       if (err) {
         throw err;
       }
-      if(data) {
+      if(data && data !== "undefined") {
+        console.log(data)
         return next({path:"/home"})
       }
     });
