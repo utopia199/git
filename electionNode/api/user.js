@@ -51,7 +51,7 @@ exports.Login = function(req, res) {// 获取列表
                                         let userInfo = {
                                             userName:  body.userName,
                                             regIP:  ipAddress,
-                                            head: null,
+                                            head: require("../uploads/default.jpg"),
                                             key: key
                                         }
                                         dbs.collection("userInfo").insertOne(userInfo, function(err, resolve) {// 添加会员默认信息

@@ -30,16 +30,20 @@
 
             <!-- 记录 -->
             <div class="list">
-                <!-- <input type="text" v-model="message.message">
-                <button @click="tttq">发送</button> -->
+         
             </div>
         </nav>
 
         <menu>
             <div class="message_content">
-                <div v-for="(item,index) in messageData" :key="index+new Date().getTime()">
-                    <p v-text="item.userName"></p>
-                    <div v-text="item.message"></div>
+                <div 
+                    v-for="(item,index) in messageData" 
+                    :key="index+new Date().getTime()" 
+                    class="message_list"
+                    :class="{'my_send_message':item.key === message.token}">
+                    <p v-if="item.key !== message.token"><img :src="item.head" class="user_head"></p>
+                    <div v-text="item.message" class="message_list_content"></div>
+                    <p v-if="item.key === message.token"><img :src="item.head" class="user_head"></p>
                 </div>
             </div>
             <div class="user_send">
@@ -180,10 +184,64 @@ export default {
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        
         .message_content{
             flex: 1;
             overflow: auto;
             background-color: #f1f1f1;
+            padding:0 10px;
+            box-sizing: border-box;
+            .message_list{// 消息列表
+                display:flex;
+                margin-top:15px;
+                .user_head{// 用户头像
+                    max-width: 35px;
+                    height: 35px;
+                }
+                .message_list_content{
+                    min-height: 30px;
+                    background-color: #fff;
+                    border-radius: 3px;
+                    margin-left:20px;
+                    max-width: 280px;
+                    line-height:30px;
+                    padding:10px;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        display:block;
+                        width:0;
+                        height:0;
+                        border-width:0px 10px 10px 0;
+                        border-style:solid;
+                        border-color:transparent transparent #fff transparent;/*透明 透明 黄*/
+                        position:absolute;
+                        top:15px;
+                        left:-5px;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+            .my_send_message{
+                justify-content: flex-end;
+                >.message_list_content{
+                    margin-right:20px;
+                    &::after{display: none;}
+                    &::before{
+                        content: "";
+                        display:block;
+                        width:0;
+                        height:0;
+                        border-width:0px 10px 10px 0;
+                        border-style:solid;
+                        border-color:transparent transparent #fff transparent;/*透明 透明 黄*/
+                        position:absolute;
+                        top:15px;
+                        right:-5px;
+                        transform: rotate(-140deg);
+                    }
+                }
+            }
         }
         .user_send{
             height: 40px;
