@@ -76,12 +76,17 @@ io.sockets.on('connection', function(socket) {
     socket.on('OnLine', function (data) {// 用户上线发送状态  
         global.GET_MONGONDB((dbs,db)=>{
             dbs.collection("userInfo").find({key: data}).toArray((err,reslut)=>{
-                let userInfo = {
-                    userName: reslut[0].userName,
-                    head: reslut[0].head,
-                    key: data
-                };
-                socket.emit('State', userInfo);
+                if(reslut.length) {
+                    let userInfo = {
+                        userName: reslut[0].userName,
+                        head: reslut[0].head,
+                        key: data
+                    };
+                    socket.emit('State', userInfo);
+                } else {
+                    console.log(data)
+                }
+                
                 db.close()
             })
         })
