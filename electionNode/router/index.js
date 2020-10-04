@@ -69,8 +69,7 @@ let io = sio.listen(socket);
 io.sockets.on('connection', function(socket) {
    
     socket.on('message', function (obj) {// 向大厅发送消息    
-        console.log(obj.token+': '+obj.message);
-        socket.emit('Message', obj);
+        io.sockets.emit('Message', obj);
     });
 
     socket.on('OnLine', function (data) {// 用户上线发送状态  
