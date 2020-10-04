@@ -44,9 +44,8 @@ export default {
                 key[this.axiosConfig.userName] = res.key
                 fs.writeFile('./login.json', JSON.stringify(key), err=> {
                     if (err) {
-                        throw err;
+                        return err;
                     }
-                    window.localStorage.setItem("key",key)
                     this.$router.push('/home')
                 });
             }).catch(err=>{

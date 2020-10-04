@@ -35,7 +35,7 @@ function logStats (proc, data) {
 
   log += '\n' + chalk.yellow.bold(`┗ ${new Array(28 + 1).join('-')}`) + '\n'
 
-  console.log(log)
+  // console.log(log)
 }
 
 function startRenderer () {
@@ -147,13 +147,13 @@ function electronLog (data, color) {
     log += `  ${line}\n`
   })
   if (/[0-9A-z]+/.test(log)) {
-    console.log(
-      chalk[color].bold('┏ Electron -------------------') +
-      '\n\n' +
-      log +
-      chalk[color].bold('┗ ----------------------------') +
-      '\n'
-    )
+    // console.log(
+    //   chalk[color].bold('┏ Electron -------------------') +
+    //   '\n\n' +
+    //   log +
+    //   chalk[color].bold('┗ ----------------------------') +
+    //   '\n'
+    // )
   }
 }
 
@@ -167,12 +167,14 @@ function greeting () {
 
   if (text) {
     say(text, {
-      colors: ['yellow'],
+      colors: ['cyan'],
       font: 'simple3d',
       space: false
     })
-  } else console.log(chalk.yellow.bold('\n  electron-vue'))
-  console.log(chalk.blue('  getting ready...') + '\n')
+  } else {
+    console.log(chalk.cyan.bold('\n  electron-vue'))
+  }
+  // console.log(chalk.blue('  getting ready...') + '\n')
 }
 
 function init () {

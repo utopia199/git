@@ -8,7 +8,7 @@
 /* eslint-disable */
 
 // Install `electron-debug` with `devtron`
-require('electron-debug')({ showDevTools: true })
+require('electron-debug')({ showDevTools: true })// 控制台调试
 
 const  { globalShortcut, Menu} = require('electron');
 const Menus = [
@@ -21,7 +21,7 @@ const Menus = [
         submenu: [{
           label: '网页版',
           click: function () {
-            console.log(electron)
+            // console.log(electron)
             electron.shell.openExternal('https://www.baiudu.com')
           }
         }]
@@ -31,15 +31,14 @@ const Menus = [
   {
     label:'测试点击',
     click: function () {
-      console.log(electron)
+      // console.log(electron)
     }
   }
 ];
 
 // Install `vue-devtools`
 require('electron').app.on('ready', () => {
-  let installExtension = require('electron-devtools-installer')
-
+  // let installExtension = require('electron-devtools-installer')
 
 
   // 自定义菜单
@@ -49,9 +48,9 @@ require('electron').app.on('ready', () => {
 
 
 
-  installExtension.default(installExtension.VUEJS_DEVTOOLS).then(() => {}).catch(err => {
-    console.log('Unable to install `vue-devtools`: \n', err)
-  })
+  // installExtension.default(installExtension.VUEJS_DEVTOOLS).then(() => {}).catch(err => {
+  //   console.log('Unable to install `vue-devtools`: \n', err)
+  // })
 })
 
 // Require `main` process to boot app

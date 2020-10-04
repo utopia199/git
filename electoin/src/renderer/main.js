@@ -25,7 +25,6 @@ import "../../static/css/reset"
 
 
 window.vm = Vue.prototype
-
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.config.productionTip = false
 

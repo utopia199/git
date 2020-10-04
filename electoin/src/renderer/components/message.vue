@@ -12,6 +12,7 @@
                     :headers="{token: message.token}"
                     :multiple="false"
                     :on-success="Success"
+                  
                     :before-upload="Upload">
                     <img :src="userInfo.head" class="user_head cursor">
                
@@ -59,14 +60,14 @@
 </template>
 
 <script>
-
+import fs from "fs"
 export default {
     data() {
         return {
             active: 0,// 0是消息 1是通讯录
             message: {
                 message: "",
-                token: window.localStorage.getItem("key")
+                token: ""
             },
             messageData: new Array(),
             lineNum: 0
@@ -77,11 +78,10 @@ export default {
             return this.$store.state.user.userInfo 
         }
     },
-    sockets:{
+    sockets: {
      
       connect(){//这里是监听connect事件
         this.$socket.emit('OnLine',this.message.token);
-        console.log('链接服务器',this.message.token);
       },
 
       
@@ -112,7 +112,29 @@ export default {
 	  },
 
     },
+
+    mounted() {
+        // 避免 socket没有创建出来导致没有发送消息
+        var timerOne = window.setInterval(() => {
+            if (this.$socket) {
+                this.$socket.emit('connect', 1)
+                window.clearInterval(timerOne)
+                return;
+            }
+        }, 500)
+    },
+
+
+
     created() {
+        // 获取会员token 
+        fs.readFile('./login.json', 'utf-8', (err, data)=> {
+            if(err){return}
+            if(data && data !== "undefined") {
+                this.message.token = Object.values(JSON.parse(data))[0]
+            }
+        });
+
         this.$store.dispatch("getUserInfo").then(res=>{
         }).catch(error=>{
             this.$message({
@@ -129,12 +151,11 @@ export default {
         },
 
         Upload(file) {// 上传之前
-            const isJPG = file.type === 'image/jpeg';
             const isLt2M = file.size / 1024 / 1024 < 1;
             if (!isLt2M) {
                 this.$message.error('上传头像图片大小不能超过 1MB!');
             }
-            return isJPG && isLt2M;
+            return isLt2M;
         },
 
         Send() {//发送信息给服务端
@@ -152,6 +173,8 @@ export default {
 #message {
     width: 700px;
     height: 600px;
+    width: 100%;
+    height: 100%;
     background-color: #fff;
     border-radius: 5px;
     display: flex;

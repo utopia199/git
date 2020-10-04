@@ -14,7 +14,7 @@ exports.uploadImage = function(req, res) {// 上传图片
         obj.path = 'http://'+req.headers.host+'/uploads/'+files.file.path.split("uploads\\")[1];
         obj.status_code = 200;
         global.GET_MONGONDB((dbs, db) => {
-            dbs.collection("userInfo").update({key: req.headers.token},{$set: {"head": obj.path}}, function(error, result){
+            dbs.collection("userInfo").updateOne({key: req.headers.token},{$set: {"head": obj.path}}, function(error, result){
                 db.close();
             });
         })

@@ -68,7 +68,7 @@ let socket = app.listen(9528, IPAdress, function () {
 let io = sio.listen(socket);
 let lineNum = 0;
 io.sockets.on('connection', function(socket) {
-   
+    console.log(2)
     socket.on('message', function (obj) {// 向大厅发送消息
         global.GET_MONGONDB((dbs,db)=>{
             dbs.collection("userInfo").find({key: obj.token }).toArray((err,reslut)=>{
@@ -97,7 +97,7 @@ io.sockets.on('connection', function(socket) {
         lineNum--
     });
 
-    socket.on('OnLine', function (data) {// 用户上线发送状态  
+    socket.on('OnLine', function (data) {// 用户上线发送状态
         lineNum++
         global.GET_MONGONDB((dbs,db)=>{
             dbs.collection("userInfo").find({key: data}).toArray((err,reslut)=>{
@@ -110,13 +110,12 @@ io.sockets.on('connection', function(socket) {
                         num: lineNum
                     };
                     io.sockets.emit('State', userInfo);
+                    dbs.collection("message").find().toArray((err,result)=>{// 推送所有的消息
+                        if(err){ return }
+                        io.sockets.emit('Message', result);
+                        db.close()
+                    })
                 }
-                dbs.collection("message").find().toArray((err,result)=>{// 推送所有的消息
-                    if(err){ return }
-                    io.sockets.emit('Message', result);
-                    db.close()
-                })
-                
             })
         })
     });
