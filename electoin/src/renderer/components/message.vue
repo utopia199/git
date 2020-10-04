@@ -37,7 +37,7 @@
 
         <menu>
             <div class="message_content">
-                <div v-for="(item,index) in messageData" :key="index+new Data().getTime()">
+                <div v-for="(item,index) in messageData" :key="index+new Date().getTime()">
                     <p v-text="item.userName"></p>
                     <div v-text="item.message"></div>
                 </div>
