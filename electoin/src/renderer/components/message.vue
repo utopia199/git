@@ -71,7 +71,7 @@ export default {
 	  },
 
 	  Message(data) {// 监听大厅的消息
-        console.log(data)
+        console.log(`${data.userName}在${data.date}发送消息：${data.message}`)
 	  },
 
 	  State(data) {// 用户上线监听
