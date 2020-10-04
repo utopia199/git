@@ -84,12 +84,7 @@ export default {
         if( Array.isArray(data)){
             this.messageData = data
         } else {
-            if(data.key === this.message.token){// 判断是否是自己发送的
-
-            } else {
-              
-                this.messageData.push(data)
-            }
+            this.messageData.push(data)
         }
         
 	  },
