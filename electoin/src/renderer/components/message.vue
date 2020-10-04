@@ -35,14 +35,18 @@
         </nav>
 
         <menu>
-            <div class="message_content">
+            <div class="message_title">
+                <span>大厅</span>
+                <span class="num">(当前在线人数{{lineNum}})</span>
+            </div>
+            <div class="message_content scroll" ref="message">
                 <div 
                     v-for="(item,index) in messageData" 
                     :key="index+new Date().getTime()" 
                     class="message_list"
                     :class="{'my_send_message':item.key === message.token}">
                     <p v-if="item.key !== message.token"><img :src="item.head" class="user_head"></p>
-                    <div v-text="item.message" class="message_list_content"></div>
+                    <div v-html="item.message" class="message_list_content"></div>
                     <p v-if="item.key === message.token"><img :src="item.head" class="user_head"></p>
                 </div>
             </div>
@@ -64,7 +68,8 @@ export default {
                 message: "",
                 token: window.localStorage.getItem("key")
             },
-            messageData: new Array()
+            messageData: new Array(),
+            lineNum: 0
         }
     },
     computed: {
@@ -82,6 +87,7 @@ export default {
       
       disconnect(){// 监听断开连接，函数
         console.log('断开服务器连接');
+        this.$socket.emit('outLine');
 	  },
 
 	  Message(data) {// 监听大厅的消息
@@ -90,6 +96,11 @@ export default {
         } else {
             this.messageData.push(data)
         }
+
+        let scroll = setTimeout(() => {
+            this.$refs.message.scrollTo(0,this.$refs.message.scrollHeight)
+            clearTimeout(scroll)
+        }, 100);
         
 	  },
 
@@ -97,6 +108,7 @@ export default {
         if(this.message.token !== data.key) {// 判断是否是自己
             console.log(data.userName,'上线啦')
         }
+        this.lineNum = data.num
 	  },
 
     },
@@ -110,10 +122,7 @@ export default {
             this.$router.push("login")
         })
     },
-    mounted() {
 
-   
-    },
     methods: {
         Success(res, file) {// 上传成功回调
             this.$store.dispatch("getUserInfo")
@@ -129,7 +138,11 @@ export default {
         },
 
         Send() {//发送信息给服务端
-            this.$socket.emit('message',this.message);
+            if(this.message.message) {
+                this.$socket.emit('message',this.message);
+                this.message.message = ""
+            }
+            
         } 
     },
 }
@@ -184,29 +197,40 @@ export default {
         display: flex;
         flex-direction: column;
         overflow: hidden;
-        
+        .message_title{
+            height: 40px;
+            line-height: 40px;
+            padding-left:30px;
+            box-sizing: border-box;
+            border-bottom:1px solid #e7e7e7;
+            .num{
+                font-size: 13px;
+            }
+        }
         .message_content{
             flex: 1;
             overflow: auto;
             background-color: #f1f1f1;
-            padding:0 10px;
+            padding:20px 10px;
             box-sizing: border-box;
             .message_list{// 消息列表
                 display:flex;
                 margin-top:15px;
+                font-size: 14px;
                 .user_head{// 用户头像
                     max-width: 35px;
                     height: 35px;
                 }
                 .message_list_content{
-                    min-height: 30px;
+                    min-height: 25px;
                     background-color: #fff;
                     border-radius: 3px;
                     margin-left:20px;
                     max-width: 280px;
-                    line-height:30px;
-                    padding:10px;
+                    line-height:25px;
+                    padding:5px 10px;
                     position: relative;
+                    border:1px solid #ededed;
                     &::after{
                         content: "";
                         display:block;
@@ -226,6 +250,8 @@ export default {
                 justify-content: flex-end;
                 >.message_list_content{
                     margin-right:20px;
+                    border:none;
+                    background-color: #9eea6a;
                     &::after{display: none;}
                     &::before{
                         content: "";
@@ -234,7 +260,7 @@ export default {
                         height:0;
                         border-width:0px 10px 10px 0;
                         border-style:solid;
-                        border-color:transparent transparent #fff transparent;/*透明 透明 黄*/
+                        border-color:transparent transparent #9eea6a transparent;/*透明 透明 黄*/
                         position:absolute;
                         top:15px;
                         right:-5px;

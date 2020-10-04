@@ -66,6 +66,7 @@ let socket = app.listen(9528, IPAdress, function () {
 
 
 let io = sio.listen(socket);
+let lineNum = 0;
 io.sockets.on('connection', function(socket) {
    
     socket.on('message', function (obj) {// 向大厅发送消息
@@ -92,7 +93,12 @@ io.sockets.on('connection', function(socket) {
         })
     });
 
+    socket.on("outLine",function(){// 离线
+        lineNum--
+    });
+
     socket.on('OnLine', function (data) {// 用户上线发送状态  
+        lineNum++
         global.GET_MONGONDB((dbs,db)=>{
             dbs.collection("userInfo").find({key: data}).toArray((err,reslut)=>{
                 if(reslut.length) {
@@ -100,7 +106,8 @@ io.sockets.on('connection', function(socket) {
                         userName: reslut[0].userName,
                         head: reslut[0].head,
                         key: data,
-                        date: new Date().getTime()
+                        date: new Date().getTime(),
+                        num: lineNum
                     };
                     io.sockets.emit('State', userInfo);
                 }
