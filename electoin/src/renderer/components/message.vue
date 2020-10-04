@@ -95,6 +95,17 @@ export default {
             this.messageData = data
         } else {
             this.messageData.push(data)
+            const notification = {
+                title: data.userName,
+                body: data.message,
+                icon: data.head,
+                tag: new Date(),
+                renotify: true
+            }
+            const myNotification = new window.Notification(notification.title, notification)
+            myNotification.onclick = () => {
+                console.log('通知被点击')
+            }
         }
 
         let scroll = setTimeout(() => {
@@ -122,6 +133,7 @@ export default {
                 return;
             }
         }, 500)
+  
     },
 
 
@@ -164,7 +176,8 @@ export default {
                 this.message.message = ""
             }
             
-        } 
+        }
+
     },
 }
 </script>
