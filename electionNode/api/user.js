@@ -113,6 +113,7 @@ exports.UserInfo = function(req,res) {// 获取会员信息
                     obj.userName = result[0].userName;
                     obj.regIP = result[0].regIP;
                     obj.head = result[0].head;
+                    obj.friends = result[0].friends;
                 
                 } else {
                     obj.status_code = 401;

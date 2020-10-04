@@ -9,8 +9,12 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
 
-
-
+import VueSocketIO from 'vue-socket.io'
+import SocketIO from 'socket.io-client';
+Vue.use(new VueSocketIO({
+ debug: false,
+ connection: SocketIO('http://192.168.0.113:9528')
+}))
 
 
 import router from './router'

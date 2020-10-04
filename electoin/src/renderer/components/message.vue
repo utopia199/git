@@ -9,18 +9,29 @@
                     action="http://192.168.0.113:9527/api/uploadImage"
                     class="avatar-uploader"
                     :show-file-list="false"
-                    :headers="{token: token}"
+                    :headers="{token: message.token}"
                     :multiple="false"
-                    :on-success="handleAvatarSuccess"
-                    :before-upload="beforeAvatarUpload">
-                    <img :src="img || userInfo.head" class="user_head cursor">
+                    :on-success="Success"
+                    :before-upload="Upload">
+                    <img :src="userInfo.head" class="user_head cursor">
                
                 </el-upload>
+
+                <!-- 消息 -->
+                <div class="icon cursor" :class="{is_actice :active === 0}" @click="active = 0">
+                    <i class="el-icon-chat-dot-round"></i>
+                </div>
+
+                <!-- 通讯录 -->
+                <div class="icon cursor" :class="{is_actice :active === 1}" @click="active = 1">
+                    <i class="el-icon-s-custom"></i>
+                </div>
             </div>
 
             <!-- 记录 -->
             <div class="list">
-
+                <input type="text" v-model="message.message">
+                <button @click="tttq">发送</button>
             </div>
         </nav>
 
@@ -31,11 +42,15 @@
 </template>
 
 <script>
+
 export default {
     data() {
         return {
-            token: window.localStorage.getItem("key"),
-            img: null
+            active: 0,// 0是消息 1是通讯录
+            message: {
+                message: "",
+                token: window.localStorage.getItem("key")
+            }
         }
     },
     computed: {
@@ -43,9 +58,31 @@ export default {
             return this.$store.state.user.userInfo 
         }
     },
+    sockets:{
+     
+      connect(){//这里是监听connect事件
+        this.$socket.emit('OnLine',this.message.token);
+        console.log('链接服务器',this.message.token);
+      },
+
+      
+      disconnect(){// 监听断开连接，函数
+        console.log('断开服务器连接');
+	  },
+
+	  Message(data) {// 监听大厅的消息
+        console.log(data)
+	  },
+
+	  State(data) {// 用户上线监听
+        if(this.message.token !== data.key) {// 判断是否是自己
+            console.log(data.userName)
+        }
+	  },
+
+    },
     created() {
         this.$store.dispatch("getUserInfo").then(res=>{
-          
         }).catch(error=>{
             this.$message({
                 message: error.message,
@@ -55,22 +92,26 @@ export default {
         })
     },
     mounted() {
-        
+
+   
     },
     methods: {
-        handleAvatarSuccess(res, file) {
-            console.log(res.file)
-            console.log(file.response.path)
-            this.img = file.response.path
+        Success(res, file) {// 上传成功回调
+            this.$store.dispatch("getUserInfo")
         },
-        beforeAvatarUpload(file) {
-            // console.log(file)
+
+        Upload(file) {// 上传之前
             const isJPG = file.type === 'image/jpeg';
-            const isLt2M = file.size / 1024 / 1024 < 2;
+            const isLt2M = file.size / 1024 / 1024 < 1;
             if (!isLt2M) {
-                this.$message.error('上传头像图片大小不能超过 2MB!');
+                this.$message.error('上传头像图片大小不能超过 1MB!');
             }
             return isJPG && isLt2M;
+        },
+
+        tttq() {//发送信息给服务端
+            
+            this.$socket.emit('message',this.message);
         } 
     },
 }
@@ -105,6 +146,14 @@ export default {
                 width: 35px;
                 height: 35px;
                 border-radius: 3px;
+            }
+            .icon{
+                margin-top:30px;
+                font-size: 25px;
+                color:#666667;
+            }
+            .is_actice{
+                color:#07c160;
             }
         }
 

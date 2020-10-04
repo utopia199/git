@@ -4,7 +4,7 @@ const app = express();
 const path = require("path");
 const bodyParser = require("body-parser");// 处理post参数 通过req.body获取
 const fs = require("fs")
-const url = require('url');
+const sio = require('socket.io');
 
 app.use(express.static("./"));// 访问Html
 // app.use(express.static(path.join(__dirname, 'uploads')))
@@ -53,9 +53,41 @@ for(var devName in interfaces){
   }  
 } 
 
-let server = app.listen(9527, IPAdress, function () {
-    console.log("\n地址为 http://"+IPAdress+':'+9527);
+app.listen(9527, IPAdress, function () {
+    console.log("\nAPI地址为 http://"+IPAdress+':'+9527);
     
 });
+// socket开始
+
+let socket = app.listen(9528, IPAdress, function () {
+    console.log("\nsocket地址为 http://"+IPAdress+':'+9528);
+    
+});
+
+
+let io = sio.listen(socket);
+io.sockets.on('connection', function(socket) {
+   
+    socket.on('message', function (obj) {// 向大厅发送消息    
+        console.log(obj.token+': '+obj.message);
+        socket.emit('Message', obj);
+    });
+
+    socket.on('OnLine', function (data) {// 用户上线发送状态  
+        global.GET_MONGONDB((dbs,db)=>{
+            dbs.collection("userInfo").find({key: data}).toArray((err,reslut)=>{
+                let userInfo = {
+                    userName: reslut[0].userName,
+                    head: reslut[0].head,
+                    key: data
+                };
+                socket.emit('State', userInfo);
+                db.close()
+            })
+        })
+    });
+});
+
+// socket结束
 
 module.exports = app;
