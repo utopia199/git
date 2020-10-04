@@ -82,7 +82,11 @@ io.sockets.on('connection', function(socket) {
                     
                     io.sockets.emit('Message', userInfo);
                 }
-                db.close()
+                dbs.collection("message").insertOne(userInfo, function(err, resolve) {// 往数据库插入消息
+                    if(err){return }
+                    db.close()
+                })
+               
             })
         })
     });
@@ -99,7 +103,12 @@ io.sockets.on('connection', function(socket) {
                     };
                     io.sockets.emit('State', userInfo);
                 }
-                db.close()
+                dbs.collection("message").find().toArray((err,result)=>{// 推送所有的消息
+                    if(err){ return }
+                    io.sockets.emit('Message', result);
+                    db.close()
+                })
+                
             })
         })
     });

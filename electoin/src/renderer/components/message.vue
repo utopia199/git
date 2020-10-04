@@ -30,13 +30,22 @@
 
             <!-- 记录 -->
             <div class="list">
-                <input type="text" v-model="message.message">
-                <button @click="tttq">发送</button>
+                <!-- <input type="text" v-model="message.message">
+                <button @click="tttq">发送</button> -->
             </div>
         </nav>
 
         <menu>
-
+            <div class="message_content">
+                <div v-for="(item,index) in messageData" :key="index+new Data().getTime()">
+                    <p v-text="item.userName"></p>
+                    <div v-text="item.message"></div>
+                </div>
+            </div>
+            <div class="user_send">
+                <input type="text" v-model="message.message" @keydown.enter="Send">
+                <span class="send_btn" @click="Send">发送</span>
+            </div>
         </menu>
     </div>
 </template>
@@ -50,7 +59,8 @@ export default {
             message: {
                 message: "",
                 token: window.localStorage.getItem("key")
-            }
+            },
+            messageData: new Array()
         }
     },
     computed: {
@@ -71,7 +81,17 @@ export default {
 	  },
 
 	  Message(data) {// 监听大厅的消息
-        console.log(`${data.userName}在${data.date}发送消息：${data.message}`)
+        if( Array.isArray(data)){
+            this.messageData = data
+        } else {
+            if(data.key === this.message.token){// 判断是否是自己发送的
+
+            } else {
+              
+                this.messageData.push(data)
+            }
+        }
+        
 	  },
 
 	  State(data) {// 用户上线监听
@@ -109,8 +129,7 @@ export default {
             return isJPG && isLt2M;
         },
 
-        tttq() {//发送信息给服务端
-            
+        Send() {//发送信息给服务端
             this.$socket.emit('message',this.message);
         } 
     },
@@ -163,6 +182,40 @@ export default {
     }
     menu{
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        .message_content{
+            flex: 1;
+            overflow: auto;
+            background-color: #f1f1f1;
+        }
+        .user_send{
+            height: 40px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            padding:0 10px;
+            box-sizing: border-box;
+            input{
+                height: 100%;
+                padding-left: 5px;
+                box-sizing: border-box;
+                flex: 1;
+                border:none;
+            }
+            .send_btn{
+                width: 70px;
+                height: 25px;
+                line-height: 25px;
+                background-color: #f5f5f5;
+                border:1px solid #e5e5e5;
+                color:#606060;
+                letter-spacing: 2px;
+                text-align: center;
+                font-size: 14px;
+            }
+        }
     }
 }
 </style>
