@@ -82,11 +82,8 @@ io.sockets.on('connection', function(socket) {
                         head: reslut[0].head,
                         key: data
                     };
-                    socket.emit('State', userInfo);
-                } else {
-                    console.log(data)
+                    io.sockets.emit('State', userInfo);
                 }
-                
                 db.close()
             })
         })

@@ -75,9 +75,8 @@ export default {
 	  },
 
 	  State(data) {// 用户上线监听
-        console.log(data)
         if(this.message.token !== data.key) {// 判断是否是自己
-            console.log(data.userName)
+            console.log(data.userName,'上线啦')
         }
 	  },
 
