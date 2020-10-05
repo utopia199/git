@@ -53,6 +53,13 @@
             </div>
             <div class="user_send">
                 <input type="text" v-model="message.message" @keydown.enter="Send">
+                <!-- <el-input
+                    type="textarea"
+                    :rows="4"
+                    resize="none"
+                    @keyup.enter.native="Send"
+                    v-model="message.message">
+                </el-input> -->
                 <span class="send_btn" @click="Send">发送</span>
             </div>
         </menu>
@@ -78,6 +85,38 @@ export default {
             return this.$store.state.user.userInfo 
         }
     },
+    
+    created() {
+        // 获取会员token 
+        fs.readFile('./login.json', 'utf-8', (err, data)=> {
+            if(err){return}
+            if(data && data !== "undefined") {
+                this.message.token = Object.values(JSON.parse(data))[0]
+            }
+        });
+
+        this.$store.dispatch("getUserInfo").then(res=>{
+        }).catch(error=>{
+            this.$message({
+                message: error.message,
+                type: 'error'
+            });
+            this.$router.push("login")
+        })
+    },
+
+    mounted() {
+        // 避免 socket没有创建出来导致没有发送消息
+        var timerOne = window.setInterval(() => {
+            if (this.$socket) {
+                this.$socket.emit('connect', 1)
+                window.clearInterval(timerOne)
+                return;
+            }
+        }, 500)
+  
+    },
+
     sockets: {
      
       connect(){//这里是监听connect事件
@@ -102,9 +141,11 @@ export default {
                 tag: new Date(),
                 renotify: true
             }
-            const myNotification = new window.Notification(notification.title, notification)
-            myNotification.onclick = () => {
-                console.log('通知被点击')
+            if(data.key !== this.message.token){
+                const myNotification = new window.Notification(notification.title, notification)
+                myNotification.onclick = () => {
+                    console.log('通知被点击')
+                }
             }
         }
 
@@ -120,41 +161,8 @@ export default {
             console.log(data.userName,'上线啦')
         }
         this.lineNum = data.num
-	  },
+	  }
 
-    },
-
-    mounted() {
-        // 避免 socket没有创建出来导致没有发送消息
-        var timerOne = window.setInterval(() => {
-            if (this.$socket) {
-                this.$socket.emit('connect', 1)
-                window.clearInterval(timerOne)
-                return;
-            }
-        }, 500)
-  
-    },
-
-
-
-    created() {
-        // 获取会员token 
-        fs.readFile('./login.json', 'utf-8', (err, data)=> {
-            if(err){return}
-            if(data && data !== "undefined") {
-                this.message.token = Object.values(JSON.parse(data))[0]
-            }
-        });
-
-        this.$store.dispatch("getUserInfo").then(res=>{
-        }).catch(error=>{
-            this.$message({
-                message: error.message,
-                type: 'error'
-            });
-            this.$router.push("login")
-        })
     },
 
     methods: {
@@ -171,11 +179,12 @@ export default {
         },
 
         Send() {//发送信息给服务端
+           
+           
             if(this.message.message) {
                 this.$socket.emit('message',this.message);
                 this.message.message = ""
             }
-            
         }
 
     },
@@ -306,7 +315,8 @@ export default {
             }
         }
         .user_send{
-            height: 40px;
+            // height: 140px;
+            min-height: 40px;
             background-color: #fff;
             display: flex;
             align-items: center;

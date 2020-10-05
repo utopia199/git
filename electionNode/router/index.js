@@ -68,7 +68,6 @@ let socket = app.listen(9528, IPAdress, function () {
 let io = sio.listen(socket);
 let lineNum = 0;
 io.sockets.on('connection', function(socket) {
-    console.log(2)
     socket.on('message', function (obj) {// 向大厅发送消息
         global.GET_MONGONDB((dbs,db)=>{
             dbs.collection("userInfo").find({key: obj.token }).toArray((err,reslut)=>{
