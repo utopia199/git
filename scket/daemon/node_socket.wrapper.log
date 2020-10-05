@@ -400,3 +400,5 @@ Stacktrace:   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInte
    在 winsw.WrapperService.OnShutdown()
 2020-10-05 09:15:34 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
 2020-10-05 09:15:34 - Started 4840
+2020-10-05 16:42:05 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-05 16:42:05 - Started 5024
