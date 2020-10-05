@@ -315,7 +315,6 @@ export default {
             }
         }
         .user_send{
-            // height: 140px;
             min-height: 40px;
             background-color: #fff;
             display: flex;
