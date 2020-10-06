@@ -1,0 +1,135 @@
+{
+  "id": "2113892",
+  "name": "electron",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2389741",
+      "name": "撤销",
+      "font_class": "chexiao",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "4314347",
+      "name": "查看",
+      "font_class": "chakan",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "6334355",
+      "name": "编辑",
+      "font_class": "bianji",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "6501295",
+      "name": "删除",
+      "font_class": "icon--shanchu",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "7761519",
+      "name": "删 除 ",
+      "font_class": "shanchu",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "13763180",
+      "name": "编辑",
+      "font_class": "bianji1",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "6496025",
+      "name": "Webpack",
+      "font_class": "webpack",
+      "unicode": "e79a",
+      "unicode_decimal": 59290
+    },
+    {
+      "icon_id": "7494704",
+      "name": "设置，维护，更新，编辑",
+      "font_class": "huabanfuben",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    },
+    {
+      "icon_id": "3978017",
+      "name": "模板",
+      "font_class": "moban",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "6496024",
+      "name": "Angular",
+      "font_class": "Angular",
+      "unicode": "e798",
+      "unicode_decimal": 59288
+    },
+    {
+      "icon_id": "6496026",
+      "name": "Vue",
+      "font_class": "Vue",
+      "unicode": "e799",
+      "unicode_decimal": 59289
+    },
+    {
+      "icon_id": "6902533",
+      "name": "Node.js",
+      "font_class": "Nodejs",
+      "unicode": "e7a4",
+      "unicode_decimal": 59300
+    },
+    {
+      "icon_id": "10061223",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "12600657",
+      "name": "css",
+      "font_class": "css",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "12600727",
+      "name": "html",
+      "font_class": "html",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "12600760",
+      "name": "js",
+      "font_class": "js",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "13304019",
+      "name": "react",
+      "font_class": "react",
+      "unicode": "e689",
+      "unicode_decimal": 59017
+    },
+    {
+      "icon_id": "14055594",
+      "name": "消息",
+      "font_class": "xiaoxi",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    }
+  ]
+}
