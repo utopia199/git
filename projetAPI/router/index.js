@@ -32,12 +32,10 @@ app.get('*', function(req, res){
     })
 });
 
-// app.post("/api/login", require("../api/user.js").Login);// 登录
-
-// app.post("/api/userInfo", require("../api/user.js").UserInfo);// 会员信息
-
-// app.post("/api/uploadImage", require("../api/upload.js").uploadImage);// 上传图片
-
+app.post("/api/router", require("../api/router.js").Router);// 路由
+app.post("/api/setConfig", require("../api/router.js").SetConfig);// 打包配置
+app.post("/api/login", require("../api/user.js").Login);// 登陆、注册
+app.post("/api/userInfo", require("../api/user.js").UserInfo);// 会员信息
 
 
 const interfaces = require('os').networkInterfaces(); // 在开发环境中获取局域网中的本机iP地址
@@ -51,73 +49,72 @@ for(var devName in interfaces){
         }  
   }  
 } 
-
-app.listen(9509, IPAdress, function () {
-    console.log("\nAPI地址为 http://"+IPAdress+':'+9527);
+app.listen(1528, IPAdress, function () {
+    console.log("\nAPI地址为 http://"+IPAdress+':'+1528);
     
 });
 // socket开始
 
-let socket = app.listen(9510, IPAdress, function () {
-    console.log("\nsocket地址为 http://"+IPAdress+':'+9528);
+let socket = app.listen(1527, IPAdress, function () {
+    console.log("\nsocket地址为 http://"+IPAdress+':'+1527);
     
 });
 
 
-let io = sio.listen(socket);
-let lineNum = 0;
-io.sockets.on('connection', function(socket) {
-    socket.on('message', function (obj) {// 向大厅发送消息
-        global.GET_MONGONDB((dbs,db)=>{
-            dbs.collection("userInfo").find({key: obj.token }).toArray((err,reslut)=>{
-                let userInfo = null
-                if(reslut.length) {
-                    userInfo = {
-                        userName: reslut[0].userName,
-                        head: reslut[0].head,
-                        key: obj.token,
-                        message: obj.message,
-                        date: new Date().getTime()
-                    };
-                    io.sockets.emit('Message', userInfo);
-                    dbs.collection("message").insertOne(userInfo, function(err, resolve) {// 往数据库插入消息
-                        if(err){return }
-                        db.close()
-                    })
-                }
+// let io = sio.listen(socket);
+// let lineNum = 0;
+// io.sockets.on('connection', function(socket) {
+//     socket.on('message', function (obj) {// 向大厅发送消息
+//         global.GET_MONGONDB((dbs,db)=>{
+//             dbs.collection("userInfo").find({key: obj.token }).toArray((err,reslut)=>{
+//                 let userInfo = null
+//                 if(reslut.length) {
+//                     userInfo = {
+//                         userName: reslut[0].userName,
+//                         head: reslut[0].head,
+//                         key: obj.token,
+//                         message: obj.message,
+//                         date: new Date().getTime()
+//                     };
+//                     io.sockets.emit('Message', userInfo);
+//                     dbs.collection("message").insertOne(userInfo, function(err, resolve) {// 往数据库插入消息
+//                         if(err){return }
+//                         db.close()
+//                     })
+//                 }
                 
                
-            })
-        })
-    });
+//             })
+//         })
+//     });
 
-    socket.on("outLine",function(){// 离线
-        lineNum--
-    });
+//     socket.on("outLine",function(){// 离线
+//         lineNum--
+//     });
 
-    socket.on('OnLine', function (data) {// 用户上线发送状态
-        lineNum++
-        global.GET_MONGONDB((dbs,db)=>{
-            dbs.collection("userInfo").find({key: data}).toArray((err,reslut)=>{
-                if(reslut.length) {
-                    let userInfo = {
-                        userName: reslut[0].userName,
-                        head: reslut[0].head,
-                        key: data,
-                        date: new Date().getTime(),
-                        num: lineNum
-                    };
-                    io.sockets.emit('State', userInfo);
-                    dbs.collection("message").find().toArray((err,result)=>{// 推送所有的消息
-                        if(err){ return }
-                        io.sockets.emit('Message', result);
-                        db.close()
-                    })
-                }
-            })
-        })
-    });
-});
+//     socket.on('OnLine', function (data) {// 用户上线发送状态
+//         lineNum++
+//         global.GET_MONGONDB((dbs,db)=>{
+//             dbs.collection("userInfo").find({key: data}).toArray((err,reslut)=>{
+//                 if(reslut.length) {
+//                     let userInfo = {
+//                         userName: reslut[0].userName,
+//                         head: reslut[0].head,
+//                         key: data,
+//                         date: new Date().getTime(),
+//                         num: lineNum
+//                     };
+//                     io.sockets.emit('State', userInfo);
+//                     dbs.collection("message").find().toArray((err,result)=>{// 推送所有的消息
+//                         if(err){ return }
+//                         io.sockets.emit('Message', result);
+//                         db.close()
+//                     })
+//                 }
+//             })
+//         })
+//     });
+// });
 
 // socket结束
 

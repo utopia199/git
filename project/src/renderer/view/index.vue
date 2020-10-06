@@ -31,21 +31,32 @@
 export default {
     data() {
         return {
-            navData: [
-                {title: "模板管理", icon: "moban", sub: [
-                    {title:"模板更新",href:"/temp"}
-                ]},
-                {title: "electron", icon: "huabanfuben", sub: [
-                    {title:"操作Windows",href:"/windows"}
-                ]}
-            ]
+            navData: [ ],
+            login: null
+
         }
     },
     computed: {
         
     },
     created() {
-        
+        const loading = this.$loading({
+          lock: true,
+          text: '数据加载中',
+          spinner: 'el-icon-loading',
+          background: 'rgba(0, 0, 0, 0.7)'
+        });
+   
+        this.$api.Route().then(res=>{
+            this.navData = res.items
+            loading.close();
+        }).catch(err=>{
+
+        })
+
+        this.$store.dispatch("GET_USER_INFO").then(result=>{// 获取用户信息
+            
+        })
     },
     mounted() {
         
@@ -68,6 +79,8 @@ export default {
     }
     >div{
         flex: 1;
+        padding-left:15px;
+        box-sizing: border-box;
     }
 }
 </style>

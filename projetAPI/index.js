@@ -13,7 +13,7 @@ global.GET_MONGONDB = function(callback,tab) {// 连接数据库 node
     const url = "mongodb://127.0.0.1:27017/";
     MongoClient.connect(url, { useUnifiedTopology: true }, function(err, db) {
         if(err) throw err
-        let dbs = db.db("election");
+        let dbs = db.db("projetApi");
         callback(dbs,db)
     })
 }

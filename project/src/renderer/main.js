@@ -1,9 +1,7 @@
 import Vue from 'vue'
-import axios from 'axios'
 
 import App from './App'
 import router from './router'
-import store from './store'
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 
@@ -14,13 +12,24 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
-Vue.http = Vue.prototype.$http = axios
+import store from './store'
+Vue.prototype.$store = store
+
+import api from "./util/api.js"
+Vue.prototype.$api = api
+
+
 Vue.config.productionTip = false
+window.vm = Vue.prototype
+
+// 获取初始配置
+store.dispatch("GET_STATE").then(res=>{
+  new Vue({
+    components: { App },
+    router,
+    store,
+    template: '<App/>'
+  }).$mount('#app')
+})
 
 
-new Vue({
-  components: { App },
-  router,
-  store,
-  template: '<App/>'
-}).$mount('#app')
