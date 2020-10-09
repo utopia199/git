@@ -33,9 +33,15 @@ app.get('*', function(req, res){
 });
 
 app.post("/api/router", require("../api/router.js").Router);// 路由
+
 app.post("/api/setConfig", require("../api/router.js").SetConfig);// 打包配置
+
 app.post("/api/login", require("../api/user.js").Login);// 登陆、注册
+
 app.post("/api/userInfo", require("../api/user.js").UserInfo);// 会员信息
+
+app.post("/api/updata", require("../api/codeData.js").getUpdata);// 更新信息
+
 
 
 const interfaces = require('os').networkInterfaces(); // 在开发环境中获取局域网中的本机iP地址

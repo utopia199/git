@@ -4,6 +4,7 @@ const config = {
     SetConfig: "/api/setConfig",// 打包配置
     Login: "/api/login",// 登陆
     UserInfo: "/api/userInfo",// 会员信息
+    UpData: "/api/updata",// 更新的信息
 }
 
 

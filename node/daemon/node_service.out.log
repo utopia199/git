@@ -3087,3 +3087,40 @@ At revision 9477.
 地址为 http://:9191
 Updating '.':
 At revision 9483.
+Updating '.':
+At revision 9483.
+Updating '.':
+At revision 9486.
+Updating '.':
+At revision 9487.
+Updating '.':
+At revision 9488.
+
+地址为 http://:9191
+Updating '.':
+U    mockpc\config\dev.env.js
+U    mockpc\index.html
+U    h83_wap\src\view\user\pay2\transfe\default.vue
+Updated to revision 9493.
+
+地址为 http://:9191
+Updating '.':
+U    g83_wap\src\view\game\default.vue
+U    g83_wap\package-lock.json
+Updated to revision 9494.
+Updating '.':
+U    g85_wap\package-lock.json
+U    g86_wap\package-lock.json
+U    g87_wap\package-lock.json
+U    g83_wap\src\view\user\bank\default.vue
+U    g85_wap\src\view\user\bank\default.vue
+U    g85_wap\src\view\game\default.vue
+U    g86_wap\src\view\game\default.vue
+U    g86_wap\src\view\user\bank\default.vue
+U    g87_wap\src\view\user\bank\default.vue
+U    g87_wap\src\view\game\default.vue
+Updated to revision 9495.
+Updating '.':
+At revision 9495.
+
+地址为 http://:9191
