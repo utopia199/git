@@ -1,5 +1,6 @@
 import fs from "fs"
 import api from "../../util/api"
+import router from "../../router/index"
 const state = {
   apiUrl: "",
   socketUrl: "",
@@ -23,6 +24,7 @@ const mutations = {
 const actions = {
   GET_STATE({commit}) {// 获取初始配置
     return new Promise((resolve,reject)=>{
+     
       let config = JSON.parse(fs.readFileSync('./axiosConfig.json', 'utf-8'));
       commit("GET_STATE",config)
       if(config.key) {// 判断是否是登陆
@@ -32,6 +34,8 @@ const actions = {
         }).catch(err=>{
           reject(err)
         })
+      } else {
+        resolve()
       }
       
     })

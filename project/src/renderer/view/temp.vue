@@ -15,7 +15,7 @@
         </div>
         <el-checkbox-group v-model="checkList">
             <div v-for="(list,index) in fileObj" :key="index">
-               
+                
                 <el-checkbox :label="list.name"></el-checkbox>
                  
             </div>
@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import fs from "fs"
 export default {
     data() {
         return {
@@ -45,6 +46,16 @@ export default {
         userInfo() { return this.$store.state.data.userInfo},// 用户的信息
     },
     created() {
+        let fileObj = fs.readdirSync(this.userInfo.svnPath),// 获取路径下的所有文件夹
+            arr = [],
+            resObj = [];
+        fileObj.forEach(file=>{// 遍历筛选出文件夹
+            let stat = fs.lstatSync(this.userInfo.svnPath+'\\'+ file)
+            if (stat.isDirectory() && !file.includes(".svn")) {
+                arr.push(file)
+            }
+        })
+        console.log(arr)
         // 获取指定路径下的所有模板   
         this.$api.UpData({codePath: this.userInfo.svnPath}).then(res=>{
             console.log(res.item)

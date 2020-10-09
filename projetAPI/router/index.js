@@ -42,6 +42,8 @@ app.post("/api/userInfo", require("../api/user.js").UserInfo);// 会员信息
 
 app.post("/api/updata", require("../api/codeData.js").getUpdata);// 更新信息
 
+app.post("/api/upCode", require("../api/codeData.js").SvnUpdata);// 更新代码
+
 
 
 const interfaces = require('os').networkInterfaces(); // 在开发环境中获取局域网中的本机iP地址

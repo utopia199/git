@@ -5,6 +5,7 @@ const config = {
     Login: "/api/login",// 登陆
     UserInfo: "/api/userInfo",// 会员信息
     UpData: "/api/updata",// 更新的信息
+    UpCode: "/api/upCode",// 更新的信息
 }
 
 

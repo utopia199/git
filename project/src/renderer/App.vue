@@ -6,10 +6,6 @@
 
 <script>
   export default {
-    name: 'project',
+    name: 'elect',
   }
 </script>
-
-<style>
-  /* CSS */
-</style>

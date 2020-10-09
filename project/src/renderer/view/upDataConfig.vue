@@ -57,8 +57,19 @@ export default {
     },
     methods: {
         Save() {
+            const loading = this.$loading({
+                lock: true,
+                text: '数据加载中',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)'
+            });
             this.$api.SetConfig(this.config).then(res=>{
                 this.$store.dispatch("GET_USER_INFO")
+                let out = setTimeout(() => {
+                    loading.close();
+                    clearTimeout(out)
+                }, 1000);
+                
             })
         }
     },

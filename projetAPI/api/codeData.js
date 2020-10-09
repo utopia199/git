@@ -3,15 +3,7 @@ exports.getUpdata = function(req,res){ //获取更新日志
     let body = req.body;
 	let obj = new Object();
     if(body.codePath) {
-        let fileObj = fs.readdirSync(body.codePath),// 获取路径下的所有文件夹
-            arr = [],
-            resObj = [];
-        fileObj.forEach(file=>{// 遍历筛选出文件夹
-            let stat = fs.lstatSync(body.codePath+'\\'+ file)
-            if (stat.isDirectory() && !file.includes(".svn")) {
-                arr.push(file)
-            }
-        })
+        var resObj = [];
         global.GET_MONGONDB((dbs,db)=>{// 查询数据库所有模板的版本号
             dbs.collection("updata").find().toArray(function(err, result) {
                 if (err) throw err;
@@ -40,7 +32,56 @@ exports.getUpdata = function(req,res){ //获取更新日志
         })
     } else {
         obj.status_code = 400
-        obj.message = "路径不能为空"
+        obj.message = body.codePath
         res.json(obj)
     }
 };
+
+exports.SvnUpdata = function (req,res) {// 更新代码
+    if(req.body.path) {
+        console.log(req.body.path)
+        if(req.body.svnUserName){
+            if(req.body.svnUserPasswold) {
+                let Client = require('svn-spawn');  
+                let client = new Client({
+                    cwd: req.body.path,
+                    username: req.body.svnUserName,
+                    password: req.body.svnUserPasswold,
+                    noAuthCache: true,
+                });
+                client.update(function(err, data) {
+                    if(err){
+                        
+                        res.json({
+                            message: err,
+                            status_code: 400
+                        })
+                        return 
+                    }
+                    // if(data.includes("Updated to revision")); {
+                    res.json({
+                        message: data,
+                        status_code: 200
+                    })
+                    // }
+                });
+            } else {
+                res.json({
+                    message: "SVN密码不能为空",
+                    status_code: 200
+                })
+            }
+        } else {
+            res.json({
+                message: "SVN帐号不能为空",
+                status_code: 200
+            })
+        }
+       
+    } else {
+        res.json({
+            message: "path不能为空",
+            status_code: 200
+        })
+    }
+}

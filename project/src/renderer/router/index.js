@@ -29,7 +29,7 @@ router.beforeEach((to,from,next)=>{
     return  next({path:"/login"})
 
   } else if(store.state.data.key && to.path === "/login"){
-
+    
     return  next({path: "/temp"})
 
   }
