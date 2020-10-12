@@ -466,3 +466,99 @@ Stacktrace:   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInte
    在 winsw.WrapperService.OnShutdown()
 2020-10-09 09:06:32 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
 2020-10-09 09:06:32 - Started 4896
+2020-10-09 18:07:38 - Stopping node_socket.exe
+2020-10-09 18:07:38 - ProcessKill 4896
+2020-10-09 18:07:38 - Shutdown exception
+Message:系统正在关机。
+
+Stacktrace:   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   在 System.Management.ManagementScope.InitializeGuts(Object o)
+   在 System.Management.ManagementScope.Initialize()
+   在 System.Management.ManagementObjectSearcher.Initialize()
+   在 System.Management.ManagementObjectSearcher.Get()
+   在 winsw.WrapperService.GetChildPids(Int32 pid)
+   在 winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   在 winsw.WrapperService.StopIt()
+   在 winsw.WrapperService.OnShutdown()
+2020-10-10 09:10:08 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-10 09:10:08 - Started 5100
+2020-10-10 13:04:32 - Stopping node_socket.exe
+2020-10-10 13:04:32 - ProcessKill 5100
+2020-10-10 13:04:32 - Found child process: 4316 Name: conhost.exe
+2020-10-10 13:04:32 - Found child process: 5904 Name: node.exe
+2020-10-10 13:04:32 - Stopping process 4316
+2020-10-10 13:04:32 - Send SIGINT 4316
+2020-10-10 13:04:32 - SIGINT to 4316 failed - Killing as fallback
+2020-10-10 13:04:32 - Stopping process 5904
+2020-10-10 13:04:32 - Send SIGINT 5904
+2020-10-10 13:04:32 - SIGINT to 5904 failed - Killing as fallback
+2020-10-10 13:04:32 - Stopping process 5100
+2020-10-10 13:04:32 - Send SIGINT 5100
+2020-10-10 13:04:32 - SIGINT to 5100 failed - Killing as fallback
+2020-10-10 13:04:32 - Finished node_socket.exe
+2020-10-10 13:05:14 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-10 13:05:14 - Started 9404
+2020-10-10 13:06:57 - Stopping node_socket.exe
+2020-10-10 13:06:57 - ProcessKill 9404
+2020-10-10 13:06:58 - Shutdown exception
+Message:系统正在关机。
+
+Stacktrace:   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   在 System.Management.ManagementScope.InitializeGuts(Object o)
+   在 System.Management.ManagementScope.Initialize()
+   在 System.Management.ManagementObjectSearcher.Initialize()
+   在 System.Management.ManagementObjectSearcher.Get()
+   在 winsw.WrapperService.GetChildPids(Int32 pid)
+   在 winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   在 winsw.WrapperService.StopIt()
+   在 winsw.WrapperService.OnShutdown()
+2020-10-10 13:07:27 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-10 13:07:27 - Started 5112
+2020-10-10 13:17:55 - Stopping node_socket.exe
+2020-10-10 13:17:55 - ProcessKill 5112
+2020-10-10 13:17:55 - Found child process: 4348 Name: conhost.exe
+2020-10-10 13:17:55 - Found child process: 6116 Name: node.exe
+2020-10-10 13:17:55 - Stopping process 4348
+2020-10-10 13:17:55 - Send SIGINT 4348
+2020-10-10 13:17:55 - SIGINT to 4348 failed - Killing as fallback
+2020-10-10 13:17:55 - Stopping process 6116
+2020-10-10 13:17:55 - Send SIGINT 6116
+2020-10-10 13:17:55 - SIGINT to 6116 failed - Killing as fallback
+2020-10-10 13:17:55 - Stopping process 5112
+2020-10-10 13:17:55 - Send SIGINT 5112
+2020-10-10 13:17:55 - SIGINT to 5112 failed - Killing as fallback
+2020-10-10 13:17:55 - Finished node_socket.exe
+2020-10-10 13:17:57 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-10 13:17:57 - Started 14844
+2020-10-10 13:20:09 - Stopping node_socket.exe
+2020-10-10 13:20:09 - ProcessKill 14844
+2020-10-10 13:20:09 - Shutdown exception
+Message:系统正在关机。
+
+Stacktrace:   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   在 System.Management.ManagementScope.InitializeGuts(Object o)
+   在 System.Management.ManagementScope.Initialize()
+   在 System.Management.ManagementObjectSearcher.Initialize()
+   在 System.Management.ManagementObjectSearcher.Get()
+   在 winsw.WrapperService.GetChildPids(Int32 pid)
+   在 winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   在 winsw.WrapperService.StopIt()
+   在 winsw.WrapperService.OnShutdown()
+2020-10-10 13:20:36 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-10 13:20:37 - Started 3632
+2020-10-10 18:24:21 - Stopping node_socket.exe
+2020-10-10 18:24:21 - ProcessKill 3632
+2020-10-10 18:24:21 - Shutdown exception
+Message:系统正在关机。
+
+Stacktrace:   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   在 System.Management.ManagementScope.InitializeGuts(Object o)
+   在 System.Management.ManagementScope.Initialize()
+   在 System.Management.ManagementObjectSearcher.Initialize()
+   在 System.Management.ManagementObjectSearcher.Get()
+   在 winsw.WrapperService.GetChildPids(Int32 pid)
+   在 winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   在 winsw.WrapperService.StopIt()
+   在 winsw.WrapperService.OnShutdown()
+2020-10-12 08:57:57 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\scket\node_modules\node-windows\lib\wrapper.js --file G:\git\scket\app.js --scriptoptions= --log "node_socket wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-12 08:57:57 - Started 4924

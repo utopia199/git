@@ -3124,3 +3124,187 @@ Updating '.':
 At revision 9495.
 
 地址为 http://:9191
+
+地址为 http://:9191
+Updating '.':
+At revision 9563.
+Updating '.':
+At revision 9563.
+Updating '.':
+At revision 9564.
+Updating '.':
+At revision 9564.
+Updating '.':
+At revision 9564.
+
+地址为 http://:9191
+
+地址为 http://192.168.0.113:9191
+Updating '.':
+A    g83_wap\src\view\user\USDTdetail.vue
+U    g33_wap\index.html
+U    g83_wap\src\view\user\pay2\transfe\default.vue
+U    g83_wap\src\router\index.js
+Updated to revision 9567.
+
+地址为 http://192.168.0.113:9191
+
+地址为 http://192.168.0.113:9191
+Updating '.':
+At revision 9567.
+Updating '.':
+At revision 9568.
+Updating '.':
+At revision 9570.
+Updating '.':
+At revision 9576.
+Updating '.':
+U    b07_pc\config\dev.env.js
+U    b07_pc\src\components\publicVue\passworld.vue
+U    b67_pc\config\dev.env.js
+U    b67_pc\src\components\passworld.vue
+U    a22_pc\src\components\passworld.vue
+U    b07_pc\src\components\component.js
+U    b07_pc\src\view\register\default.vue
+U    b07_pc\src\js\agentRegister.js
+U    b07_pc\src\store\mutationss.js
+U    b07_pc\index.html
+U    b67_pc\package-lock.json
+U    b67_pc\index.html
+U    b67_pc\src\components\pubilc.js
+U    b67_pc\src\view\register.vue
+U    b67_pc\src\js\register.js
+U    b67_pc\src\store\mutationss.js
+U    a21_pc\src\components\passworld.vue
+Updated to revision 9581.
+
+地址为 http://:9191
+Updating '.':
+A    user003\src\view\pay\openqkl
+A    user003\src\view\pay\openqkl\index.vue
+A    usery01\src\assets\chacha.png
+A    usery01\src\components\popup
+A    usery01\src\view\openqkl
+A    usery01\src\view\openqkl\index.vue
+U    g87_wap\package-lock.json
+U    b04_app\config\dev.env.js
+U    b04_app\package-lock.json
+U    user003\src\router\index.js
+U    user003\src\components\menu\default.vue
+U    user003\src\view\home\default.vue
+A    user003\src\view\pay\openqkl\default.vue
+U    g87_wap\src\view\user\pay2\transfe\default.vue
+U    b04_app\config\index.js
+U    b04_app\src\view\user\loginPass\default.vue
+U    b04_app\src\router\index.js
+U    b04_app\index.html
+U    b77_wap\config\dev.env.js
+U    b77_wap\src\components\input\input.vue
+U    b77_wap\src\view\register.vue
+U    b77_wap\src\router\index.js
+U    b78_wap\config\dev.env.js
+A    usery01\src\view\openqkl\defalut.scss
+U    usery01\build.html
+U    g85_wap\src\view\user\loginPass\default.vue
+U    g86_wap\src\view\user\pay2\transfe\default.vue
+U    b04_app\src\view\user\pay2\transfe\default.vue
+U    b04_app\src\store\user.js
+A    user003\src\view\pay\openqkl\defalut.css
+A    user003\src\view\pay\openqkl\defalut.min.css
+A    user003\src\view\pay\openqkl\defalut.scss
+U    user003\src\view\pay\xshk\default.vue
+U    user003\src\view\pay\xshk\xshk.css
+U    user003\src\view\pay\xshk\xshk.min.css
+U    user003\src\view\pay\xshk\xshk.scss
+U    user003\src\view\pay\zhhktwo\default.vue
+U    b79_wap\config\dev.env.js
+D    b04_wap\package-lock.json
+A    user003\static\img\resizeApi.png
+A    b77_wap\src\view\user\USDTdetail.vue
+U    b77_wap\src\view\user\pay2transfe.vue
+A    b04_wap\build\package-lock.json
+A    b78_wap\src\view\user\USDTdetail.vue
+U    user003\index.html
+U    g83_wap\package-lock.json
+U    g83_wap\src\view\user\loginPass\default.vue
+U    g83_wap\src\view\user\pay2\transfe\default.vue
+U    usery01\src\router\index.js
+U    b04_wap\config\dev.env.js
+U    b07_wap\config\dev.env.js
+U    b77_wap\src\store\user.js
+U    b78_wap\src\components\input\input.vue
+U    b78_wap\src\view\register\default.vue
+U    b78_wap\src\store\user.js
+U    b79_wap\config\index.js
+U    b04_wap\src\components\input\input.vue
+U    b07_wap\package-lock.json
+U    b81_wap\src\view\user\USDTdetail.vue
+U    b78_wap\index.html
+U    b79_wap\index.html
+U    b04_wap\src\view\user\pay2transfe.vue
+U    b04_wap\src\store\user.js
+U    b78_wap\src\view\user\pay2\transfe\default.vue
+U    b04_wap\src\router\index.js
+A    b04_wap\src\view\user\USDTdetail.vue
+U    b04_wap\index.html
+A    usery01\src\assets\resizeApi.png
+A    usery01\src\components\popup\popup.vue
+U    usery01\src\api\Code.js
+U    usery01\src\view\home\home_cn.vue
+A    usery01\src\view\openqkl\default.vue
+U    usert02\config\dev.env.js
+A    usery01\src\view\openqkl\defalut.css
+A    usery01\src\view\openqkl\defalut.min.css
+U    usery01\src\view\xszfhk\xszf_cn.vue
+U    usery01\config\dev.env.js
+U    g85_wap\src\view\user\pay2\transfe\default.vue
+U    g86_wap\src\view\user\loginPass\default.vue
+U    b04_wap\src\view\user\loginpass.vue
+U    b07_wap\src\components\input\input.vue
+U    b07_wap\src\view\user\pay2\transfe\default.vue
+A    usert02\src\view\pay\openqkl
+A    usert02\src\view\pay\openqkl\index.vue
+A    usert02\src\view\pay\openqkl\defalut.css
+A    usert02\src\view\pay\openqkl\defalut.min.css
+A    usert02\src\view\pay\openqkl\defalut.scss
+A    usert02\static\img\resizeApi.png
+U    b07_wap\src\view\user\loginPass\default.vue
+U    b04_wap\config\index.js
+U    b07_wap\src\view\user\pay\transfe\default.vue
+U    b81_wap\src\view\user\loginpass.vue
+U    g87_wap\src\view\user\loginPass\default.vue
+U    b04_app\src\view\register\default.vue
+A    b04_app\src\view\user\USDTdetail.vue
+U    b04_app\src\components\input\input.vue
+U    b07_wap\index.html
+U    app2\config\dev.env.js
+U    app2\src\components\tool.js
+U    app2\src\view\user\pay\payzhuanz\payzhuanz.vue
+U    app2\src\components\register\index.vue
+A    app2\src\view\user\USDTteacth.vue
+U    app2\index.html
+U    b77_wap\src\view\user\loginpass.vue
+U    b77_wap\index.html
+U    b78_wap\src\view\user\loginPass\default.vue
+U    b78_wap\src\router\index.js
+U    b79_wap\static\css\reset.css
+U    b04_wap\src\view\login.vue
+U    app2\src\router\index.js
+U    app2\src\api\pay.js
+A    app2\static\img\copy_adress.png
+U    usert02\src\router\index.js
+U    usert02\src\view\pay\zhhktwo\default.vue
+U    g33_wap\src\view\user\pay2\transfe\default.vue
+A    usert02\src\view\pay\openqkl\default.vue
+U    g33_wap\src\view\user\USDTdetail.vue
+U    usert02\src\view\home\default.vue
+U    usert02\index.html
+U    b04_wap\src\view\register.vue
+U    b07_wap\src\view\register\default.vue
+U    b07_wap\src\store\user.js
+U    b81_wap\src\view\user\pay2transfe.vue
+U    app2\src\utils\request.js
+U    app2\src\view\user\editPassworld\default.vue
+A    app2\static\img\USDT_bg.png
+U    usert02\src\components\menu\default.vue
+Updated to revision 9622.

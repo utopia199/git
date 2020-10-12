@@ -1,123 +1,192 @@
 <!-- 模板更新 -->
 <template>
-    <div id="template">
-        <div class="screen">
-
-            <el-dropdown  @command="Search">
-
-                <el-input v-model="search" placeholder="搜索条件" style="width:130px;" @input="HandleSearch(search)"></el-input>
-
-                <el-dropdown-menu>
-                    <el-dropdown-item v-for="(item,index) in typeTemp" :key="index" v-text="item.name " :command="item"></el-dropdown-item>
-                </el-dropdown-menu>
-
-            </el-dropdown>
+  <div id="template">
+    <div class="screen">
+        <el-dropdown @command="Search">
+            <el-input v-model="search" placeholder="搜索条件" style="width: 130px" @input="HandleSearch(search)"></el-input>
+            <el-dropdown-menu>
+                <el-dropdown-item v-for="(item, index) in typeTemp" :key="index" v-text="item.name" :command="item"></el-dropdown-item>
+            </el-dropdown-menu>
+        </el-dropdown>
+        <div class="w_btn">
+            <el-row>
+                <el-button type="danger">批量打包</el-button>
+            </el-row>
         </div>
-        <el-checkbox-group v-model="checkList">
-            <div v-for="(list,index) in fileObj" :key="index">
-                
-                <el-checkbox :label="list.name"></el-checkbox>
-                 
-            </div>
-            
-         
-            <!-- <el-checkbox label="选中且禁用" disabled></el-checkbox> -->
-        </el-checkbox-group>
     </div>
+    <el-checkbox-group v-model="checkList" class="scroll">
+        <div class="w_list" v-for="(list, index) in fileObj" :key="index">
+            <el-checkbox :label="list.name"></el-checkbox>
+            <div class="w_version">
+                <div class="w_dban">
+                    <span>当前版本</span>
+                    <span>{{ list.version }}</span>
+                </div>
+                <span class="w_xbanben">
+                    <span>新版本</span>
+                    <input type="text" v-model="version" style="width: 50px" />
+                </span>
+            </div>
+            <el-row>
+                <el-button type="primary">初始化</el-button>
+                <el-button type="success">打包</el-button>
+            </el-row>
+        </div>
+    </el-checkbox-group>
+  </div>
 </template>
 
 <script>
-import fs from "fs"
+import fs from "fs";
 export default {
     data() {
         return {
             fileObj: new Array(),
-            checkList: [],// 选中的数组
-            typeTemp: [// 筛选的条件
-                {name: "PC", field: "pc"},
-                {name: "WAP/APP", field: "wap"},
-                {name: "会员中心", field: "user"},
+            checkList: [], // 选中的数组
+            typeTemp: [
+                // 筛选的条件
+                { name: "PC", field: "pc" },
+                { name: "WAP/APP", field: "wap" },
+                { name: "会员中心", field: "user" },
             ],
-            search: "",// input 搜索
-            tempALL: []// 所有的模板
-        }
+            search: "", // input 搜索
+            tempALL: [], // 所有的模板
+            version: "", //版本号
+        };
     },
     computed: {
-        userInfo() { return this.$store.state.data.userInfo},// 用户的信息
+        userInfo() {
+        return this.$store.state.data.userInfo;
+        }, // 用户的信息
     },
     created() {
-        let fileObj = fs.readdirSync(this.userInfo.svnPath),// 获取路径下的所有文件夹
-            arr = [],
-            resObj = [];
-        fileObj.forEach(file=>{// 遍历筛选出文件夹
-            let stat = fs.lstatSync(this.userInfo.svnPath+'\\'+ file)
-            if (stat.isDirectory() && !file.includes(".svn")) {
-                arr.push(file)
-            }
-        })
-        console.log(arr)
-        // 获取指定路径下的所有模板   
-        this.$api.UpData({codePath: this.userInfo.svnPath}).then(res=>{
-            console.log(res.item)
-            this.fileObj = res.item
-            this.tempALL = res.item
-        }).catch(err=>{
-
-        })
-    },
-    mounted() {
-        
-    },
-    methods: {
-        Search(item) {// 下拉框点击
-            this.search = item.name
-            this.SearchFunction(item)
-        },
-
-        HandleSearch(value) {// input搜索
-            this.SearchFunction(value)
-        },
-
-        SearchFunction(item) {// 搜索触发的方法 筛选出对应的模板
-            this.fileObj = []
-            if(typeof item === "object") {
-                this.tempALL.forEach(data=>{
-                    if(item.field === "pc" && data.name.includes("pc")) {
-                        this.fileObj.push(data)
-                    }else if(item.field === "wap" && (data.name.includes("wap") || data.name.includes("app"))) {
-                        this.fileObj.push(data)
-                    }else if(item.field === "user" && data.name.includes("user")) {
-                        this.fileObj.push(data) 
+        let arr = fs.readdirSync(this.userInfo.svnPath); // 获取路径下的所有文件夹
+        //     arr = [],
+        //     resObj = [];
+        // fileObj.forEach(file=>{// 遍历筛选出文件夹
+        //     let stat = fs.lstatSync(this.userInfo.svnPath+'\\'+ file)
+        //     if (stat.isDirectory() && !file.includes(".svn")) {
+        //         arr.push(file)
+        //     }
+        // })
+        // console.log(arr)
+        // 获取指定路径下的所有模板
+        this.$api.UpData({ codePath: this.userInfo.svnPath }).then((res) => {
+            this.fileObj = res.item;
+            this.tempALL = res.item;
+            let data = [];
+            for (let i = 0; i < arr.length; i++) {// 循环遍历路径下的所有文件夹与svn打包文件夹是否相同
+                
+                for (let k = 0; k < res.item.length; k++) {
+                    if (arr[i] == res.item[k].name) {
+                        data.push(res.item[k]);
                     }
-                })
+                }
+            }
+            this.fileObj = data;
+            this.tempALL = data;
+        }).catch((err) => {});
+    },
+    mounted() {},
+    methods: {
+        Search(item) {
+            // 下拉框点击
+            this.search = item.name;
+            this.SearchFunction(item);
+        },
+
+        HandleSearch(value) {
+            // input搜索
+            this.SearchFunction(value);
+        },
+
+        SearchFunction(item) {
+            // 搜索触发的方法 筛选出对应的模板
+            this.fileObj = [];
+            if (typeof item === "object") {
+                this.tempALL.forEach((data) => {
+                if (item.field === "pc" && data.name.includes("pc")) {
+                    this.fileObj.push(data);
+                } else if (
+                    item.field === "wap" &&
+                    (data.name.includes("wap") || data.name.includes("app"))
+                ) {
+                    this.fileObj.push(data);
+                } else if (item.field === "user" && data.name.includes("user")) {
+                    this.fileObj.push(data);
+                }
+                });
             } else {
-                this.tempALL.forEach(data=>{
-                    if(data.name.includes(item)) {
-                        this.fileObj.push(data) 
+                this.tempALL.forEach((data) => {
+                    if (data.name.includes(item)) {
+                        this.fileObj.push(data);
                     }
                 })
             }
         }
-    },
-}
+    }
+};
 </script>
 
 <style lang="scss" scoped>
-#template{
+#template {
     width: 100%;
-
-    .screen{
+    display: flex;
+    flex-direction: column;
+    .screen {
         width: 100%;
         height: 50px;
-        border-bottom:1px solid #f1f1f1;
-        .el-dropdown{
-            margin-right:25px;
+        border-bottom: 1px solid #f1f1f1;
+        display: flex;
+        .el-dropdown {
+            margin-right: 25px;
+        }
+        .w_btn {
+            width: 100px;
         }
     }
-    .el-checkbox-group{
+    .el-checkbox-group {
+        min-height: 10;
+        flex: 1;
         display: flex;
         flex-wrap: wrap;
-        // justify-content: space-around;
+        overflow-x: hidden;
+        overflow-y: auto;
+        .w_list {
+            width: 540px;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #ccc;
+            margin: 15px 5px;
+            font-size: 14px;
+            color: #010101;
+            padding: 0 15px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .w_version {
+                width: 190px;
+                display: flex;
+                justify-content: space-between;
+                .w_dban{
+                    width: 85px;
+                    float: left;
+                }
+                .w_xbanben {
+                    width: 100px;
+                float: right;
+                }
+            }
+            .el-row {
+                height: 30px;
+                line-height: 30px;
+                button {
+                height: 30px;
+                line-height: 5px;
+                }
+            }
+        }
     }
 }
 </style>
