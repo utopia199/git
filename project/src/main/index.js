@@ -21,7 +21,7 @@ function createWindow () {
     height: 863,
     useContentSize: true,
     width: 1000,
-    autoHideMenuBar: true, // 因此工具栏
+    autoHideMenuBar: true, // 隐藏工具栏
   })
 
   mainWindow.loadURL(winURL)

@@ -1698,3 +1698,7 @@ Emitted 'error' event at:
 (node:4080) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
 (node:5368) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
 (node:5368) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:17004) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:17004) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+(node:9280) DeprecationWarning: collection.insert is deprecated. Use insertOne, insertMany or bulkWrite instead.
+(node:9280) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.

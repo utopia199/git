@@ -51,6 +51,36 @@ const actions = {
       })
     })
     
+  },
+
+  UP_CODE({commit},data) {// 更新SVN代码
+    return new Promise((resolve,reject)=>{
+      api.UpCode(data).then(res=>{
+        resolve(res)
+      }).catch(err=>{
+        reject(err)
+      })
+    })
+  },
+
+  COMM_CODE({commit},data) {// 提交SVN代码
+    return new Promise((resolve,reject)=>{
+      api.CommCode(data).then(res=>{
+        resolve(res)
+      }).catch(err=>{
+        reject(err)
+      })
+    })
+  },
+
+  CODE_INSTALL({commit},data) {// 初始化代码 
+    return new Promise((resolve,reject)=>{
+      api.CodeInstall(data).then(res=>{
+        resolve(res)
+      }).catch(err=>{
+        reject(err)
+      })
+    })
   }
 }
 

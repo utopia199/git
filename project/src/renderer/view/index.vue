@@ -60,12 +60,7 @@ export default {
         })
 
         this.$store.dispatch("GET_USER_INFO").then(result=>{// 获取用户信息
-            console.log(result)
-            this.$api.UpCode({svnUserName: result.svnUserName, svnUserPasswold: result.svnUserPasswold, path:  result.svnPath}).then(res=>{
-                console.log(res)
-            }).catch(err=>{
-                console.log(err)
-            })
+            
         })
     },
     mounted() {

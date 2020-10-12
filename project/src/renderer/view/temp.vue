@@ -1,7 +1,7 @@
 <!-- 模板更新 -->
 <template>
   <div id="template">
-    <div class="screen">
+    <div class="screen" v-loading.fullscreen.lock="loading">
         <el-dropdown @command="Search">
             <el-input v-model="search" placeholder="搜索条件" style="width: 130px" @input="HandleSearch(search)"></el-input>
             <el-dropdown-menu>
@@ -9,10 +9,9 @@
             </el-dropdown-menu>
         </el-dropdown>
         <div class="w_btn">
-            <el-row>
-                <el-button type="danger">批量打包</el-button>
-            </el-row>
+            <el-button type="danger" @click="Allbuild">批量打包</el-button>
         </div>
+        <span @click="Commit">提交代码</span>
     </div>
     <el-checkbox-group v-model="checkList" class="scroll">
         <div class="w_list" v-for="(list, index) in fileObj" :key="index">
@@ -24,12 +23,12 @@
                 </div>
                 <span class="w_xbanben">
                     <span>新版本</span>
-                    <input type="text" v-model="version" style="width: 50px" />
+                    <input type="text" v-model="list.newV" style="width: 50px" />
                 </span>
             </div>
             <el-row>
-                <el-button type="primary">初始化</el-button>
-                <el-button type="success">打包</el-button>
+                <el-button type="primary" @click="Install(list)">初始化</el-button>
+                <el-button type="success" @click="BuildCode(list)">打包</el-button>
             </el-row>
         </div>
     </el-checkbox-group>
@@ -51,34 +50,24 @@ export default {
             ],
             search: "", // input 搜索
             tempALL: [], // 所有的模板
-            version: "", //版本号
+            loading: false
         };
     },
     computed: {
         userInfo() {
-        return this.$store.state.data.userInfo;
+            return this.$store.state.data.userInfo;
         }, // 用户的信息
     },
     created() {
         let arr = fs.readdirSync(this.userInfo.svnPath); // 获取路径下的所有文件夹
-        //     arr = [],
-        //     resObj = [];
-        // fileObj.forEach(file=>{// 遍历筛选出文件夹
-        //     let stat = fs.lstatSync(this.userInfo.svnPath+'\\'+ file)
-        //     if (stat.isDirectory() && !file.includes(".svn")) {
-        //         arr.push(file)
-        //     }
-        // })
-        // console.log(arr)
         // 获取指定路径下的所有模板
         this.$api.UpData({ codePath: this.userInfo.svnPath }).then((res) => {
-            this.fileObj = res.item;
-            this.tempALL = res.item;
             let data = [];
             for (let i = 0; i < arr.length; i++) {// 循环遍历路径下的所有文件夹与svn打包文件夹是否相同
                 
                 for (let k = 0; k < res.item.length; k++) {
                     if (arr[i] == res.item[k].name) {
+                        res.item[k].newV = ""
                         data.push(res.item[k]);
                     }
                 }
@@ -123,6 +112,88 @@ export default {
                     }
                 })
             }
+        },
+
+        Install(item) {// 更新代码
+            this.loading = true
+            this.UpCode().then(()=>{
+                this.loading = true
+                this.$store.dispatch("CODE_INSTALL",{path: this.userInfo.svnPath+'\\'+item.name }).then(res=>{
+                    this.$notify({
+                        title: '成功',
+                        message: res.message,
+                        type: 'success'
+                    });
+                    this.loading = false
+                })
+            }).catch(err=>{
+               this.loading = false
+            })
+        },
+
+        Commit() {// 提交代码
+            this.loading = true
+            this.$store.dispatch("COMM_CODE",{svnUserName: this.userInfo.svnUserName, svnUserPasswold: this.userInfo.svnUserPasswold, path:  this.userInfo.svnPath}).then(res=>{
+                this.$notify({
+                    title: '成功',
+                    message: res.message,
+                    type: 'success'
+                });
+                this.loading = false
+            }).catch(err=>{
+                this.loading = false
+            })
+        },
+
+        UpCode(isAlert) {// 更新代码
+            return new Promise((resolve,reject)=>{
+                this.loading = true
+                this.$store.dispatch("UP_CODE",{svnUserName: this.userInfo.svnUserName, svnUserPasswold: this.userInfo.svnUserPasswold, path:  this.userInfo.svnPath}).then(res=>{
+                    if( isAlert ) {
+                        this.$notify({
+                            title: '成功',
+                            message: res.message,
+                            type: 'success'
+                        });
+                    }
+                    resolve(res)
+                    this.loading = false
+                }).catch(err=>{
+                   this.loading = false
+                    reject(err)
+                })
+            })
+            
+        },
+
+        BuildCode(list) {// 单个打包代码
+            this.loading = true
+            this.Build(list).then(res=>{
+                this.loading = false
+                this.$notify({
+                    title: '成功',
+                    message:options.name+'打包成功',
+                    type: 'success'
+                });
+            }).catch(err=>{
+                this.loading = false
+            })  
+        },
+
+        Allbuild() {// 批量打包
+            this.checkList
+            let index = this.checkList.length
+            let active = 0
+            
+        },
+
+        Build(options) {// 打包
+            return new Promise((resolve,reject)=>{
+                this.$api.CodeBuild({path: this.userInfo.svnPath, temp: options.name, version: options.newV}).then(res=>{
+                }).catch(err=>{
+                })
+            })
+            
         }
     }
 };

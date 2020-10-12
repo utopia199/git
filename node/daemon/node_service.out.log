@@ -3308,3 +3308,89 @@ U    app2\src\view\user\editPassworld\default.vue
 A    app2\static\img\USDT_bg.png
 U    usert02\src\components\menu\default.vue
 Updated to revision 9622.
+
+地址为 http://192.168.0.113:9191
+G:\aoneQt
+Updating '.':
+U    g33_wap\src\view\user\USDTdetail.vue
+U    b58_wap\config\dev.env.js
+U    b67_wap\config\dev.env.js
+U    g83_wap\src\view\user\USDTdetail.vue
+U    g85_wap\src\view\user\USDTdetail.vue
+U    g86_wap\src\view\user\USDTdetail.vue
+U    g87_wap\src\view\user\USDTdetail.vue
+A    b72_wap\src\view\user\USDTdetail.vue
+U    b72_wap\src\view\user\pay2line.vue
+U    b72_wap\config\dev.env.js
+U    b04_wap\src\view\user\USDTdetail.vue
+U    b58_wap\src\components\input\input.vue
+U    b58_wap\src\view\user\loginpass.vue
+U    b58_wap\src\view\user\paytransfe.vue
+U    b58_wap\src\view\register.vue
+U    b58_wap\src\store\user.js
+U    b58_wap\index.html
+U    b67_wap\src\components\input\input.vue
+U    b67_wap\src\view\user\pay2transfe.vue
+A    b67_wap\src\view\user\USDTdetail.vue
+U    b67_wap\src\view\user\loginpass.vue
+U    b67_wap\src\view\register.vue
+U    b67_wap\src\store\user.js
+U    b67_wap\src\router\index.js
+U    b67_wap\index.html
+U    b04_app\src\view\user\USDTdetail.vue
+U    b72_wap\src\view\register.vue
+U    b72_wap\src\view\user\loginpass.vue
+U    b72_wap\src\view\user\paytransfe.vue
+U    b72_wap\src\store\user.js
+U    b72_wap\src\router\index.js
+U    b72_wap\src\components\input\input.vue
+U    b72_wap\static\css\reset.css
+U    b72_wap\index.html
+Updated to revision 9639.
+G:\aoneQt
+Updating '.':
+At revision 9639.
+G:\aoneQt
+Updating '.':
+At revision 9639.
+
+地址为 http://192.168.0.113:9191
+Updating '.':
+U    y01_wap\config\dev.env.js
+U    y01_wap\config\index.js
+U    y01_wap\src\view\login.vue
+U    y01_wap\src\view\user\pay2.vue
+U    y01_wap\src\view\user\pay2transfe.vue
+A    y01_wap\src\view\user\USDTdetail.vue
+U    y01_wap\src\view\user\loginpass.vue
+U    y01_wap\src\view\register.vue
+U    y01_wap\src\store\user.js
+U    y01_wap\src\router\index.js
+U    y01_wap\src\components\input\input.vue
+U    y01_wap\index.html
+U    g33_wap\src\store\user.js
+U    g33_wap\package-lock.json
+A    g33_wap\index_wap.html
+Updated to revision 9668.
+Updating '.':
+At revision 9668.
+Updating '.':
+At revision 9671.
+Updating '.':
+At revision 9671.
+Updating '.':
+Restored 'AAA1'
+Restored 'AAA'
+At revision 9671.
+Updating '.':
+U    waptemp\package.json
+U    waptemp\src\main.js
+U    waptemp\static\css\reset.css
+U    waptemp\package-lock.json
+U    g86_wap\src\view\user\USDTdetail.vue
+U    waptemp\src\components\input\input.vue
+U    waptemp\src\view\register.vue
+U    waptemp\src\view\user\newblank.vue
+U    waptemp\src\view\user\usersetup.vue
+U    waptemp\src\view\user\withdrawal.vue
+Updated to revision 9680.

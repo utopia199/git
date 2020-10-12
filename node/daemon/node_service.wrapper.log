@@ -1620,3 +1620,35 @@ Stacktrace:   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInte
    在 winsw.WrapperService.OnShutdown()
 2020-10-12 08:57:57 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\node\node_modules\node-windows\lib\wrapper.js --file G:\git\node\app.js --scriptoptions= --log "node_service wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
 2020-10-12 08:57:57 - Started 4936
+2020-10-12 12:59:54 - Stopping node_service.exe
+2020-10-12 12:59:54 - ProcessKill 4936
+2020-10-12 12:59:54 - Found child process: 4968 Name: conhost.exe
+2020-10-12 12:59:54 - Found child process: 5368 Name: node.exe
+2020-10-12 12:59:54 - Stopping process 4968
+2020-10-12 12:59:54 - Send SIGINT 4968
+2020-10-12 12:59:54 - SIGINT to 4968 failed - Killing as fallback
+2020-10-12 12:59:54 - Stopping process 5368
+2020-10-12 12:59:54 - Send SIGINT 5368
+2020-10-12 12:59:54 - SIGINT to 5368 failed - Killing as fallback
+2020-10-12 12:59:54 - Stopping process 4936
+2020-10-12 12:59:54 - Send SIGINT 4936
+2020-10-12 12:59:54 - SIGINT to 4936 failed - Killing as fallback
+2020-10-12 12:59:54 - Finished node_service.exe
+2020-10-12 13:01:46 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\node\node_modules\node-windows\lib\wrapper.js --file G:\git\node\app.js --scriptoptions= --log "node_service wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-12 13:01:46 - Started 14448
+2020-10-12 15:47:49 - Stopping node_service.exe
+2020-10-12 15:47:49 - ProcessKill 14448
+2020-10-12 15:47:50 - Found child process: 6852 Name: conhost.exe
+2020-10-12 15:47:50 - Found child process: 17004 Name: node.exe
+2020-10-12 15:47:50 - Stopping process 6852
+2020-10-12 15:47:50 - Send SIGINT 6852
+2020-10-12 15:47:50 - SIGINT to 6852 failed - Killing as fallback
+2020-10-12 15:47:50 - Stopping process 17004
+2020-10-12 15:47:50 - Send SIGINT 17004
+2020-10-12 15:47:50 - SIGINT to 17004 failed - Killing as fallback
+2020-10-12 15:47:50 - Stopping process 14448
+2020-10-12 15:47:50 - Send SIGINT 14448
+2020-10-12 15:47:50 - SIGINT to 14448 failed - Killing as fallback
+2020-10-12 15:47:50 - Finished node_service.exe
+2020-10-12 15:47:59 - Starting C:\Program Files\nodejs\node.exe  --harmony G:\git\node\node_modules\node-windows\lib\wrapper.js --file G:\git\node\app.js --scriptoptions= --log "node_service wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-10-12 15:47:59 - Started 14804
