@@ -8,10 +8,12 @@
                 <el-dropdown-item v-for="(item, index) in typeTemp" :key="index" v-text="item.name" :command="item"></el-dropdown-item>
             </el-dropdown-menu>
         </el-dropdown>
-        <div class="w_btn">
-            <el-button type="danger" @click="Allbuild">批量打包</el-button>
-        </div>
-        <span @click="Commit">提交代码</span>
+
+        <el-button type="danger" @click="Allbuild" size="small">批量打包</el-button>
+        <el-button type="primary" @click="UpCode" size="small">更新代码</el-button>
+        <el-button type="warning" @click="Commit" size="small">提交代码</el-button>
+        
+        
     </div>
     <el-checkbox-group v-model="checkList" class="scroll">
         <div class="w_list" v-for="(list, index) in fileObj" :key="index">
@@ -21,9 +23,9 @@
                     <span>当前版本</span>
                     <span>{{ list.version }}</span>
                 </div>
-                <span class="w_xbanben">
+                <span class="edit_input">
                     <span>新版本</span>
-                    <input type="text" v-model="list.newV" style="width: 50px" />
+                    <input type="text" v-model="list.newV" />
                 </span>
             </div>
             <el-row>
@@ -37,6 +39,7 @@
 
 <script>
 import fs from "fs";
+
 export default {
     data() {
         return {
@@ -53,12 +56,15 @@ export default {
             loading: false
         };
     },
+
     computed: {
         userInfo() {
             return this.$store.state.data.userInfo;
         }, // 用户的信息
     },
+
     created() {
+       
         let arr = fs.readdirSync(this.userInfo.svnPath); // 获取路径下的所有文件夹
         // 获取指定路径下的所有模板
         this.$api.UpData({ codePath: this.userInfo.svnPath }).then((res) => {
@@ -76,7 +82,7 @@ export default {
             this.tempALL = data;
         }).catch((err) => {});
     },
-    mounted() {},
+
     methods: {
         Search(item) {
             // 下拉框点击
@@ -114,7 +120,7 @@ export default {
             }
         },
 
-        Install(item) {// 更新代码
+        Install(item) {// 初始化nodemodules
             this.loading = true
             this.UpCode().then(()=>{
                 this.loading = true
@@ -168,33 +174,71 @@ export default {
 
         BuildCode(list) {// 单个打包代码
             this.loading = true
-            this.Build(list).then(res=>{
+            this.$store.dispatch("UP_CODE",{svnUserName: this.userInfo.svnUserName, svnUserPasswold: this.userInfo.svnUserPasswold, path:  this.userInfo.svnPath}).then(res=>{
+                this.$api.CodeBuild({path: this.userInfo.svnPath, temp: list.name, version: list.newV}).then(res=>{
+                    const notification = {
+                        title: "打包成功",
+                        body: list.name+'打包成功',
+                        tag: new Date(),
+                        renotify: true
+                    }
+                    new window.Notification("打包成功", notification)
+                    this.loading = false
+                }).catch(err=>{
                 this.loading = false
-                this.$notify({
-                    title: '成功',
-                    message:options.name+'打包成功',
-                    type: 'success'
-                });
+                })
             }).catch(err=>{
+                reject(err)
                 this.loading = false
-            })  
+            })
+            
         },
 
         Allbuild() {// 批量打包
-            this.checkList
-            let index = this.checkList.length
-            let active = 0
-            
+           
+            let checkList = this.checkList;
+            let all = this.tempALL;
+            let path = this.userInfo.svnPath;
+            let thin = this;
+            let active = 0;
+            if( checkList.length ) {
+                this.loading = true
+                this.UpCode().then(res=>{
+                    this.loading = true
+                    build()
+                }).catch(()=>{})
+                
+            } else {
+                this.$notify.error({
+                    title: '失败',
+                    message: "请选择需要打包的模板"
+                });
+            }
+
+            function build(){
+                const newVObj = all.filter( name=> name.name == checkList[active] )
+                thin.$api.CodeBuild({path: path, temp: checkList[active], version: newVObj[0].newV}).then(res=>{
+                  active +=1
+                  if(active <= checkList.length) {
+                    build() 
+                  } else {
+                  
+                    const notification = {
+                        title: "打包成功",
+                        body: list.name+'打包成功',
+                        tag: new Date(),
+                        renotify: true
+                    }
+                    new window.Notification("打包成功", notification)
+
+                    thin.loading = false
+                  }
+                }).catch(err=>{
+                    thin.loading = false
+                }) 
+            }
         },
 
-        Build(options) {// 打包
-            return new Promise((resolve,reject)=>{
-                this.$api.CodeBuild({path: this.userInfo.svnPath, temp: options.name, version: options.newV}).then(res=>{
-                }).catch(err=>{
-                })
-            })
-            
-        }
     }
 };
 </script>
@@ -209,12 +253,11 @@ export default {
         height: 50px;
         border-bottom: 1px solid #f1f1f1;
         display: flex;
+        align-items: center;
         .el-dropdown {
             margin-right: 25px;
         }
-        .w_btn {
-            width: 100px;
-        }
+     
     }
     .el-checkbox-group {
         min-height: 10;
@@ -244,9 +287,15 @@ export default {
                     width: 85px;
                     float: left;
                 }
-                .w_xbanben {
+                .edit_input {
                     width: 100px;
-                float: right;
+                    float: right;
+                    input{
+                        width: 40px;
+                        text-align: center;
+                        border:1px solid #ccc;
+                        border-radius: 2px;
+                    }
                 }
             }
             .el-row {

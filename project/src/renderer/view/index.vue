@@ -33,17 +33,9 @@ export default {
         return {
             navData: [ ],
             login: null,
-            updataConfig: {
-                svnUserName: '',
-                svnUserPasswold: '',
-                path: ''
-            }
-
         }
     },
-    computed: {
-        
-    },
+
     created() {
         const loading = this.$loading({
           lock: true,
@@ -63,12 +55,15 @@ export default {
             
         })
     },
+
     mounted() {
         
     },
+
     methods: {
        
     },
+    
 }
 </script>
 
